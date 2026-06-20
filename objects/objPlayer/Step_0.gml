@@ -3,6 +3,19 @@ var _input_x = objInputManager.held.right - objInputManager.held.left;
 var _input_y = objInputManager.held.down - objInputManager.held.up;
 
 
+
+// Spin
+if (objInputManager.held.space) {
+	image_angle += spinSpeed;
+}
+// Reset orientation?
+/*else {
+	image_angle = 0;
+}
+*/
+
+
+// Player Movement
 if (_input_x != 0 || _input_y != 0) {
 
     var _direction = point_direction(0, 0, _input_x, _input_y);
@@ -15,5 +28,6 @@ if (_input_x != 0 || _input_y != 0) {
 }
 
 
+// Do not leave the bounds of the level
 x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
 y = clamp(y, PLAYER_CENTER, room_height - PLAYER_CENTER);

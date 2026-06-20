@@ -9,7 +9,6 @@ for (var _key = 0; _key < array_length(input_keys); _key++)
 }
 
 
-
 // Keyboard Input Checks
 for (var _key = 0; _key < array_length(input_keys); _key++)
 {

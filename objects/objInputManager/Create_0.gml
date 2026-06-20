@@ -12,8 +12,8 @@ input = {
 	left:  [ A_KEY ],
 	right: [ D_KEY ],
 	
-	select: [ vk_space ],
-	cancel: [ vk_escape ],
+	space:  [ vk_space ],
+	escape: [ vk_escape ],
 	
 	start: [ vk_enter ],
 };
