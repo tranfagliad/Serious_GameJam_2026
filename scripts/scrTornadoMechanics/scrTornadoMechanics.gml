@@ -38,5 +38,34 @@ function PlayerTornadoItemPickup (_radius) {
 
 
 
+function DrawTornadoVisuals () {
 
+    if (isSpinning && spinSpeed >= tornadoThreshold) {
 
+        draw_sprite_ext(sprPlaceholderTornado, image_index, x, y, 1, 1, image_angle, c_white, 1);
+    	
+        var _categories = struct_get_names(global.inventoryVisuals);
+        
+        for (var _i = 0; _i < array_length(_categories); _i++) {
+            var _category = _categories[_i];
+            var _visual_array = struct_get(global.inventoryVisuals, _category);
+            
+            var _sprite = noone;
+            if (_category == "papers") _sprite = sprPlaceholderPaper;
+            //if (_category == "computers") _sprite = sprPlaceholderComputer;
+            //if (_category == "staplers") _sprite = sprPlaceholderStapler;
+            
+            if (_sprite == noone) continue;
+            
+            // Render every item caught in this category's vortex loop
+            for (var _j = 0; _j < array_length(_visual_array); _j++) {
+                var _item = _visual_array[_j];
+                
+                var _draw_x = x + lengthdir_x(_item.orbit_distance, _item.orbit_angle);
+                var _draw_y = y + lengthdir_y(_item.orbit_distance, _item.orbit_angle);
+                
+                draw_sprite_ext(_sprite, 0, _draw_x, _draw_y, 1, 1, _item.item_rotation, c_white, 1);
+            }
+        }
+    }
+}

@@ -24,5 +24,11 @@
 global.inventory = {
 	papers: 0,
 	computers: 0,
-	staples: 0
+	staplers: 0
+};
+
+global.inventoryVisuals = {
+    papers: [],
+    computers: [],
+    staplers: []
 };

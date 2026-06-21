@@ -65,6 +65,7 @@
     {"id":{"name":"sprPlaceholderEnemy","path":"sprites/sprPlaceholderEnemy/sprPlaceholderEnemy.yy",},},
     {"id":{"name":"sprPlaceholderExplosion","path":"sprites/sprPlaceholderExplosion/sprPlaceholderExplosion.yy",},},
     {"id":{"name":"sprPlaceholderMainMenuTitle","path":"sprites/sprPlaceholderMainMenuTitle/sprPlaceholderMainMenuTitle.yy",},},
+    {"id":{"name":"sprPlaceholderPaper","path":"sprites/sprPlaceholderPaper/sprPlaceholderPaper.yy",},},
     {"id":{"name":"sprPlaceholderPlayerHealth","path":"sprites/sprPlaceholderPlayerHealth/sprPlaceholderPlayerHealth.yy",},},
     {"id":{"name":"sprPlaceholderStartButton","path":"sprites/sprPlaceholderStartButton/sprPlaceholderStartButton.yy",},},
     {"id":{"name":"sprPlaceholderTable1","path":"sprites/sprPlaceholderTable1/sprPlaceholderTable1.yy",},},
