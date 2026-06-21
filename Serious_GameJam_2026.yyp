@@ -57,7 +57,7 @@
     {"id":{"name":"scrGameTriggers","path":"scripts/scrGameTriggers/scrGameTriggers.yy",},},
     {"id":{"name":"scrMisc","path":"scripts/scrMisc/scrMisc.yy",},},
     {"id":{"name":"scrPlayerCollision","path":"scripts/scrPlayerCollision/scrPlayerCollision.yy",},},
-    {"id":{"name":"scrPlayerHealth","path":"scripts/scrPlayerHealth/scrPlayerHealth.yy",},},
+    {"id":{"name":"scrPlayerHUD","path":"scripts/scrPlayerHUD/scrPlayerHUD.yy",},},
     {"id":{"name":"scrPlayerStateMachine","path":"scripts/scrPlayerStateMachine/scrPlayerStateMachine.yy",},},
     {"id":{"name":"scrTornadoMechanics","path":"scripts/scrTornadoMechanics/scrTornadoMechanics.yy",},},
     {"id":{"name":"sPauseCover","path":"sprites/sPauseCover/sPauseCover.yy",},},

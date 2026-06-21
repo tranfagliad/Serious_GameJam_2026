@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrPlayerHealth",
+  "%Name":"scrPlayerHUD",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrPlayerHealth",
+  "name":"scrPlayerHUD",
   "parent":{
     "name":"Player",
     "path":"folders/Scripts/Player.yy",

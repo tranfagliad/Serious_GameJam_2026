@@ -3,23 +3,33 @@ function PlayerStateDefault(){
 	// Detect Inputs
 	var _input_x = objInputManager.held.right - objInputManager.held.left;
 	var _input_y = objInputManager.held.down - objInputManager.held.up;
+    
+    // Check if the player is attempting to move
+    var _is_moving = (_input_x != 0 || _input_y != 0);
+	if (_is_moving) {
+		spinSpeed = Approach(spinSpeed, maxSpinSpeed, spinAccel);
+	} else {
+		spinSpeed = Approach(spinSpeed, 0, spinDecel);
+	}
 
-
-	// Spin
-	isSpinning = objInputManager.held.space;
+	isSpinning = (spinSpeed > 0);
 	if (isSpinning) {
 		image_angle += spinSpeed;
-		PlayerTornadoItemPickup(PLAYER_WIDTH);
-	}
-	// Reset orientation?
-	/*else {
-		image_angle = 0;
-	}
-	*/
-
+        
+        // Only pick up items if spinning fast enough
+        if (spinSpeed >= tornadoThreshold) {
+		    PlayerTornadoItemPickup(PLAYER_WIDTH);
+        }
+	} else {
+        // If the spin completely dies out, clear the inventory contents
+        global.inventory.papers = 0;
+        global.inventory.computers = 0;
+        global.inventory.staples = 0;
+        total_items = 0;
+    }
 
 	// Player Movement
-	if (_input_x != 0 || _input_y != 0) {
+	if (_is_moving) {
 
 	    var _direction = point_direction(0, 0, _input_x, _input_y);
     
@@ -32,58 +42,38 @@ function PlayerStateDefault(){
 		y = _collision.collidedY ? y : y + _move_y;
 	}
 	
-	
-	//enemy collision
-	var _enCol = instance_place(x,y, objEnemyParent);
+	// Enemy collision logic...
+	var _enCol = instance_place(x, y, objEnemyParent);
 	if instance_exists(_enCol) && invulCd <= 0 {
 		
-		//check if enemy is actively damaging
 		if _enCol.damageActive {
-			
-			//get enemy damage
 			var _dmg = _enCol.damage;
-		
-			//reduce hp
 			currentHp -= _dmg;
 			if currentHp <= 0 GameLose();
 			
-			//refresh invul cooldown
 			invulCd = invulCdMax;
 			image_blend = c_red;
-		
 		}
 		
-		//deal damage to the enemy
 		with _enCol {
-			
 			hp -= other.playerDamage;
 			if hp <= 0 {
-				
-				//deactivate damaging ability
 				damageActive = false;
-				
-				//this should be a dying animation state
 				explodeCd = 90;
 				enemyState = EnemyStateExplode;
 				sprite_index = sprPlaceholderExplosion;
-				
 			}
-			
 		}
-		
 	}
 	
-	//invul cooldown
+	// Invul cooldown
 	invulCd = Approach(invulCd, 0, 1);
 	if invulCd == 0 {
 		image_blend = c_white;
 		invulCd = -1;
 	}
-	
 
 	// Do not leave the bounds of the level
 	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
 	y = clamp(y, PLAYER_CENTER, room_height - PLAYER_CENTER);
-
-	
 }

@@ -1,8 +1,13 @@
 
 playerState = PlayerStateDefault;
 
-playerSpeed = 5;
-spinSpeed = 20;
+playerSpeed = 3;
+
+spinSpeed = 0;
+maxSpinSpeed = 30;
+spinAccel = 0.05;
+spinDecel = 0.3;
+tornadoThreshold = 25;
 
 isSpinning = false;
 
