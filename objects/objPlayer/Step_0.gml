@@ -7,8 +7,7 @@ var _input_y = objInputManager.held.down - objInputManager.held.up;
 isSpinning = objInputManager.held.space;
 if (isSpinning) {
 	image_angle += spinSpeed;
-	
-	PlayerTornadoScan(PLAYER_WIDTH);
+	PlayerTornadoItemPickup(PLAYER_WIDTH);
 }
 // Reset orientation?
 /*else {
@@ -27,13 +26,8 @@ if (_input_x != 0 || _input_y != 0) {
 	
 	// Check for collisions with tables
 	var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
-	x = _collision.blockedX ? x : x + _move_x;
-	y = _collision.blockedY ? y : y + _move_y;
-	
-	
-    
-    //x += _move_x;
-    //y += _move_y;
+	x = _collision.collidedX ? x : x + _move_x;
+	y = _collision.collidedY ? y : y + _move_y;
 }
 
 
