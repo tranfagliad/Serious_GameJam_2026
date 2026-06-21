@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objGameControl",
-  "eventList":[],
+  "%Name":"objParentTable",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"objGameControl",
+  "name":"objParentTable",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Tables",
+    "path":"folders/Objects/Tables.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprPlaceholderTable1",
+    "path":"sprites/sprPlaceholderTable1/sprPlaceholderTable1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

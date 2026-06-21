@@ -3,10 +3,12 @@ var _input_x = objInputManager.held.right - objInputManager.held.left;
 var _input_y = objInputManager.held.down - objInputManager.held.up;
 
 
-
 // Spin
-if (objInputManager.held.space) {
+isSpinning = objInputManager.held.space;
+if (isSpinning) {
 	image_angle += spinSpeed;
+	
+	PlayerTornadoScan(PLAYER_WIDTH);
 }
 // Reset orientation?
 /*else {
