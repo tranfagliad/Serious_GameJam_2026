@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"Consol",
+  "%Name":"fntConsol",
   "AntiAlias":0,
   "applyKerning":0,
   "ascender":14,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":19,
   "maintainGms1Font":false,
-  "name":"Consol",
+  "name":"fntConsol",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

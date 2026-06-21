@@ -24,9 +24,16 @@ if (_input_x != 0 || _input_y != 0) {
     
     var _move_x = lengthdir_x(playerSpeed, _direction);
     var _move_y = lengthdir_y(playerSpeed, _direction);
+	
+	// Check for collisions with tables
+	var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
+	x = _collision.blockedX ? x : x + _move_x;
+	y = _collision.blockedY ? y : y + _move_y;
+	
+	
     
-    x += _move_x;
-    y += _move_y;
+    //x += _move_x;
+    //y += _move_y;
 }
 
 
