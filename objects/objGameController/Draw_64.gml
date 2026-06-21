@@ -7,8 +7,13 @@ draw_set_halign(fa_left);
 //debug ui
 if global.showDebugUI {
 	
+	draw_set_halign(fa_left);
 	draw_text(10,	15*1,	$"FPS: {fps}");
 	draw_text(10,	15*2,	$"FPS REAL: {fps_real}");
+	
+	draw_set_halign(fa_right);
+	draw_text(VIEWPORT_WIDTH - 16,	15*1,	$"enemy spawn cd: {global.enemySpawnCd}");
+	draw_set_halign(fa_left);
 	
 }
 

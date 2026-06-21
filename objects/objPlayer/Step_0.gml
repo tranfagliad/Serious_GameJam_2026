@@ -1,5 +1,5 @@
 
 //moved player behavior into state machine
-if !global.gamePaused && !global.unpausingInputLock {
+if !global.gamePaused {
 	playerState();
 }

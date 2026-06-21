@@ -31,7 +31,55 @@ function PlayerStateDefault(){
 		x = _collision.collidedX ? x : x + _move_x;
 		y = _collision.collidedY ? y : y + _move_y;
 	}
-
+	
+	
+	//enemy collision
+	var _enCol = instance_place(x,y, objEnemyParent);
+	if instance_exists(_enCol) && invulCd <= 0 {
+		
+		//check if enemy is actively damaging
+		if _enCol.damageActive {
+			
+			//get enemy damage
+			var _dmg = _enCol.damage;
+		
+			//reduce hp
+			currentHp -= _dmg;
+			if currentHp <= 0 GameLose();
+			
+			//refresh invul cooldown
+			invulCd = invulCdMax;
+			image_blend = c_red;
+		
+		}
+		
+		//deal damage to the enemy
+		with _enCol {
+			
+			hp -= other.playerDamage;
+			if hp <= 0 {
+				
+				//deactivate damaging ability
+				damageActive = false;
+				
+				//this should be a dying animation state
+				explodeCd = 90;
+				enemyState = EnemyStateExplode;
+				sprite_index = sprPlaceholderExplosion;
+				
+			}
+			
+		}
+		
+	}
+	
+	//invul cooldown
+	invulCd = Approach(invulCd, 0, 1);
+	if invulCd == 0 {
+		image_blend = c_white;
+		invulCd = -1;
+	}
+	
 
 	// Do not leave the bounds of the level
 	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);

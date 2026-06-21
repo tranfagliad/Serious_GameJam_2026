@@ -1,0 +1,5 @@
+function GameLose(){
+	
+	//ehhhhhh
+	
+}

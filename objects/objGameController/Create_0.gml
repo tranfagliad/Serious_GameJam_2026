@@ -9,20 +9,15 @@
 
 #endregion
 
-#region pause
-	
-	//pausing variables
-	global.gamePaused = false;
-	global.unpausingInputLock = false;	//using this flag to not trigger input the same frame as unpausing
-	global.unpausingCd = 0;
-	global.unpausingCdMax = 1;			//1 frame of unpausing buffer
-	
-#endregion
-
 #region state machine
+
+	global.gamePaused = false;
 	
 	global.gameState = GameStateDefault;
 	global.gameStatePrev = GameStateDefault;
+	
+	global.enemySpawnCd = 180;
+	global.enemySpawnCdMax = 180;
 	
 #endregion
 

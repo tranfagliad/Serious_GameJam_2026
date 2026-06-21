@@ -34,12 +34,7 @@ function PauseDeactivate(){
 	//set flag
 	global.gamePaused = false;
 	
-	
 	//reset state
 	global.gameState = global.gameStatePrev;
-	
-	//limit player input
-	global.unpausingCd = global.unpausingCdMax;
-	global.unpausingInputLock = true;
 	
 }

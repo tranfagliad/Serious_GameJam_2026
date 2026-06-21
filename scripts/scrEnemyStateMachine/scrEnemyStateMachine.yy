@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrPauseLogic",
+  "%Name":"scrEnemyStateMachine",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrPauseLogic",
+  "name":"scrEnemyStateMachine",
   "parent":{
-    "name":"System",
-    "path":"folders/Scripts/System.yy",
+    "name":"Enemy",
+    "path":"folders/Scripts/Enemy.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

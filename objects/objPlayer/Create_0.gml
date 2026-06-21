@@ -9,3 +9,7 @@ isSpinning = false;
 maxHp = 5;
 currentHp = 5;
 
+invulCd = 0;
+invulCdMax = 180;
+
+playerDamage = 1;
