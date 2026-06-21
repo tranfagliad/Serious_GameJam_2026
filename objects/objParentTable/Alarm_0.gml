@@ -1,5 +1,5 @@
 
 // Restock table when triggered
-contents = defaultContents;
+contents = variable_clone(defaultContents);	//structs use a pointer by default so we need to manually copy them when doing this
 hasItems = true;
 image_index = 0;

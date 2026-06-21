@@ -1,4 +1,4 @@
 
 followTarget = objPlayer;
-x = followTarget.x;
-y = followTarget.y;
+//x = followTarget.x;	moved this to room start
+//y = followTarget.y;

@@ -1,5 +1,5 @@
 
-playerSpeed = 3;
+playerSpeed = 5;
 spinSpeed = 20;
 
 isSpinning = false;

@@ -1,5 +1,5 @@
 
-function draw_player_health (_current_hp, _max_hp) {
+function DrawPlayerHealth (_current_hp, _max_hp) {
 	
 	for (var _i = 0; _i < _max_hp; _i++) {
 		var _frame = (_i < _current_hp) ? 0 : 1;

@@ -1,2 +1,2 @@
 
-draw_player_health(currentHp, maxHp);
+DrawPlayerHealth(currentHp, maxHp);

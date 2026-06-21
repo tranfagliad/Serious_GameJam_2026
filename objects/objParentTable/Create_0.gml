@@ -13,8 +13,4 @@ defaultContents = {
 
 }
 
-contents = {
-	papers: defaultContents.papers,
-	computers: defaultContents.computers,
-	staples: defaultContents.staples
-}
+contents = variable_clone(defaultContents);
