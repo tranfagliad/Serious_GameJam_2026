@@ -3,7 +3,7 @@ function PlayerTornadoItemPickup (_radius) {
 	// Did the tornado touch a table?
 	var _touched_table = collision_circle(x, y, _radius, objParentTable, false, true);
 
-	if (_touched_table != noone && _touched_table.has_items) {
+	if (_touched_table != noone && _touched_table.hasItems) {
 		
 		var _item_types = variable_struct_get_names(_touched_table.contents);
         var _type_count = array_length(_item_types);
@@ -26,10 +26,11 @@ function PlayerTornadoItemPickup (_radius) {
 				_took_items = true;
 			}
 			
-			// Empty the table
+			// Empty the table, start the timer for items to respawn
 			if (_took_items) {
-				_touched_table.has_items = false;
+				_touched_table.hasItems = false;
 				_touched_table.image_index = 1;
+				_touched_table.alarm[0] = _touched_table.itemRespawnTime;
 			}
 		}	
 	}
