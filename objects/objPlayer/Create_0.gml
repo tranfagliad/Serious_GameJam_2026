@@ -1,4 +1,6 @@
 
+playerState = PlayerStateDefault;
+
 playerSpeed = 5;
 spinSpeed = 20;
 

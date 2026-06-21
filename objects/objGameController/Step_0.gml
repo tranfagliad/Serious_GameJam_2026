@@ -16,3 +16,20 @@
 	}
 
 #endregion
+
+//global state machine
+global.gameState();
+
+//fullscreen
+if !global.htmlActive {
+	if objInputManager.pressed.fullscreen window_set_fullscreen(!window_get_fullscreen());
+}
+
+//unpausing input cd
+if !global.gamePaused {
+	
+	//use unpaused cooldown to limit input when unpausing
+	global.unpausingCd = Approach(global.unpausingCd, 0, 1);
+	if (global.unpausingCd <= 0) global.unpausingInputLock = false;
+	
+}

@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrGameStates",
+  "%Name":"scrPlayerStateMachine",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrGameStates",
+  "name":"scrPlayerStateMachine",
   "parent":{
-    "name":"System",
-    "path":"folders/Scripts/System.yy",
+    "name":"Player",
+    "path":"folders/Scripts/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

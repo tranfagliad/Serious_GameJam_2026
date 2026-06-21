@@ -1,0 +1,11 @@
+function GameStateDefault(){
+	
+	
+	
+}
+
+function GameStatePaused(){
+	
+	
+	
+}

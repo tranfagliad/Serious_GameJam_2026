@@ -14,8 +14,9 @@ input = {
 	
 	space:  [ vk_space ],
 	escape: [ vk_escape ],
+	enter:	[ vk_enter ],
 	
-	enter: [ vk_enter ],
+	fullscreen:	[ vk_f4 ],
 };
 input_keys = variable_struct_get_names(input);
 
