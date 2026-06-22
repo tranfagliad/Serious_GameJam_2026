@@ -11,12 +11,22 @@ function PlayerStateDefault(){
 	} else {
 		spinSpeed = Approach(spinSpeed, 0, spinDecel);
 	}
-
+	
+	// Dash Mechanic
+	if (spinSpeed >= maxSpinSpeed && objInputManager.pressed.space && _is_moving) {
+		dashDirection = point_direction(0, 0, _input_x, _input_y);
+		dashTimer = dashDuration;
+		playerState = PlayerStateDash;
+		return;
+	}
+	
+	// Spin Animation
 	isSpinning = (spinSpeed > 0);
 	if (isSpinning) {
 		image_angle += spinSpeed;
 	}
 
+	// Tornado
 	if (spinSpeed >= tornadoThreshold) {
 		PlayerTornadoItemPickup(PLAYER_WIDTH);
 		
@@ -116,10 +126,28 @@ function PlayerStateDefault(){
 
 function PlayerStateDash () {
 
-
-
-
-
+	spinSpeed = maxSpinSpeed;
+	image_angle += spinSpeed;
+	
+	invulCd = invulCdMax;
+	image_blend = c_aqua;
+	
+	var _move_x = lengthdir_x(dashSpeed, dashDirection);
+	var _move_y = lengthdir_y(dashSpeed, dashDirection);
+	
+	var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
+	x = _collision.collidedX ? x : x + _move_x;
+	y = _collision.collidedY ? y : y + _move_y;
+	
+	// Clamp to room bounds
+	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
+	y = clamp(y, PLAYER_CENTER, room_height - PLAYER_CENTER);
+	
+	dashTimer--;
+	if (dashTimer <= 0) {
+		playerState = PlayerStateDefault;
+		image_blend = c_white;
+	}
 }
 
 
