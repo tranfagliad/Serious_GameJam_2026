@@ -9,7 +9,7 @@ itemRespawnTime = 10 * game_get_speed(gamespeed_fps);   // 10 second item respaw
 defaultContents = {
 	papers: 4,
 	computers: 1,
-	staples: 10
+	staplers: 10
 
 }
 

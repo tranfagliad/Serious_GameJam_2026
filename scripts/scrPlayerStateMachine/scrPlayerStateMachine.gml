@@ -30,6 +30,10 @@ function PlayerStateDefault(){
 	if (spinSpeed >= tornadoThreshold) {
 		PlayerTornadoItemPickup(PLAYER_WIDTH);
 		
+		//enemy collision
+		tornadoColCd = Approach(tornadoColCd, 0, 1);
+		if (tornadoColCd <= 0) PlayerTornadoEnemyCollision(PLAYER_WIDTH);
+		
 		// Get a list of all item categories in our inventory ("papers", "computers", etc.)
 		var _categories = struct_get_names(global.inventory);
 		
@@ -63,13 +67,13 @@ function PlayerStateDefault(){
 		// If the tornado drops, wipe out data inventories
 		global.inventory.papers = 0;
 		global.inventory.computers = 0;
-		global.inventory.staples = 0;
+		global.inventory.staplers = 0;
 		total_items = 0;
 		
 		// Reset all visual tracking arrays
 		global.inventoryVisuals.papers = [];
 		global.inventoryVisuals.computers = [];
-		global.inventoryVisuals.staples = [];
+		global.inventoryVisuals.staplers = [];
 	}
 
 	// Player Movement
@@ -89,24 +93,12 @@ function PlayerStateDefault(){
 	var _enCol = instance_place(x, y, objEnemyParent);
 	if instance_exists(_enCol) && invulCd <= 0 {
 		
-		if _enCol.damageActive {
-			var _dmg = _enCol.damage;
-			currentHp -= _dmg;
-			if currentHp <= 0 GameLose();
-			
-			invulCd = invulCdMax;
-			image_blend = c_red;
-		}
+		//player takes a hit
+		if _enCol.damageActive PlayerHit(_enCol.damage);
 		
-		with _enCol {
-			hp -= other.playerDamage;
-			if hp <= 0 {
-				damageActive = false;
-				explodeCd = 90;
-				enemyState = EnemyStateExplode;
-				sprite_index = sprPlaceholderExplosion;
-			}
-		}
+		//enemy also takes a hit
+		with _enCol EnemyHit(other.playerDamage);
+		
 	}
 	
 	// Invul cooldown

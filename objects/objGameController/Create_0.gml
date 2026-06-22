@@ -21,14 +21,18 @@
 	
 #endregion
 
-global.inventory = {
-	papers: 0,
-	computers: 0,
-	staplers: 0
-};
+#region inventory data
+	
+	global.inventory = {
+		papers: 0,
+		computers: 0,
+		staplers: 0
+	};
 
-global.inventoryVisuals = {
-    papers: [],
-    computers: [],
-    staplers: []
-};
+	global.inventoryVisuals = {
+	    papers: [],
+	    computers: [],
+	    staplers: []
+	};
+	
+#endregion

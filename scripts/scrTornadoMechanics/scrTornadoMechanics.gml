@@ -69,3 +69,55 @@ function DrawTornadoVisuals () {
         }
     }
 }
+
+function PlayerTornadoEnemyCollision (_radius) {
+	
+	//create a list of collisions
+	var _colList = ds_list_create();
+	
+	//collision check
+	var _colNum = collision_circle_list(x, y, _radius, objEnemyParent, false, true, _colList, true);
+	if (_colNum > 0) {
+		
+		//iterate through each enemy within tornado
+		for (var _i = 0; _i < _colNum; _i++) {
+			
+			//get enemy id
+			var _enId = _colList[| _i];
+			
+			//do not damage deactivated enemies
+			if !_enId.damageActive continue;
+			
+			//iterate through each item category
+			var _categories = struct_get_names(global.inventory);
+			for (var _j = 0; _j < array_length(_categories); _j++) {
+				
+				//check item amount
+				var _category = _categories[_j];
+				var _itemAmount = struct_get(global.inventory, _category);
+				if (_itemAmount > 0) {
+					
+					//update inventory
+					struct_set(global.inventory, _category, _itemAmount - 1);
+					
+					//damage enemy
+					with _enId EnemyHit(other.playerDamage);
+				
+					//refresh tornado cd
+					tornadoColCd = tornadoColCdMax;
+					
+					//stop item reduction
+					exit;
+					
+				} else continue;
+				
+			}
+			
+		}
+		
+	}
+	
+	//destroy the list
+	ds_list_destroy(_colList);
+	
+}

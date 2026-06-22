@@ -11,6 +11,6 @@ if global.showDebugUI {
 	
 	draw_text(x,	y+15*0,	$"has items: {hasItems}");
 	draw_text(x,	y+15*1,	$"respawn time: {alarm[0]}");
-	draw_text(x,	y+15*2,	$"P: {contents.papers}, C: {contents.computers}, S: {contents.staples}");
+	draw_text(x,	y+15*2,	$"P: {contents.papers}, C: {contents.computers}, S: {contents.staplers}");
 	
 }
