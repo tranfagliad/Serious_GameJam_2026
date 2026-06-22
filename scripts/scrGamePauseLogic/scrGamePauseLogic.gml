@@ -8,14 +8,6 @@ function PauseActivate(){
 		
 	}
 	
-	
-	
-	// Test comment
-	// Test comment 2
-	
-	
-	
-	
 	//pause all sounds
 	audio_pause_all();
 	
