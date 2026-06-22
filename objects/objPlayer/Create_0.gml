@@ -28,6 +28,7 @@ tornadoColCdMax = 15;
 // Dash variables
 dashDuration = 10;
 dashTimer = 0;
-dashTimer = 0;
-dashSpeed = 12;
+dashSpeed = 20;
 dashDirection = 0;
+dashCd = 0;
+dashCdMax = 60;

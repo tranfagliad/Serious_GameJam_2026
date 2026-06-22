@@ -43,6 +43,7 @@
     {"id":{"name":"fntConsol","path":"fonts/fntConsol/fntConsol.yy",},},
     {"id":{"name":"fntConsolBig","path":"fonts/fntConsolBig/fntConsolBig.yy",},},
     {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},},
+    {"id":{"name":"objDashExplosion","path":"objects/objDashExplosion/objDashExplosion.yy",},},
     {"id":{"name":"objEnemyDefault","path":"objects/objEnemyDefault/objEnemyDefault.yy",},},
     {"id":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},},
     {"id":{"name":"objGameController","path":"objects/objGameController/objGameController.yy",},},

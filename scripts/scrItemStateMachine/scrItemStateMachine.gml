@@ -13,9 +13,7 @@ function ItemStateOrbit(){
 			with _enId EnemyHit(other.damage);
 		
 			//explode
-			explodeCd = 15;
-			sprite_index = sprPlaceholderExplosion;
-			itemState = ItemStateExplode;
+			ItemExplode();
 			
 			//remove item from inventory
 			switch object_index {
@@ -34,18 +32,38 @@ function ItemStateOrbit(){
 
 function ItemStateExplode(){
 	
-	if instance_exists(followId) {
+	//create the variable if not set yet
+	if !variable_instance_exists(id, "explodeCd") explodeCd = 15;
 	
-		//still orbit
-		ItemOrbit(followId.x, followId.y, followId.spinSpeed);
+	//countdown until destruction
+	explodeCd = Approach(explodeCd, 0, 1);
+	if explodeCd <= 0 instance_destroy();
 	
-		//create the variable if not set yet
-		if !variable_instance_exists(id, "explodeCd") explodeCd = 15;
+}
+
+function ItemStateDash(){
 	
-		//countdown until destruction
-		explodeCd = Approach(explodeCd, 0, 1);
-		if explodeCd <= 0 instance_destroy();
+	//precaution
+	if !variable_instance_exists(id, "dashDirection") dashDirection = 0;
+	if !variable_instance_exists(id, "dashSpeed") dashSpeed = 1;
 	
+	//movement
+	x += lengthdir_x(dashSpeed, dashDirection);
+	y += lengthdir_y(dashSpeed, dashDirection);
+	
+	//enemy collision
+	var _enId = instance_place(x,y, objEnemyParent);
+	if instance_exists(_enId) {
+		
+		//damage enemy
+		with _enId if damageActive EnemyHit(other.damage);
+		
+		//explode
+		ItemExplode();
+		
 	}
+	
+	//out of bounds
+	if (x < 0 || x > room_width || y < 0 || y > room_height) instance_destroy();
 	
 }

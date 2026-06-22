@@ -41,3 +41,11 @@ function ItemObjectCreate(_type){
 	}
 	
 }
+
+function ItemExplode(){
+	
+	explodeCd = 15;
+	sprite_index = sprPlaceholderExplosion;
+	itemState = ItemStateExplode;
+	
+}

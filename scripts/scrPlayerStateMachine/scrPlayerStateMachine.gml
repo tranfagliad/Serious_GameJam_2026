@@ -12,13 +12,19 @@ function PlayerStateDefault(){
 		spinSpeed = Approach(spinSpeed, 0, spinDecel);
 	}
 	
+	
 	// Dash Mechanic
-	if (spinSpeed >= maxSpinSpeed && objInputManager.pressed.space && _is_moving) {
+	if (spinSpeed >= maxSpinSpeed && objInputManager.pressed.space && _is_moving && dashCd <= 0) {
 		dashDirection = point_direction(0, 0, _input_x, _input_y);
 		dashTimer = dashDuration;
 		playerState = PlayerStateDash;
+		dashCd = dashCdMax;
 		return;
 	}
+	
+	//dash cd
+	dashCd = Approach(dashCd, 0, 1);
+	
 	
 	// Spin Animation
 	isSpinning = (spinSpeed > 0);
@@ -88,6 +94,7 @@ function PlayerStateDefault(){
 		with objItemParent instance_destroy();
 	}
 
+
 	// Player Movement
 	if (_is_moving) {
 		var _direction = point_direction(0, 0, _input_x, _input_y);
@@ -101,11 +108,12 @@ function PlayerStateDefault(){
 		y = _collision.collidedY ? y : y + _move_y;
 	}
 	
+	
 	// Enemy collision logic
 	var _enCol = instance_place(x, y, objEnemyParent);
 	if instance_exists(_enCol) && invulCd <= 0 {
 		
-		//player takes a hit
+		//check if enemy is active
 		if _enCol.damageActive {
 			
 			//check paper
@@ -118,12 +126,18 @@ function PlayerStateDefault(){
 				
 				//unique paper sfx
 				
-			} else PlayerHit(_enCol.damage);
+			} else {
+				
+				//player hit
+				PlayerHit(_enCol.damage);
+				
+				//player hit sfx
+			}
+			
+			//enemy also takes a hit
+			with _enCol EnemyHit(other.playerDamage);
 			
 		}
-		
-		//enemy also takes a hit
-		with _enCol EnemyHit(other.playerDamage);
 		
 	}
 	
@@ -133,6 +147,7 @@ function PlayerStateDefault(){
 		image_blend = c_white;
 		invulCd = -1;
 	}
+
 
 	// Do not leave the bounds of the level
 	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
@@ -161,10 +176,45 @@ function PlayerStateDash () {
 	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
 	y = clamp(y, PLAYER_CENTER, room_height - PLAYER_CENTER);
 	
+	//enemy collision
+	var _enCol = instance_place(x, y, objEnemyParent);
+	with _enCol if damageActive EnemyHit(other.playerDamage);
+	
 	dashTimer--;
 	if (dashTimer <= 0) {
+		
+		//create an explosion
+		instance_create_layer(x,y, "Player", objDashExplosion);
+		
+		//check if any computers obtained
+		if global.inventory.computers > 0 {
+			
+			//remove one computer from inventory
+			global.inventory.computers -= 1;
+			
+			//make computer fly
+			with objItemComputer {
+				
+				//move to the player position
+				x = other.x;
+				y = other.y;
+				
+				//setup dash
+				dashDirection = other.dashDirection;
+				dashSpeed = other.dashSpeed/2;
+				itemState = ItemStateDash;
+				
+				//only one computer flies
+				break;
+				
+			}
+			
+		}
+		
+		//stop dashing
 		playerState = PlayerStateDefault;
 		image_blend = c_white;
+		
 	}
 }
 

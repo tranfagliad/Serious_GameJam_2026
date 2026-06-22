@@ -11,7 +11,7 @@ function DrawPlayerHealth (_current_hp, _max_hp) {
 
 
 
-function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed) {
+function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd) {
 
 	var _bar_width = 20;
 	var _bar_height = 200;
@@ -45,7 +45,7 @@ function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed) {
 	var _text_x = _x1 + (_bar_width / 2);
 	var _text_y = _y1 - 8;
 	
-	if (_percentage < 1.0) {
+	if (_percentage < 1.0) || (_dashCd > 0) {
 		draw_text(_text_x, _text_y, "Spin");
 	} else {
 		draw_text(_text_x, _text_y, "DASH!");

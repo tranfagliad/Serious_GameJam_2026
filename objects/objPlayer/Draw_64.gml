@@ -1,4 +1,4 @@
 
 DrawPlayerHealth(currentHp, maxHp);
 
-DrawPlayerSpinMeter(spinSpeed, maxSpinSpeed);
+DrawPlayerSpinMeter(spinSpeed, maxSpinSpeed, dashCd);
