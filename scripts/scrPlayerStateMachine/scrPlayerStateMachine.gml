@@ -110,3 +110,21 @@ function PlayerStateDefault(){
 	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
 	y = clamp(y, PLAYER_CENTER, room_height - PLAYER_CENTER);
 }
+
+
+
+
+function PlayerStateDash () {
+
+
+
+
+
+}
+
+
+
+
+
+
+

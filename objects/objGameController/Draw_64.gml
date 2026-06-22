@@ -20,7 +20,7 @@ if global.showDebugUI {
 //inventory
 draw_text(10, 15*4, "Papers:    " + string(global.inventory.papers));
 draw_text(10, 15*5, "Computers: " + string(global.inventory.computers));
-draw_text(10, 15*6, "Staples:   " + string(global.inventory.staples));
+draw_text(10, 15*6, "Staplers:   " + string(global.inventory.staplers));
 
 //draw pause
 if global.gamePaused {
