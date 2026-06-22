@@ -1,7 +1,7 @@
 function EnemyDeath(){
 	
 	damageActive = false;
-	explodeCd = 90;
+	explodeCd = 60;
 	enemyState = EnemyStateExplode;
 	sprite_index = sprPlaceholderExplosion;
 	

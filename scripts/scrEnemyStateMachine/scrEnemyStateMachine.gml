@@ -33,7 +33,7 @@ function EnemyStateDefault(){
 function EnemyStateExplode(){
 	
 	//create the variable if not set yet
-	if !variable_instance_exists(id, "explodeCd") explodeCd = 90;
+	if !variable_instance_exists(id, "explodeCd") explodeCd = 60;
 	
 	//countdown until destruction
 	explodeCd = Approach(explodeCd, 0, 1);

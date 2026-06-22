@@ -19,7 +19,12 @@ function PlayerTornadoItemPickup (_radius) {
 			
 				// Add the contents of the table to the player
 				variable_struct_set(global.inventory, _item_type, _current_inventory_amount + _item_amount);
-			
+				
+				//create item objects
+				repeat _item_amount {
+					ItemObjectCreate(_item_type);
+				}
+				
 				// Clear the contents of the table
 				variable_struct_set(_touched_table.contents, _item_type, 0);
 			
@@ -44,10 +49,12 @@ function DrawTornadoVisuals () {
 
         draw_sprite_ext(sprPlaceholderTornado, image_index, x, y, 1, 1, image_angle, c_white, 1);
     	
-        var _categories = struct_get_names(global.inventoryVisuals);
+		//ONLY DRAWING PAPER THIS WAY I THINK
+		
+        //var _categories = struct_get_names(global.inventoryVisuals);
         
-        for (var _i = 0; _i < array_length(_categories); _i++) {
-            var _category = _categories[_i];
+        //for (var _i = 0; _i < array_length(_categories); _i++) {
+            var _category = "papers";//_categories[_i];
             var _visual_array = struct_get(global.inventoryVisuals, _category);
             
             var _sprite = noone;
@@ -55,7 +62,7 @@ function DrawTornadoVisuals () {
             //if (_category == "computers") _sprite = sprPlaceholderComputer;
             //if (_category == "staplers") _sprite = sprPlaceholderStapler;
             
-            if (_sprite == noone) continue;
+           // if (_sprite == noone) continue;
             
             // Render every item caught in this category's vortex loop
             for (var _j = 0; _j < array_length(_visual_array); _j++) {
@@ -66,10 +73,12 @@ function DrawTornadoVisuals () {
                 
                 draw_sprite_ext(_sprite, 0, _draw_x, _draw_y, 1, 1, _item.item_rotation, c_white, 1);
             }
-        }
+        //}
     }
 }
 
+
+/* idk don't like this I think
 function PlayerTornadoEnemyCollision (_radius) {
 	
 	//create a list of collisions
@@ -121,3 +130,4 @@ function PlayerTornadoEnemyCollision (_radius) {
 	ds_list_destroy(_colList);
 	
 }
+*/

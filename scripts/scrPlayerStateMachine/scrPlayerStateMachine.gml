@@ -31,8 +31,8 @@ function PlayerStateDefault(){
 		PlayerTornadoItemPickup(PLAYER_WIDTH);
 		
 		//enemy collision
-		tornadoColCd = Approach(tornadoColCd, 0, 1);
-		if (tornadoColCd <= 0) PlayerTornadoEnemyCollision(PLAYER_WIDTH);
+		//tornadoColCd = Approach(tornadoColCd, 0, 1);
+		//if (tornadoColCd <= 0) PlayerTornadoEnemyCollision(PLAYER_WIDTH);
 		
 		// Get a list of all item categories in our inventory ("papers", "computers", etc.)
 		var _categories = struct_get_names(global.inventory);
@@ -55,12 +55,21 @@ function PlayerStateDefault(){
 				});
 			}
 			
+			// check if some items were removed
+			while (array_length(_visual_array) > _target_count) {
+				array_pop(_visual_array);
+			}
+			
 			// Update the physics/rotation for everything in this specific category
 			for (var _j = 0; _j < array_length(_visual_array); _j++) {
 				var _item = _visual_array[_j];
 				_item.orbit_angle += _item.orbit_speed + (spinSpeed * 0.1);
 				_item.item_rotation += _item.item_spin_speed;
 			}
+			
+			//update the struct with new array
+			struct_set(global.inventoryVisuals, _category, _visual_array);
+			
 		}
 		
 	} else {
@@ -74,6 +83,9 @@ function PlayerStateDefault(){
 		global.inventoryVisuals.papers = [];
 		global.inventoryVisuals.computers = [];
 		global.inventoryVisuals.staplers = [];
+		
+		//destroy all item objects
+		with objItemParent instance_destroy();
 	}
 
 	// Player Movement
@@ -94,7 +106,21 @@ function PlayerStateDefault(){
 	if instance_exists(_enCol) && invulCd <= 0 {
 		
 		//player takes a hit
-		if _enCol.damageActive PlayerHit(_enCol.damage);
+		if _enCol.damageActive {
+			
+			//check paper
+			var _paperAmount = global.inventory.papers;
+			if (_paperAmount > 0) {
+				
+				//reduce paper amount
+				_paperAmount = Approach(_paperAmount, 0, 5);
+				global.inventory.papers = _paperAmount;
+				
+				//unique paper sfx
+				
+			} else PlayerHit(_enCol.damage);
+			
+		}
 		
 		//enemy also takes a hit
 		with _enCol EnemyHit(other.playerDamage);

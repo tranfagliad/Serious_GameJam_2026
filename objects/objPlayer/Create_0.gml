@@ -17,7 +17,7 @@ spinSpeed = 0;
 maxSpinSpeed = 30;
 spinAccel = 0.3; //0.05
 spinDecel = 0.3;
-tornadoThreshold = 25;
+tornadoThreshold = 10;
 isSpinning = false;
 
 //tornado collision cooldown
