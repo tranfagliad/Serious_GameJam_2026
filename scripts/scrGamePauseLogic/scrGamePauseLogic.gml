@@ -7,7 +7,7 @@ function PauseActivate(){
 		image_speed = 0;
 		
 	}
-	
+	// Test comment
 	//pause all sounds
 	audio_pause_all();
 	
