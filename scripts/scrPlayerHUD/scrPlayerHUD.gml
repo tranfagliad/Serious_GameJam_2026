@@ -46,6 +46,5 @@ function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd) {
 		_frame = (_dashCd > 0) ? 6 : 5;
 	}
 	
-	draw_sprite_ext(sprSpinMeter, _frame, 20, VIEWPORT_HEIGHT-10, 1.5, 1.5, 0, c_white, 1);
+	draw_sprite_ext(sprSpinMeter, _frame, 20, VIEWPORT_HEIGHT-10, 2, 2, 0, c_white, 1);
 }
-
