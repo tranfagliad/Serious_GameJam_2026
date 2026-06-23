@@ -1,13 +1,13 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"tsOffice",
+  "%Name":"tsOfficeBlue",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"tsOffice",
+  "name":"tsOfficeBlue",
   "out_columns":1,
   "out_tilehborder":2,
   "out_tilevborder":2,
