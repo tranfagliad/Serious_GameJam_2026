@@ -35,9 +35,9 @@ function PlayerStateDefault(){
 	
 	// Tornado
 	if (spinSpeed >= tornadoThreshold) {
-		PlayerTornadoItemPickup(PLAYER_WIDTH);
+		PlayerTornadoItemPickup(PLAYER_WIDTH + 32);
 		
-		//enemy collision
+		//enemy collision (replaced with separate object collision)
 		//tornadoColCd = Approach(tornadoColCd, 0, 1);
 		//if (tornadoColCd <= 0) PlayerTornadoEnemyCollision(PLAYER_WIDTH);
 		
@@ -173,7 +173,8 @@ function PlayerStateDash () {
 	clampBounds();
 	
 	//enemy collision
-	var _enCol = instance_place(x, y, objEnemyParent);
+	var _enCol = collision_circle(x,y, PLAYER_WIDTH, objEnemyParent, false, true);
+	//var _enCol = instance_place(x, y, objEnemyParent);
 	with _enCol if damageActive EnemyHit(other.playerDamage);
 	
 	dashTimer--;

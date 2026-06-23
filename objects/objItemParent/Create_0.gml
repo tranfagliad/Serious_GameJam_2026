@@ -1,7 +1,7 @@
 followId = objPlayer;
 
 orbitSpeed = 1;
-orbitDist = PLAYER_WIDTH;
+orbitDist = PLAYER_WIDTH + 32;
 orbitAngle = random(360);
 itemSpinSpeed = random_range(-5,5);
 

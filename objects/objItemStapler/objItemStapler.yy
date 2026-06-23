@@ -6,7 +6,7 @@
   "name":"objItemStapler",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objItemParent","path":"objects/objItemParent/objItemParent.yy",},"propertyId":{"name":"damage","path":"objects/objItemParent/objItemParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objItemParent","path":"objects/objItemParent/objItemParent.yy",},"propertyId":{"name":"orbitSpeedMult","path":"objects/objItemParent/objItemParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objItemParent","path":"objects/objItemParent/objItemParent.yy",},"propertyId":{"name":"orbitSpeedMult","path":"objects/objItemParent/objItemParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.1",},
   ],
   "parent":{
     "name":"Items",
