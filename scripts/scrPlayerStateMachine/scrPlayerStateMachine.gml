@@ -151,8 +151,7 @@ function PlayerStateDefault(){
 
 
 	// Do not leave the bounds of the level
-	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
-	y = clamp(y, PLAYER_CENTER, room_height - PLAYER_CENTER);
+	clampBounds();
 }
 
 
@@ -171,8 +170,7 @@ function PlayerStateDash () {
 	y = _collision.collidedY ? y : y + _move_y;
 	
 	// Clamp to room bounds
-	x = clamp(x, PLAYER_CENTER, room_width - PLAYER_CENTER);
-	y = clamp(y, PLAYER_CENTER, room_height - PLAYER_CENTER);
+	clampBounds();
 	
 	//enemy collision
 	var _enCol = instance_place(x, y, objEnemyParent);
@@ -212,4 +210,11 @@ function PlayerStateDash () {
 		//stop dashing
 		playerState = PlayerStateDefault;		
 	}
+}
+
+
+
+function clampBounds () {
+	x = clamp(x, PLAYER_CENTER-5, room_width - PLAYER_CENTER+5);
+	y = clamp(y, PLAYER_CENTER-40, room_height - PLAYER_CENTER);
 }

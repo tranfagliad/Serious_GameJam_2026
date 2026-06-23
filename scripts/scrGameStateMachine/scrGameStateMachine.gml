@@ -10,8 +10,10 @@ function GameStateDefault(){
 		//choose an enemy (can introduce weighted randomness later maybe)
 		var _enemyType = choose(objEnemyDefault, objEnemyDefault);
 		
-		//get enemy size
-		var _spr = object_get_sprite(_enemyType) ?? sprPlaceholderEnemy;
+		// choose the random sprite
+		var _spr = choose(sprEnemy1M, sprEnemy1F);
+		
+		// Get enemy size based on the chosen sprite
 		var _w = sprite_get_width(_spr);
 		var _h = sprite_get_height(_spr);
 		
@@ -19,11 +21,14 @@ function GameStateDefault(){
 		var _x = irandom_range(_w, room_width - _w);
 		var _y = irandom_range(_h, room_height - _h);
 		
-		//spawn enemy on the enemy layer
-		instance_create_layer(_x,_y, "Enemy", _enemyType);
+		// capture the instance ID when creating it
+		var _inst = instance_create_layer(_x, _y, "Enemy", _enemyType);
 		
+		// assign the chosen sprite
+		if (instance_exists(_inst)) {
+			_inst.sprite_index = _spr;
+		}
 	}
-	
 }
 
 function GameStatePaused(){

@@ -18,10 +18,10 @@ invulCdMax = 180;
 
 // Spin and tornado variables
 spinSpeed = 0;
-maxSpinSpeed = 30;
-spinAccel = 0.3; //0.05
+maxSpinSpeed = 50;
+spinAccel = 0.2; //0.05
 spinDecel = 0.3;
-tornadoThreshold = 10;
+tornadoThreshold = 40;
 isSpinning = false;
 
 //tornado collision cooldown
