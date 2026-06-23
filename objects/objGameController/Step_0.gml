@@ -12,6 +12,7 @@
 		
 		if keyboard_check_pressed(ord("R")) game_restart();
 		if keyboard_check_pressed(vk_tab) global.showDebugUI = !global.showDebugUI;
+		if keyboard_check_pressed(vk_f1) DialogueStart(DLG_SEQ_TEST, GameStateDefault);
 		
 	}
 

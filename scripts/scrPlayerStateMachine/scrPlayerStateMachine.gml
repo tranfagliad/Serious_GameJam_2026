@@ -155,8 +155,6 @@ function PlayerStateDefault(){
 }
 
 
-
-
 function PlayerStateDash () {
 
 	spinSpeed = maxSpinSpeed;
@@ -214,6 +212,9 @@ function PlayerStateDash () {
 }
 
 
+function PlayerStateLocked(){
+	
+}
 
 function clampBounds () {
 	x = clamp(x, PLAYER_CENTER-5, room_width - PLAYER_CENTER+5);

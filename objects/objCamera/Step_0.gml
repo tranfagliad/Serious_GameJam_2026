@@ -9,6 +9,10 @@ if !global.gamePaused {
 		y = lerp(y, followTarget.y, CAMERA_PAN_SPEED);
 	
 	}
-	camera_set_view_pos(view_camera[0], x-(VIEWPORT_WIDTH/4), y-(VIEWPORT_HEIGHT/4));
+	
+	//center camera
+	var _camX = x-(VIEWPORT_WIDTH/4);
+	var _camY = y-(VIEWPORT_HEIGHT/4);
+	camera_set_view_pos(view_camera[0], _camX, _camY);
 
 }

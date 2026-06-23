@@ -16,3 +16,14 @@
 #macro PLAYER_WIDTH 64
 #macro PLAYER_HEIGHT 64
 #macro PLAYER_CENTER (PLAYER_WIDTH / 2)
+
+//dialogue data macros
+#macro DLG_SFX			"dlgSfx"
+#macro DLG_ALPHA		"dlgAlpha"
+#macro DLG_COLOR		"dlgColor"
+#macro DLG_SPEED		"dlgSpeed"
+#macro DLG_TEXT			"dlgText"
+#macro DLG_NAME			"dlgName"
+#macro DLG_PORTRAIT		"dlgPortrait"
+	
+#macro DLG_SEQ_TEST		"dlgSeqTest"

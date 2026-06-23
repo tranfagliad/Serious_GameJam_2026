@@ -9,6 +9,19 @@
 
 #endregion
 
+#region sound
+	
+	global.soundVolume = 0.5;
+	global.musicVolume = 0.5;
+	
+#endregion
+
+#region game data
+	
+	global.dataDialogue = DataCreateDialogue();
+	
+#endregion
+
 #region state machine
 
 	global.gamePaused = false;

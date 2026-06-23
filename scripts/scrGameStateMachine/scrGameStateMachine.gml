@@ -36,3 +36,13 @@ function GameStatePaused(){
 	
 	
 }
+
+function GameStateDialogue(){
+	
+	//check if textbox is removed
+	if !instance_exists(objTextbox) {
+		DialogueClean();
+		global.gameState = global.gameStateTarget;
+	}
+	
+}

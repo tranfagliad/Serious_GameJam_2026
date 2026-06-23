@@ -40,3 +40,7 @@ function EnemyStateExplode(){
 	if explodeCd <= 0 instance_destroy();
 	
 }
+	
+function EnemyStateLocked(){
+	
+}

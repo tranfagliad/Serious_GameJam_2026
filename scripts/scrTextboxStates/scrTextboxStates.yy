@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrTextboxStates",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrTextboxStates",
+  "parent":{
+    "name":"Textbox",
+    "path":"folders/Scripts/Textbox.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
