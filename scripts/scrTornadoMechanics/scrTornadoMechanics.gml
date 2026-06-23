@@ -58,7 +58,7 @@ function DrawTornadoVisuals () {
             var _visual_array = struct_get(global.inventoryVisuals, _category);
             
             var _sprite = noone;
-            if (_category == "papers") _sprite = sprPlaceholderPaper;
+            if (_category == "papers") _sprite = sprPaper;
             //if (_category == "computers") _sprite = sprPlaceholderComputer;
             //if (_category == "staplers") _sprite = sprPlaceholderStapler;
             

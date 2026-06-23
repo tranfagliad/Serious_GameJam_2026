@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprPlaceholderStapler",
-    "path":"sprites/sprPlaceholderStapler/sprPlaceholderStapler.yy",
+    "name":"sprStapler",
+    "path":"sprites/sprStapler/sprStapler.yy",
   },
   "spriteMaskId":null,
   "visible":true,

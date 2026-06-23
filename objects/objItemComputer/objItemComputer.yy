@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprPlaceholderComputer",
-    "path":"sprites/sprPlaceholderComputer/sprPlaceholderComputer.yy",
+    "name":"sprComputer",
+    "path":"sprites/sprComputer/sprComputer.yy",
   },
   "spriteMaskId":null,
   "visible":true,
