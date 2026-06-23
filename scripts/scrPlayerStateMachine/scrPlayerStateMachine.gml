@@ -25,13 +25,14 @@ function PlayerStateDefault(){
 	//dash cd
 	dashCd = Approach(dashCd, 0, 1);
 	
-	
 	// Spin Animation
 	isSpinning = (spinSpeed > 0);
 	if (isSpinning) {
-		image_angle += spinSpeed;
+		image_speed = (spinSpeed / maxSpinSpeed) * 6;
+	} else {
+		image_speed = 0;
 	}
-
+	
 	// Tornado
 	if (spinSpeed >= tornadoThreshold) {
 		PlayerTornadoItemPickup(PLAYER_WIDTH);
@@ -160,10 +161,7 @@ function PlayerStateDefault(){
 function PlayerStateDash () {
 
 	spinSpeed = maxSpinSpeed;
-	image_angle += spinSpeed;
-	
 	invulCd = invulCdMax;
-	image_blend = c_aqua;
 	
 	var _move_x = lengthdir_x(dashSpeed, dashDirection);
 	var _move_y = lengthdir_y(dashSpeed, dashDirection);
@@ -212,15 +210,6 @@ function PlayerStateDash () {
 		}
 		
 		//stop dashing
-		playerState = PlayerStateDefault;
-		image_blend = c_white;
-		
+		playerState = PlayerStateDefault;		
 	}
 }
-
-
-
-
-
-
-

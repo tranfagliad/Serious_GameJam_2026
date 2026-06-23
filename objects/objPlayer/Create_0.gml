@@ -1,7 +1,11 @@
 
+image_speed = 0;
+image_index = 0;
+
+
 //general
 playerState = PlayerStateDefault;
-playerSpeed = 3;
+playerSpeed = 4;
 playerDamage = 1;
 
 
