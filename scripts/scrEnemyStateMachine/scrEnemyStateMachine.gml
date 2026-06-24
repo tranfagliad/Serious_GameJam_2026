@@ -38,6 +38,7 @@ function EnemyStateDefault(){
 	
 }
 
+
 function EnemyStateDashLocate(){
 	
 	//quit if player is gone
@@ -117,6 +118,53 @@ function EnemyStateDashActive(){
 	
 }
 
+
+function EnemyStateTrapLocate(){
+	
+	//quit if player is gone
+	if !instance_exists(objPlayer) exit;
+	
+	//wait a little after spawning
+	waitCd = Approach(waitCd, 0, 1);
+	if waitCd <= 0 {
+		
+		//get player position
+		var _x = 0, _y = 0;
+		with objPlayer {
+			_x = x;
+			_y = y;
+		}
+		
+		//movement
+		EnemyMoveTo(_x,_y);
+		
+		
+		//trap cd
+		trapCd = Approach(trapCd, 0, 1);
+		if trapCd <= 0 {
+			
+			trapCharge = trapChargeMax;
+			enemyState = EnemyStateTrapCharge;
+			
+		}
+	
+	}
+	
+}
+
+function EnemyStateTrapCharge(){
+	
+	//spin in place before spawning a trap
+	trapCharge = Approach(trapCharge, 0, 1);
+	if trapCharge <= 0 {
+		
+		instance_create_layer(x,y, "Traps", objEnemyTrapTile);
+		trapCd = trapCdMax;
+		enemyState = EnemyStateTrapLocate;
+		
+	}
+	
+}
 
 
 function EnemyStateExplode(){

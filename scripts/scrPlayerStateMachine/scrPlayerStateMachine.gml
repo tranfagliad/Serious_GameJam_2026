@@ -143,6 +143,24 @@ function PlayerStateDefault(){
 		
 	}
 	
+	//trap collision logic
+	var _trapCol = instance_place(x, y, objEnemyTrapTile);
+	if instance_exists(_trapCol) && invulCd <= 0 {
+		
+		//slow spin (DEBATABLE MECHANIC)
+		spinSpeed = Approach(spinSpeed, 0, spinDecel);
+		
+		//slow movement
+		playerSpeed = playerSpeedSlowed;
+		
+	} else {
+		
+		//return normal speed
+		playerSpeed = playerSpeedDefault;
+		
+	}
+	
+	
 	// Invul cooldown
 	invulCd = Approach(invulCd, 0, 1);
 	if invulCd <= 0 image_blend = c_white;

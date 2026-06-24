@@ -8,15 +8,15 @@ function GameStateDefault(){
 		global.enemySpawnCd = global.enemySpawnCdMax;
 		
 		//choose an enemy (can introduce weighted randomness later maybe)
-		var _enemyType = objEnemyDash; // choose(objEnemyDefault, objEnemyDash);
+		var _enemyType = choose(objEnemyDefault, objEnemyDash, objEnemyTrap);
 
 		// Get enemy size (based on first sprite)
 		var _w = sprite_get_width(sprEnemy1F);
 		var _h = sprite_get_height(sprEnemy1F);
 		
 		//choose a random position within room
-		var _x = room_width/2; //irandom_range(_w, room_width - _w);
-		var _y = room_height/2; //irandom_range(_h, room_height - _h);
+		var _x = irandom_range(_w, room_width - _w);
+		var _y = irandom_range(_h, room_height - _h);
 		
 		//just create the enemy
 		instance_create_layer(_x, _y, "Enemy", _enemyType);
