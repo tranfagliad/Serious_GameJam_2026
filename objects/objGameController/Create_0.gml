@@ -18,6 +18,7 @@
 
 #region game data
 	
+	global.screenShakeActive = true;
 	global.dataDialogue = DataCreateDialogue();
 	
 #endregion
@@ -31,6 +32,9 @@
 	
 	global.enemySpawnCd = 180;
 	global.enemySpawnCdMax = 180;
+	
+	global.enemyDefeated = 0;
+	global.enemyDefeatedReq = 15;
 	
 #endregion
 

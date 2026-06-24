@@ -22,6 +22,25 @@ function GameStateDefault(){
 		instance_create_layer(_x, _y, "Enemy", _enemyType);
 		
 	}
+	
+	
+	//level complete
+	if global.enemyDefeated >= global.enemyDefeatedReq {
+		
+		global.enemyDefeated = 0;
+		switch room {
+			
+			case rmLevelOne: {
+				
+				//transition to next room
+				room_goto(rmLevelOne);
+				
+			} break;
+			
+		}
+		
+	}
+	
 }
 
 function GameStatePaused(){

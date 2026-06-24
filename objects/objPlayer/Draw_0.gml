@@ -9,9 +9,10 @@ draw_set_halign(fa_left);
 if global.showDebugUI {
 	
 	draw_text(x,	y+15*0,	$"spinning: {isSpinning}");
-	draw_text(x,	y+15*1,	$"damage: {playerDamage}");
-	draw_text(x,	y+15*2,	$"hp: {currentHp}");
-	draw_text(x,	y+15*3,	$"invul cd: {invulCd}");
+	draw_text(x,	y+15*1,	$"spin speed: {spinSpeed}");
+	draw_text(x,	y+15*2,	$"damage: {playerDamage}");
+	draw_text(x,	y+15*3,	$"hp: {currentHp}");
+	draw_text(x,	y+15*4,	$"invul cd: {invulCd}");
 	
 }
 

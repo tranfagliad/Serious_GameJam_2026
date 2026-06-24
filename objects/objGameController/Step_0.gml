@@ -14,6 +14,9 @@
 		if keyboard_check_pressed(vk_tab) global.showDebugUI = !global.showDebugUI;
 		if keyboard_check_pressed(vk_f1) DialogueStart(DLG_SEQ_TEST, GameStateDefault);
 		
+		if keyboard_check_pressed(vk_f2) room_goto(rmLevelOne);
+		if keyboard_check_pressed(vk_f3) ScreenShakeStart(60, 6);
+		
 	}
 
 #endregion

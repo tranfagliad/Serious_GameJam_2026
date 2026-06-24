@@ -174,7 +174,14 @@ function EnemyStateExplode(){
 	
 	//countdown until destruction
 	explodeCd = Approach(explodeCd, 0, 1);
-	if explodeCd <= 0 instance_destroy();
+	if explodeCd <= 0 {
+		
+		instance_destroy();
+		
+		//increase enemy defeated count
+		global.enemyDefeated = Approach(global.enemyDefeated, global.enemyDefeatedReq, 1);
+		
+	}
 	
 }
 	

@@ -93,6 +93,7 @@
     {"id":{"name":"rmLevelOne","path":"rooms/rmLevelOne/rmLevelOne.yy",},},
     {"id":{"name":"rmMainMenu","path":"rooms/rmMainMenu/rmMainMenu.yy",},},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},},
+    {"id":{"name":"scrCameraGeneral","path":"scripts/scrCameraGeneral/scrCameraGeneral.yy",},},
     {"id":{"name":"scrEnemyStateMachine","path":"scripts/scrEnemyStateMachine/scrEnemyStateMachine.yy",},},
     {"id":{"name":"scrEnemyTriggers","path":"scripts/scrEnemyTriggers/scrEnemyTriggers.yy",},},
     {"id":{"name":"scrGameDataSetup","path":"scripts/scrGameDataSetup/scrGameDataSetup.yy",},},

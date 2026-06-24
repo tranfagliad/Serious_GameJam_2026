@@ -8,14 +8,21 @@ draw_set_halign(fa_left);
 if global.showDebugUI {
 	
 	//make it not white
-	draw_set_colour(c_maroon);
+	draw_set_colour(c_gray);
+	
+	//get zoom
+	var _camZ = 1;
+	with objCamera _camZ = zoomFactor;
 	
 	draw_set_halign(fa_left);
-	draw_text(10,	15*1,	$"FPS: {fps}");
-	draw_text(10,	15*2,	$"FPS REAL: {fps_real}");
+	draw_text(10,	96+15*1,	$"FPS: {fps}");
+	draw_text(10,	96+15*2,	$"FPS REAL: {fps_real}");
+	draw_text(10,	96+15*3,	$"Zoom Factor: {_camZ}");
 	
 	draw_set_halign(fa_right);
-	draw_text(VIEWPORT_WIDTH - 16,	15*1,	$"enemy spawn cd: {global.enemySpawnCd}");
+	draw_text(VIEWPORT_WIDTH - 16,	96+15*1,	$"enemy spawn cd: {global.enemySpawnCd}");
+	draw_text(VIEWPORT_WIDTH - 16,	96+15*2,	$"enemy defeated: {global.enemyDefeated}");
+	draw_text(VIEWPORT_WIDTH - 16,	96+15*3,	$"enemy defeated req: {global.enemyDefeatedReq}");
 	draw_set_halign(fa_left);
 	
 	//reset
