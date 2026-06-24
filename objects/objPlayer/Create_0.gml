@@ -41,3 +41,7 @@ dashSpeed = 20;
 dashDirection = 0;
 dashCd = 0;
 dashCdMax = 60;
+
+
+//update w/e vars are needed
+PlayerStatsLoadUp();

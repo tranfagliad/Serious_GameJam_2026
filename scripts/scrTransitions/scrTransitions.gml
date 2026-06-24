@@ -49,9 +49,10 @@ function TransitionStart(_targetRoom, _typeOut, _typeIn, _playerX, _playerY, _st
 		//set player position
 		global.trPlayerX = _playerX;
 		global.trPlayerY = _playerY;
-		
-		//update checkpoint
 		global.playerPosCheckpoint = [_playerX, _playerY];
+		
+		//update player stats
+		PlayerStatsSaveUp();
 		
 		
 		//set state

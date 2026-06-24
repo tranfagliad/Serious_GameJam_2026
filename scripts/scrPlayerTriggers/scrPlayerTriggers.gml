@@ -12,3 +12,25 @@ function PlayerHit(_damage){
 	ScreenShakeStart(60, 6);
 	
 }
+
+function PlayerStatsSaveUp(){
+	with objPlayer {
+		
+		//save hp between transitions
+		global.playerHp = currentHp;
+		
+		//whatever else is needed
+		
+	}
+}
+
+function PlayerStatsLoadUp(){
+	with objPlayer {
+		
+		//load hp between transitions
+		currentHp = global.playerHp;
+		
+		//whatever else is needed
+		
+	}
+}

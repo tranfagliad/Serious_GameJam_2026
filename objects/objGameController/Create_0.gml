@@ -19,6 +19,7 @@
 #region game data
 	
 	global.screenShakeActive = true;
+	global.cutsceneSkip = false;
 	global.dataDialogue = DataCreateDialogue();
 	
 	global.playerPosCheckpoint = [256, 256];
@@ -26,7 +27,7 @@
 	global.playerPosLevel2 = [512, 256];
 	global.playerPosLevel3 = [352, 224];
 	
-	global.cutsceneSkip = false;
+	global.playerHp = 5;	//used for keeping track between transitions
 	
 #endregion
 
