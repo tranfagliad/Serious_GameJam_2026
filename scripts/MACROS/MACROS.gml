@@ -33,5 +33,10 @@
 #macro DLG_NAME			"dlgName"
 #macro DLG_PORTRAIT		"dlgPortrait"
 	
-#macro DLG_SEQ_TEST		"dlgSeqTest"
-#macro DLG_SEQ_INTRO	"dlgSeqIntro"
+#macro DLG_SEQ_TEST		  "dlgSeqTest"
+#macro DLG_SEQ_INTRO	  "dlgSeqIntro"
+#macro DLG_SEQ_LVL_TWO    "dlgSeqLvlTwo"
+#macro DLG_SEQ_LVL_THREE  "dlgSeqLvlThree"
+#macro DLG_SEQ_LVL_BOSS   "dlgSeqLvlBoss"
+
+
