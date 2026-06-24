@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objLevel1ComputerDesk1",
+  "%Name":"objLevel1ComputerDesk2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objLevel1ComputerDesk1",
+  "name":"objLevel1ComputerDesk2",
   "overriddenProperties":[],
   "parent":{
     "name":"LevelOne",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprComputerDesk1",
-    "path":"sprites/sprComputerDesk1/sprComputerDesk1.yy",
+    "name":"sprComputerDesk2",
+    "path":"sprites/sprComputerDesk2/sprComputerDesk2.yy",
   },
   "spriteMaskId":null,
   "visible":true,
