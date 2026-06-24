@@ -21,11 +21,19 @@
 	global.screenShakeActive = true;
 	global.dataDialogue = DataCreateDialogue();
 	
+	global.playerPosCheckpoint = [256, 256];
+	global.playerPosLevel1 = [512, 256];
+	global.playerPosLevel2 = [512, 256];
+	global.playerPosLevel3 = [352, 224];
+	
+	global.cutsceneSkip = false;
+	
 #endregion
 
 #region state machine
 
 	global.gamePaused = false;
+	global.midTransition = false;
 	
 	global.gameState = GameStateDefault;
 	global.gameStatePrev = GameStateDefault;

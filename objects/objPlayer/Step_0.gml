@@ -1,5 +1,3 @@
-
-//moved player behavior into state machine
-if !global.gamePaused {
+if !global.gamePaused && !global.midTransition {
 	playerState();
 }

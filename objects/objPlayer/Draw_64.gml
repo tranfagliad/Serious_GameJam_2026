@@ -1,4 +1,5 @@
-
-DrawInventory(global.inventory);
-DrawPlayerHealth(currentHp, maxHp);
-DrawPlayerSpinMeter(spinSpeed, maxSpinSpeed, dashCd);
+if global.gameState == GameStateDefault {
+	DrawInventory(global.inventory);
+	DrawPlayerHealth(currentHp, maxHp);
+	DrawPlayerSpinMeter(spinSpeed, maxSpinSpeed, dashCd);
+}

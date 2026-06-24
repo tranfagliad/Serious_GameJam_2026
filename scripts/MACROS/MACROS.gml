@@ -10,6 +10,7 @@
 
 
 #macro CAMERA_PAN_SPEED 0.08
+#macro TRANS_DEPTH	-9999
 
 // For the sake of collision map checking
 #macro PLAYER_WIDTH_COLLISION 70

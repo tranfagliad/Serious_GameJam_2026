@@ -1,3 +1,3 @@
-if !global.gamePaused {
+if !global.gamePaused && !global.midTransition {
 	itemState();
 }

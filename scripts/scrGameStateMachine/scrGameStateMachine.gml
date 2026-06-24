@@ -64,3 +64,10 @@ function GameStateDialogue(){
 	}
 	
 }
+
+function GameStateTransition(){
+	
+	//check when transition is over, then move from this state
+	if !global.midTransition global.gameState = global.gameStateTarget;
+		
+}
