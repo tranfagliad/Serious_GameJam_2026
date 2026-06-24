@@ -41,6 +41,7 @@
 	
 	global.enemySpawnCd = 180;
 	global.enemySpawnCdMax = 180;
+	global.enemySpawnPoints = [];
 	
 	global.enemyDefeated = 0;
 	global.enemyDefeatedReq = 15;

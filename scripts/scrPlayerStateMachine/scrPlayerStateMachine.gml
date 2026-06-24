@@ -174,7 +174,7 @@ function PlayerStateDefault(){
 function PlayerStateDash () {
 
 	spinSpeed = maxSpinSpeed;
-	invulCd = invulCdMax;
+	invulCd = invulCdMax/2;
 	
 	var _move_x = lengthdir_x(dashSpeed, dashDirection);
 	var _move_y = lengthdir_y(dashSpeed, dashDirection);

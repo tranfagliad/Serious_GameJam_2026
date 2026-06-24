@@ -10,6 +10,8 @@
     {"name":"inst_67DFF3B9","path":"rooms/rmLevelOne/rmLevelOne.yy",},
     {"name":"inst_2CC2CAD3","path":"rooms/rmLevelOne/rmLevelOne.yy",},
     {"name":"inst_23370674","path":"rooms/rmLevelOne/rmLevelOne.yy",},
+    {"name":"inst_73E46D98","path":"rooms/rmLevelOne/rmLevelOne.yy",},
+    {"name":"inst_725A74A5","path":"rooms/rmLevelOne/rmLevelOne.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -138,7 +140,10 @@
           -2147483648,2,0,1,-518,-2147483648,2,0,1,-518,-2147483648,2,0,1,-518,-2147483648,2,0,1,-518,-2147483648,
           2,0,1,-518,-2147483648,2,0,1,-518,-2147483648,2,0,1,-325,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tsCollision","path":"tilesets/tsCollision/tsCollision.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRInstanceLayer":"","%Name":"Enemy","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Enemy","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Enemy","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"inst_73E46D98","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_73E46D98","objectId":{"name":"objEnemySpawn","path":"objects/objEnemySpawn/objEnemySpawn.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":256.0,},
+        {"$GMRInstance":"v4","%Name":"inst_725A74A5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_725A74A5","objectId":{"name":"objEnemySpawn","path":"objects/objEnemySpawn/objEnemySpawn.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":160.0,},
+      ],"layers":[],"name":"Enemy","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_4E4473AF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E4473AF","objectId":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":271.0,"y":255.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

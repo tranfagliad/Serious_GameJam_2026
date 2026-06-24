@@ -9,14 +9,13 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"damage","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"moveSpeed","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"spinSpeed","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"waitCd","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"60",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"spriteChoice","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[sprEnemy2F, sprEnemy2M]",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"enemyState","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"EnemyStateTrapLocate",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"enemyStatePrev","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"EnemyStateTrapLocate",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"enemyStateTarget","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"EnemyStateTrapLocate",},
   ],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Enemies.yy",
+    "name":"EnemyTypes",
+    "path":"folders/Objects/Enemies/EnemyTypes.yy",
   },
   "parentObjectId":{
     "name":"objEnemyParent",

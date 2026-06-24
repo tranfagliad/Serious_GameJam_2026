@@ -15,26 +15,34 @@ function EnemyMoveTo(_x,_y){
 }
 
 
-function EnemyStateDefault(){
-	
-	//quit if player is gone
-	if !instance_exists(objPlayer) exit;
+function EnemyStateSpawned(){
 	
 	//wait a little after spawning
 	waitCd = Approach(waitCd, 0, 1);
 	if waitCd <= 0 {
 		
-		//get player position
-		var _x = 0, _y = 0;
-		with objPlayer {
-			_x = x;
-			_y = y;
-		}
+		enemyState = enemyStateTarget;
+		damageActive = true;
+		image_blend = c_white;
 		
-		//only movement
-		EnemyMoveTo(_x,_y);
-	
 	}
+	
+}
+
+function EnemyStateDefault(){
+	
+	//quit if player is gone
+	if !instance_exists(objPlayer) exit;
+	
+	//get player position
+	var _x = 0, _y = 0;
+	with objPlayer {
+		_x = x;
+		_y = y;
+	}
+		
+	//only movement
+	EnemyMoveTo(_x,_y);
 	
 }
 
@@ -44,30 +52,25 @@ function EnemyStateDashLocate(){
 	//quit if player is gone
 	if !instance_exists(objPlayer) exit;
 	
-	//wait a little after spawning
-	waitCd = Approach(waitCd, 0, 1);
-	if waitCd <= 0 {
+	//get player position
+	var _x = 0, _y = 0;
+	with objPlayer {
+		_x = x;
+		_y = y;
+	}
 		
-		//get player position
-		var _x = 0, _y = 0;
-		with objPlayer {
-			_x = x;
-			_y = y;
-		}
-		
-		//movement
-		EnemyMoveTo(_x,_y);
-		
-		//check distance
-		var _dist = point_distance(x,y, _x,_y);
-		if _dist <= dashReadyDist {
-			
-			//start charging
-			dashCharge = dashChargeMax;
-			enemyState = EnemyStateDashCharge;
-			
-		}
+	//movement
+	EnemyMoveTo(_x,_y);
 	
+	
+	//check distance
+	var _dist = point_distance(x,y, _x,_y);
+	if _dist <= dashReadyDist {
+			
+		//start charging
+		dashCharge = dashChargeMax;
+		enemyState = EnemyStateDashCharge;
+			
 	}
 	
 }
@@ -112,6 +115,18 @@ function EnemyStateDashActive(){
 		
 		//introduce cd before next dash
 		waitCd = 60;
+		enemyState = EnemyStateDashCooldown;
+		
+	}
+	
+}
+
+function EnemyStateDashCooldown(){
+	
+	//wait a little in between dashes
+	waitCd = Approach(waitCd, 0, 1);
+	if waitCd <= 0 {
+		
 		enemyState = EnemyStateDashLocate;
 		
 	}
@@ -124,30 +139,24 @@ function EnemyStateTrapLocate(){
 	//quit if player is gone
 	if !instance_exists(objPlayer) exit;
 	
-	//wait a little after spawning
-	waitCd = Approach(waitCd, 0, 1);
-	if waitCd <= 0 {
+	//get player position
+	var _x = 0, _y = 0;
+	with objPlayer {
+		_x = x;
+		_y = y;
+	}
 		
-		//get player position
-		var _x = 0, _y = 0;
-		with objPlayer {
-			_x = x;
-			_y = y;
-		}
-		
-		//movement
-		EnemyMoveTo(_x,_y);
+	//movement
+	EnemyMoveTo(_x,_y);
 		
 		
-		//trap cd
-		trapCd = Approach(trapCd, 0, 1);
-		if trapCd <= 0 {
+	//trap cd
+	trapCd = Approach(trapCd, 0, 1);
+	if trapCd <= 0 {
 			
-			trapCharge = trapChargeMax;
-			enemyState = EnemyStateTrapCharge;
+		trapCharge = trapChargeMax;
+		enemyState = EnemyStateTrapCharge;
 			
-		}
-	
 	}
 	
 }

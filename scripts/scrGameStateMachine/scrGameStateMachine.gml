@@ -15,11 +15,23 @@ function GameStateDefault(){
 		var _h = sprite_get_height(sprEnemy1F);
 		
 		//choose a random position within room
-		var _x = irandom_range(_w, room_width - _w);
-		var _y = irandom_range(_h, room_height - _h);
+		//var _x = irandom_range(_w, room_width - _w);
+		//var _y = irandom_range(_h, room_height - _h);
 		
-		//just create the enemy
-		instance_create_layer(_x, _y, "Enemy", _enemyType);
+		//choose a random spawn point
+		var _al = array_length(global.enemySpawnPoints);
+		if _al > 0 {
+			
+			var _i = irandom(_al - 1);
+			var _sp = global.enemySpawnPoints[_i];
+			with _sp {
+				
+				//create the enemy
+				instance_create_layer(x, y, "Enemy", _enemyType);
+			
+			}
+			
+		}
 		
 	}
 	
@@ -33,7 +45,10 @@ function GameStateDefault(){
 			case rmLevelOne: {
 				
 				//transition to next room
-				room_goto(rmLevelOne);
+				TransitionStart(rmLevelOne, sqFadeOut, sqFadeIn, global.playerPosLevel1[0], global.playerPosLevel1[1], GameStateDefault);
+				
+				//clear enemy spawn points
+				global.enemySpawnPoints = [];
 				
 			} break;
 			
