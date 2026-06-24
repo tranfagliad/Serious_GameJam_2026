@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"LevelOneDesks",
-    "path":"folders/Sprites/Levels/LevelOne/LevelOneDesks.yy",
+    "name":"LevelOneTables",
+    "path":"folders/Sprites/Levels/LevelOne/LevelOneTables.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
