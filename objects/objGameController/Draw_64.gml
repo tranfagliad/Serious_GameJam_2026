@@ -61,7 +61,7 @@ if (global.gameState == GameStateLevelComplete) {
 	var _cy = VIEWPORT_HEIGHT / 2 - 20;
 	
 	draw_sprite_ext(sprUpgradeWheel, 0, _cx, _cy, 1.0, 1.0, wheelAngle, c_white, 1.0);
-	draw_sprite(sprWheelPointer, 0, _cx, _cy - 256);
+	draw_sprite(sprWheelPointer, 0, _cx, _cy - 200);
 	
 	draw_set_font(fntConsolBig);
 	draw_set_valign(fa_top);
