@@ -27,11 +27,19 @@ function DataCreateDialogue(){
 	//colors for dialogue
 	var _cDef = c_white;
 		
-	#region	intro sequences
+	#region	test
 			
 		//test
 		DataDialogueSet(_data, DLG_SEQ_TEST, 0,	"Name",	"Short Text", _cDef,	noone,	0);
 		DataDialogueSet(_data, DLG_SEQ_TEST, 1,	"Loooooong Assssssssssss Name",	"Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text", _cDef,	noone,	0);
+		
+	#endregion
+	
+	#region	intro cutscene
+			
+		//test
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 0,	"MC",	"This is the intro dialogue",								_cDef,	noone,	1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 1,	"MC",	"In this office, you either spin or get spinned on...",	_cDef,	noone,	1);
 		
 	#endregion
 	

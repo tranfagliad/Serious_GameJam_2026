@@ -35,7 +35,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"trapCd","filters":[],"listItems":[],"multiselect":false,"name":"trapCd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"trapCd","filters":[],"listItems":[],"multiselect":false,"name":"trapCd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"300","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"trapCdMax","filters":[],"listItems":[],"multiselect":false,"name":"trapCdMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"300","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"trapCharge","filters":[],"listItems":[],"multiselect":false,"name":"trapCharge","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"trapChargeMax","filters":[],"listItems":[],"multiselect":false,"name":"trapChargeMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":0,},

@@ -34,3 +34,4 @@
 #macro DLG_PORTRAIT		"dlgPortrait"
 	
 #macro DLG_SEQ_TEST		"dlgSeqTest"
+#macro DLG_SEQ_INTRO	"dlgSeqIntro"
