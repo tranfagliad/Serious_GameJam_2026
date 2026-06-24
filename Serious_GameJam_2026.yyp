@@ -93,6 +93,7 @@
     {"id":{"name":"scrPlayerStateMachine","path":"scripts/scrPlayerStateMachine/scrPlayerStateMachine.yy",},},
     {"id":{"name":"scrPlayerTriggers","path":"scripts/scrPlayerTriggers/scrPlayerTriggers.yy",},},
     {"id":{"name":"scrSoundLogic","path":"scripts/scrSoundLogic/scrSoundLogic.yy",},},
+    {"id":{"name":"scrTableStateMachine","path":"scripts/scrTableStateMachine/scrTableStateMachine.yy",},},
     {"id":{"name":"scrTextboxGeneral","path":"scripts/scrTextboxGeneral/scrTextboxGeneral.yy",},},
     {"id":{"name":"scrTextboxStates","path":"scripts/scrTextboxStates/scrTextboxStates.yy",},},
     {"id":{"name":"scrTornadoMechanics","path":"scripts/scrTornadoMechanics/scrTornadoMechanics.yy",},},

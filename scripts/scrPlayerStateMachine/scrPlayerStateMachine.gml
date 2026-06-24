@@ -144,10 +144,7 @@ function PlayerStateDefault(){
 	
 	// Invul cooldown
 	invulCd = Approach(invulCd, 0, 1);
-	if invulCd == 0 {
-		image_blend = c_white;
-		invulCd = -1;
-	}
+	if invulCd <= 0 image_blend = c_white;
 
 
 	// Do not leave the bounds of the level

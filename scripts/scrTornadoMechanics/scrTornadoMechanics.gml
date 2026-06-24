@@ -35,7 +35,9 @@ function PlayerTornadoItemPickup (_radius) {
 			if (_took_items) {
 				_touched_table.hasItems = false;
 				_touched_table.image_index = 1;
-				_touched_table.alarm[0] = _touched_table.itemRespawnTime;
+				_touched_table.itemRespawnTime = _touched_table.itemRespawnTimeMax;
+				_touched_table.tableState = TableStateCooldown;
+				//_touched_table.alarm[0] = _touched_table.itemRespawnTime;	//moved this to manual cooldown to be easier to pause
 			}
 		}	
 	}
