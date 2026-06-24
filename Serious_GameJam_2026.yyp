@@ -64,6 +64,7 @@
     {"id":{"name":"fntConsolHUD","path":"fonts/fntConsolHUD/fntConsolHUD.yy",},},
     {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},},
     {"id":{"name":"objDashExplosion","path":"objects/objDashExplosion/objDashExplosion.yy",},},
+    {"id":{"name":"objEnemyDash","path":"objects/objEnemyDash/objEnemyDash.yy",},},
     {"id":{"name":"objEnemyDefault","path":"objects/objEnemyDefault/objEnemyDefault.yy",},},
     {"id":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},},
     {"id":{"name":"objGameController","path":"objects/objGameController/objGameController.yy",},},

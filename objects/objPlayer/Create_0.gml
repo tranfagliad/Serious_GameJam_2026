@@ -7,6 +7,7 @@ collisionMap = layer_tilemap_get_id(layer_get_id("CollisionMap"));
 
 //general
 playerState = PlayerStateDefault;
+playerStatePrev = PlayerStateDefault;
 playerSpeed = 4;
 playerDamage = 1;
 

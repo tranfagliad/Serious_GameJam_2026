@@ -47,8 +47,8 @@ function TextboxStateDissappear(){
 		global.gameState = global.gameStateTarget;
 		
 		//unlock other state machines
-		with objPlayer playerState = PlayerStateDefault;
-		with objEnemyParent enemyState = EnemyStateDefault;
+		with objPlayer playerState = playerStatePrev;
+		with objEnemyParent enemyState = enemyStatePrev;
 		
 		//clean dialogue
 		DialogueClean();

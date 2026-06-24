@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
   "%Name":"objEnemyDefault",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"objEnemyDefault",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"hp","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"hp","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"damage","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"moveSpeed","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"spinSpeed","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},

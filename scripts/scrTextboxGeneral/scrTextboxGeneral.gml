@@ -195,8 +195,14 @@ function DialogueStart(_seq, _stateTarget){
 	global.gameStateTarget = _stateTarget;
 	
 	//lock everybody in place
-	with objPlayer playerState = PlayerStateLocked;
-	with objEnemyParent enemyState = EnemyStateLocked;
+	with objPlayer {
+		playerStatePrev = playerState;
+		playerState = PlayerStateLocked;
+	}
+	with objEnemyParent {
+		enemyStatePrev = enemyState;
+		enemyState = EnemyStateLocked;
+	}
 	
 }
 
