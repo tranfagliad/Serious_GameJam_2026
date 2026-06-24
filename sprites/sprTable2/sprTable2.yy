@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Tables",
-    "path":"folders/Sprites/Level/Tables.yy",
+    "path":"folders/Sprites/Levels/LevelOne/Tables.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
