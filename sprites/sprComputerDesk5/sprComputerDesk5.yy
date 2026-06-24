@@ -1,28 +1,28 @@
 {
   "$GMSprite":"v2",
-  "%Name":"sprComputerDesk2",
+  "%Name":"sprComputerDesk5",
   "bboxMode":0,
   "bbox_bottom":69,
   "bbox_left":0,
-  "bbox_right":96,
-  "bbox_top":2,
+  "bbox_right":112,
+  "bbox_top":3,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"024005c4-f643-4a70-b626-9aca5ddfefb8","name":"024005c4-f643-4a70-b626-9aca5ddfefb8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"5bca7a58-9db6-4fa7-be72-9147cbb8e41c","name":"5bca7a58-9db6-4fa7-be72-9147cbb8e41c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2618617a-7c48-4bb4-913a-b39cb8223cce","name":"2618617a-7c48-4bb4-913a-b39cb8223cce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f60dbb14-284d-474b-9b31-87eb45c7e212","name":"f60dbb14-284d-474b-9b31-87eb45c7e212","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":70,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"9750c4f3-daf4-4e2b-bfa5-fa5c3c661edb","blendMode":0,"displayName":"default","isLocked":false,"name":"9750c4f3-daf4-4e2b-bfa5-fa5c3c661edb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c4af4b6b-c011-45d2-85e5-6aa7311a16a0","blendMode":0,"displayName":"default","isLocked":false,"name":"c4af4b6b-c011-45d2-85e5-6aa7311a16a0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sprComputerDesk2",
+  "name":"sprComputerDesk5",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -34,7 +34,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"sprComputerDesk2",
+    "%Name":"sprComputerDesk5",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -58,7 +58,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sprComputerDesk2",
+    "name":"sprComputerDesk5",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -70,11 +70,11 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"024005c4-f643-4a70-b626-9aca5ddfefb8","path":"sprites/sprComputerDesk2/sprComputerDesk2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5e38883f-65ca-4154-8340-c02109fe6dd1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2618617a-7c48-4bb4-913a-b39cb8223cce","path":"sprites/sprComputerDesk5/sprComputerDesk5.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"bd877ac9-ae5e-449c-9a1b-bff64adf3911","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5bca7a58-9db6-4fa7-be72-9147cbb8e41c","path":"sprites/sprComputerDesk2/sprComputerDesk2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8707a7bf-40f9-4061-98c8-53520b92912b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f60dbb14-284d-474b-9b31-87eb45c7e212","path":"sprites/sprComputerDesk5/sprComputerDesk5.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fdd1ede6-7571-4054-ae96-37b0cd0f8998","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -90,5 +90,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":97,
+  "width":113,
 }
