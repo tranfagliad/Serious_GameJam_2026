@@ -49,7 +49,7 @@ function DrawTornadoVisuals () {
 
     if (isSpinning && spinSpeed >= tornadoThreshold) {
 
-        draw_sprite_ext(sprPlaceholderTornado, image_index, x, y, 1, 1, image_angle, c_white, 1);
+        draw_sprite_ext(sprTornado, image_index, x, y, 1, 1, image_angle, c_white, 1);
     	
 		//ONLY DRAWING PAPER THIS WAY I THINK
 		
