@@ -11,11 +11,17 @@
 
 #macro CAMERA_PAN_SPEED 0.08
 
+// For the sake of collision map checking
+#macro PLAYER_WIDTH_COLLISION 70
+#macro PLAYER_HEIGHT_COLLISION 70
 
 // Might change later
-#macro PLAYER_WIDTH 64
-#macro PLAYER_HEIGHT 64
+#macro PLAYER_WIDTH 75
+#macro PLAYER_HEIGHT 75
+
 #macro PLAYER_CENTER (PLAYER_WIDTH / 2)
+
+#macro COLLISION_TILESIZE 5
 
 //dialogue data macros
 #macro DLG_SFX			"dlgSfx"

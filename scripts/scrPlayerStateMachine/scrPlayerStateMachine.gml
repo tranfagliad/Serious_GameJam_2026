@@ -102,11 +102,12 @@ function PlayerStateDefault(){
     
 		var _move_x = lengthdir_x(playerSpeed, _direction);
 		var _move_y = lengthdir_y(playerSpeed, _direction);
-	
+		
+		CheckPlayerCollisionMap(_move_x, _move_y);
 		// Check for collisions with tables
-		var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
-		x = _collision.collidedX ? x : x + _move_x;
-		y = _collision.collidedY ? y : y + _move_y;
+		//var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
+		//x = _collision.collidedX ? x : x + _move_x;
+		//y = _collision.collidedY ? y : y + _move_y;
 	}
 	
 	
@@ -163,9 +164,10 @@ function PlayerStateDash () {
 	var _move_x = lengthdir_x(dashSpeed, dashDirection);
 	var _move_y = lengthdir_y(dashSpeed, dashDirection);
 	
-	var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
-	x = _collision.collidedX ? x : x + _move_x;
-	y = _collision.collidedY ? y : y + _move_y;
+	CheckPlayerCollisionMap(_move_x, _move_y);
+	//var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
+	//x = _collision.collidedX ? x : x + _move_x;
+	//y = _collision.collidedY ? y : y + _move_y;
 	
 	// Clamp to room bounds
 	clampBounds();

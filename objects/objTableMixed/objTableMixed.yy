@@ -8,8 +8,8 @@
   "name":"objTableMixed",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tables",
-    "path":"folders/Objects/Tables.yy",
+    "name":"Placeholder",
+    "path":"folders/Objects/Tables/Placeholder.yy",
   },
   "parentObjectId":{
     "name":"objParentTable",

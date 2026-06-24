@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sprCollision",
   "bboxMode":0,
-  "bbox_bottom":31,
-  "bbox_left":32,
-  "bbox_right":63,
+  "bbox_bottom":4,
+  "bbox_left":5,
+  "bbox_right":9,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -14,9 +14,9 @@
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"def509ec-dae8-4250-a6f7-c36b66f24d96","name":"def509ec-dae8-4250-a6f7-c36b66f24d96","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
-  "height":64,
+  "gridX":5,
+  "gridY":5,
+  "height":10,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"1019235a-badd-4420-b900-8382649fa4cd","blendMode":0,"displayName":"default","isLocked":false,"name":"1019235a-badd-4420-b900-8382649fa4cd","opacity":50.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Level",
-    "path":"folders/Sprites/Level.yy",
+    "name":"Misc",
+    "path":"folders/Sprites/Misc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":10,
 }

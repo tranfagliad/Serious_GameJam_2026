@@ -6,7 +6,7 @@ followTarget = objPlayer;
 
 
 // If we don't like this we can get rid of it
-zoomFactor = 0.7;
+zoomFactor = 0.7;   // Bigger number = more zoomed out
 zoomWidth  = VIEWPORT_WIDTH * zoomFactor;
 zoomHeight = VIEWPORT_HEIGHT * zoomFactor;
 camera_set_view_size(view_camera[0], zoomWidth, zoomHeight);
