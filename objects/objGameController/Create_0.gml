@@ -64,3 +64,10 @@
 	};
 	
 #endregion
+
+
+// Wheel Spins
+wheelPhase = WheelSpinPhase.WAITING;
+wheelAngle = 0;
+wheelSpeed = 0;
+wheelFriction = 0.15;
