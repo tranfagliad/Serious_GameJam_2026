@@ -53,23 +53,40 @@ if global.gamePaused {
 
 if (global.gameState == GameStateLevelComplete) {
 	
-	// Standardize fonts and center points
-	draw_set_font(fntConsol);
-	draw_set_valign(fa_middle);
+	draw_set_alpha(0.7);
+	draw_rectangle_colour(0, 0, VIEWPORT_WIDTH, VIEWPORT_HEIGHT, c_black, c_black, c_black, c_black, false);
+	draw_set_alpha(1.0);
+	
+	var _cx = VIEWPORT_WIDTH / 2;
+	var _cy = VIEWPORT_HEIGHT / 2 - 20;
+	
+	draw_sprite_ext(sprUpgradeWheel, 0, _cx, _cy, 1.0, 1.0, wheelAngle, c_white, 1.0);
+	draw_sprite(sprWheelPointer, 0, _cx, _cy - 256);
+	
+	draw_set_font(fntConsolBig);
+	draw_set_valign(fa_top);
 	draw_set_halign(fa_center);
 	
-	var _x = VIEWPORT_WIDTH / 2;
-	var _y = VIEWPORT_HEIGHT / 2;
+	var _text_y = _cy + 276;
+	var _inst_text = "";
+	var _text_color = c_yellow;
 	
-	// 1. Draw a translucent horizontal cinematic backdrop band
-	draw_set_alpha(0.65);
-	draw_rectangle_colour(0, _y - 45, VIEWPORT_WIDTH, _y + 45, c_black, c_black, c_black, c_black, false);
-	draw_set_alpha(1.0); // Reset alpha
+	switch (wheelPhase) {
+		case 0:
+			_inst_text = "PRESS [SPACE] TO SPIN THE UPGRADE WHEEL!";
+			_text_color = c_yellow;
+			break;
+		case 1:
+			_inst_text = "SPINNING...";
+			_text_color = c_orange;
+			break;
+		case 2:
+			_inst_text = "SPIN COMPLETE! PRESS [SPACE] TO UPGRADE & PROCEED!";
+			_text_color = c_lime;
+			break;
+	}
 	
-	// 2. Draw Drop Shadow Text
-	draw_text_transformed_colour(_x + 2, _y + 2, "LEVEL COMPLETE", 2.5, 2.5, 0, c_black, c_black, c_black, c_black, 1);
-	
-	// 3. Draw Main Core Heading Text
-	draw_text_transformed_colour(_x, _y, "LEVEL COMPLETE", 2.5, 2.5, 0, c_lime, c_lime, c_lime, c_lime, 1);
+	// Draw dropping shadow text behind main text loop
+	draw_text_colour(_cx + 2, _text_y + 2, _inst_text, c_black, c_black, c_black, c_black, 1.0);
+	draw_text_colour(_cx, _text_y, _inst_text, _text_color, _text_color, _text_color, _text_color, 1.0);
 }
-
