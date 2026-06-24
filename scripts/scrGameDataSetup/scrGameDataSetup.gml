@@ -38,9 +38,27 @@ function DataCreateDialogue(){
 	#region	intro cutscene
 			
 		//test
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 0,	"MC",	"This is the intro dialogue",								_cDef,	noone,	1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 0,	"MC",	"This is the intro dialogue", _cDef,	noone,	1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 1,	"MC",	"In this office, you either spin or get spinned on...",	_cDef,	noone,	1);
 		
+	#endregion
+	
+	#region   // Level Two
+	
+		DataDialogueSet(_data, DLG_SEQ_LVL_TWO, 0,	"MC",	"This is Level 2... Whatever that means", _cDef,	noone,	1);
+	
+	#endregion
+	
+	#region   // Level Three
+	
+		DataDialogueSet(_data, DLG_SEQ_LVL_THREE, 0,	"MC",	"Level 3, I'm almost there", _cDef,	noone,	1);
+	
+	#endregion
+	
+	#region
+	
+		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 0,	"MC",	"Finally... Boss floor", _cDef,	noone,	1);
+	
 	#endregion
 	
 	//return structure of datasets

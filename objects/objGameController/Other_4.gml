@@ -8,6 +8,25 @@ switch room {
 		
 	} break;
 	
+	case rmLevelTwo: {
+		
+		DialogueStart(DLG_SEQ_LVL_TWO, GameStateDefault);
+		
+	} break;
+	
+	
+	case rmLevelThree: {
+		
+		DialogueStart(DLG_SEQ_LVL_THREE, GameStateDefault);
+		
+	} break;
+	
+	case rmBossLevel: {
+		
+		DialogueStart(DLG_SEQ_LVL_BOSS, GameStateDefault);
+		
+	} break;
+	
 	//add outro later
 	
 }
