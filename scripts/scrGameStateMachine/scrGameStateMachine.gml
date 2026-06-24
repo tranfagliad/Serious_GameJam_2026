@@ -11,7 +11,7 @@ function GameStateDefault(){
 		var _enemyType = choose(objEnemyDefault, objEnemyDefault);
 		
 		// choose the random sprite
-		var _spr = choose(sprEnemy1M, sprEnemy1F, sprEnemy2M);
+		var _spr = choose(sprEnemy1M, sprEnemy1F, sprEnemy2M, sprEnemy2F, sprEnemy3M, sprEnemy3F);
 		
 		// Get enemy size based on the chosen sprite
 		var _w = sprite_get_width(_spr);
