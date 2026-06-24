@@ -44,16 +44,21 @@ function GameStateDefault(){
 			
 			case rmLevelOne: {
 				TransitionStart(rmLevelTwo, sqFadeOut, sqFadeIn, global.playerPosLevel2[0], global.playerPosLevel2[1], GameStateDefault);
-				
 				//clear enemy spawn points so the new room can repopulate its own
 				global.enemySpawnPoints = [];
 			} break;
 			
 			case rmLevelTwo: {
-				TransitionStart(rmBossLevel, sqFadeOut, sqFadeIn, global.playerPosBossLevel[0], global.playerPosBossLevel[1], GameStateDefault);
-				
+				TransitionStart(rmLevelThree, sqFadeOut, sqFadeIn, global.playerPosLevel3[0], global.playerPosLevel3[1], GameStateDefault);
 				global.enemySpawnPoints = [];
 			} break;
+			
+			case rmLevelThree: {
+				TransitionStart(rmBossLevel, sqFadeOut, sqFadeIn, global.playerPosBossLevel[0], global.playerPosBossLevel[1], GameStateDefault);
+				global.enemySpawnPoints = [];
+			} break;
+			
+			// BOSS ROOM TRANSITION
 		}
 	}
 	

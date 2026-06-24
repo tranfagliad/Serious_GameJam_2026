@@ -26,7 +26,7 @@
 	global.playerPosLevel1 = [512, 256];
 	global.playerPosLevel2 = [512, 256];
 	global.playerPosLevel3 = [352, 224];
-	global.playerPosBossLevel = [ 400, 400 ];  // idk right now
+	global.playerPosBossLevel = [512, 256];
 	
 	global.playerHp = 5;	//used for keeping track between transitions
 	
