@@ -72,15 +72,25 @@ if (global.gameState == GameStateLevelComplete) {
 	var _text_color = c_yellow;
 	
 	switch (wheelPhase) {
-		case 0:
+		case WheelSpinPhase.WAITING:
 			_inst_text = "PRESS [SPACE] TO SPIN THE UPGRADE WHEEL!";
 			_text_color = c_yellow;
 			break;
-		case 1:
+		case WheelSpinPhase.SPINNING:
 			_inst_text = "SPINNING...";
 			_text_color = c_orange;
 			break;
-		case 2:
+		case WheelSpinPhase.SPIN_COMPLETE:
+			if (wheelAngle >= THIRD_QUADRANT && wheelAngle < FOURTH_QUADRANT) {
+				show_debug_message("FIRST");
+			} else if (wheelAngle >= SECOND_QUADRANT && wheelAngle < THIRD_QUADRANT) {
+				show_debug_message("SECOND");
+			} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
+				_quadrant_text = "THIRD";
+			} else {
+				_quadrant_text = "FOURTH";
+			}
+		
 			_inst_text = "SPIN COMPLETE! PRESS [SPACE] TO UPGRADE & PROCEED!";
 			_text_color = c_lime;
 			break;

@@ -39,4 +39,8 @@
 #macro DLG_SEQ_LVL_THREE  "dlgSeqLvlThree"
 #macro DLG_SEQ_LVL_BOSS   "dlgSeqLvlBoss"
 
-
+// Wheel stuff
+#macro FIRST_QUADRANT 90
+#macro SECOND_QUADRANT 180
+#macro THIRD_QUADRANT 270
+#macro FOURTH_QUADRANT 360
