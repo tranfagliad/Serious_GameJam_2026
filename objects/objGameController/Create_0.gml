@@ -45,7 +45,7 @@
 	global.enemySpawnPoints = [];
 	
 	global.enemyDefeated = 0;
-	global.enemyDefeatedReq = 2;
+	global.enemyDefeatedReq = 10;
 	
 #endregion
 
