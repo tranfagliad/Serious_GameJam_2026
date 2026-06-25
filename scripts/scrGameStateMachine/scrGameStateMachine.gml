@@ -74,15 +74,12 @@ function GameStateDialogue(){
 
 
 
-
-
 function GameStateTransition(){
 	
 	//check when transition is over, then move from this state
 	if !global.midTransition global.gameState = global.gameStateTarget;
 		
 }
-
 
 
 
@@ -134,6 +131,61 @@ function GameStateLevelComplete(){
 					}
 					
 					global.enemySpawnPoints = [];
+				}
+				break;
+		}
+	}
+}
+
+
+
+
+function GameStatePlayerDeath() {
+	global.gamePaused = true;
+	
+	with (objGameController) {
+		
+		switch (wheelPhase) {
+			
+			case WheelSpinPhase.WAITING:
+				if (objInputManager.pressed.space) {
+					wheelSpeed = random_range(25, 40);
+					wheelPhase = WheelSpinPhase.SPINNING;
+				}
+				break;
+				
+			case WheelSpinPhase.SPINNING:
+				wheelAngle += wheelSpeed;
+				wheelSpeed = Approach(wheelSpeed, 0, wheelFriction);
+				
+				if (wheelAngle >= FOURTH_QUADRANT) wheelAngle -= FOURTH_QUADRANT;
+				
+				if (wheelSpeed <= 0) {
+					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
+				}
+				break;
+				
+			case WheelSpinPhase.SPIN_COMPLETE:
+				if (objInputManager.pressed.space) {
+					if (wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
+						global.gamePaused = false;
+						
+						with (objPlayer) {
+							currentHp = 2;   // Revive with 2 HP (?)
+							image_blend = c_white;
+							image_speed = 1;
+						}
+						
+						with (objEnemyParent) {
+							image_speed = 1;
+						}
+						
+						global.gameState = GameStateDefault;
+						
+					} else { // TODO: Game Over... go back to main menu when the player presses SPACE
+						global.gamePaused = false;
+						GameLose();
+					}
 				}
 				break;
 		}

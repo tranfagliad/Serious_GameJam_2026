@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrWheelMechanics",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrWheelMechanics",
+  "parent":{
+    "name":"Wheels",
+    "path":"folders/Scripts/Wheels.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

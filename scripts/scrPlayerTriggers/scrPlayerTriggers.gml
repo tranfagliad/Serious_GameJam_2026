@@ -1,8 +1,12 @@
 function PlayerHit(_damage){
 	
-	//hp reduction
+	// hp reduction
 	currentHp -= _damage;
-	if currentHp <= 0 GameLose();
+	
+	// Player Death
+	if (currentHp <= 0) {
+		PlayerDeath();
+	}
 	
 	//invulnerability
 	invulCd = invulCdMax;
@@ -10,8 +14,45 @@ function PlayerHit(_damage){
 	
 	//screen shake
 	ScreenShakeStart(60, 6);
-	
 }
+
+
+
+function PlayerDeath () {
+
+	currentHp = 0;   // Prevent HP from becoming negative
+		
+	with (objGameController) {
+		wheelPhase = 0;
+		wheelAngle = irandom(359);
+		wheelSpeed = 0;
+	}
+	with (objPlayer) {
+		playerStatePrev = playerState;
+		image_speed = 0;
+	}
+	with (objEnemyParent) {
+		enemyStatePrev = enemyState;
+		image_speed = 0;
+	}
+		
+	// Empty Inventory on death (?)
+	global.inventory = {
+		papers: 0,
+		computers: 0,
+		staplers: 0
+	};
+	global.inventoryVisuals = {
+		papers: [],
+		computers: [],
+		staplers: []
+	};
+		
+	global.gameState = GameStatePlayerDeath;
+}
+
+
+
 
 function PlayerStatsSaveUp(){
 	with objPlayer {
@@ -23,6 +64,9 @@ function PlayerStatsSaveUp(){
 		
 	}
 }
+
+
+
 
 function PlayerStatsLoadUp(){
 	with objPlayer {
