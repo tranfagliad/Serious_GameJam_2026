@@ -2,8 +2,11 @@ function EnemyDeath(){
 	
 	damageActive = false;
 	explodeCd = 60;
-	enemyState = EnemyStateExplode;
 	sprite_index = sprPlaceholderExplosion;
+	enemyState = EnemyStateExplode;
+	
+	//check for boss
+	if object_index == objEnemyBoss DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
 	
 }
 

@@ -16,23 +16,34 @@ function GameStateDefault(){
 	}
 	
 	// --- LEVEL COMPLETE TRIGGER ---
-	if (global.enemyDefeated >= global.enemyDefeatedReq) {
-		if (room == rmLevelOne || room == rmLevelTwo || room == rmLevelThree) {
-			global.enemyDefeated = 0;
+	switch room {
+		//normal levels
+		default: {
+			if (global.enemyDefeated >= global.enemyDefeatedReq) {
+				global.enemyDefeated = 0;
 			
-			// Initialize our upgrade wheel phase and variables inside objGameController
-			with (objGameController) {
-				wheelPhase = 0;
-				wheelAngle = irandom(359); // Start at a random resting position
-				wheelSpeed = 0;
+				// Initialize our upgrade wheel phase and variables inside objGameController
+				with (objGameController) {
+					wheelPhase = 0;
+					wheelAngle = irandom(359); // Start at a random resting position
+					wheelSpeed = 0;
+				}
+			
+				// Lock down player and enemy state buffers
+				with objPlayer playerStatePrev = playerState;
+				with objEnemyParent enemyStatePrev = enemyState;
+				
+				//move to wheel
+				global.gameState = GameStateLevelComplete;
 			}
-			
-			// Lock down player and enemy state buffers
-			with objPlayer playerStatePrev = playerState;
-			with objEnemyParent enemyStatePrev = enemyState;
-			
-			global.gameState = GameStateLevelComplete;
-		}
+		} break;
+		
+		//this actually should trigger during boss death animation (within enemy death trigger)
+		//but here is a precaution
+		case rmBossLevel: {
+			if !instance_exists(objEnemyBoss) DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+		} break;
+		
 	}
 }
 
@@ -82,6 +93,12 @@ function GameStateTransition(){
 }
 
 
+function GameStateCredits(){
+	
+	//maybe
+	
+}
+
 
 
 function GameStateLevelComplete(){
@@ -130,7 +147,6 @@ function GameStateLevelComplete(){
 							break;
 					}
 					
-					global.enemySpawnPoints = [];
 				}
 				break;
 		}

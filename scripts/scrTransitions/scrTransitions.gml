@@ -54,9 +54,6 @@ function TransitionStart(_targetRoom, _typeOut, _typeIn, _playerX, _playerY, _st
 		//update player stats
 		PlayerStatsSaveUp();
 		
-		//clear enemy spawn points
-		global.enemySpawnPoints = [];
-		
 		
 		//set state
 		global.gameStateTarget = _stateTarget;
