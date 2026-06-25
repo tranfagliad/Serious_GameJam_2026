@@ -10,6 +10,7 @@ if objInputManager.pressed.escape {
 	if (!global.midTransition && !_exception) {
 		
 		if !global.gamePaused PauseActivate(); else PauseDeactivate();
+		SoundPlay(sfxUIClick);
 		
 	}
 	

@@ -1,5 +1,5 @@
 //quick dialogue creation in a single line
-function DataDialogueSet(_struct, _seq, _num, _name = "", _text = "", _color = c_white, _sfx = noone, _portraitNum = -1, _speed = 0.7, _alpha = 1){
+function DataDialogueSet(_struct, _seq, _num, _name = "", _text = "", _color = c_white, _portraitNum = -1, _sfx = sfxText, _speed = 0.7, _alpha = 1){
 	
 	//initiate sequence data
 	if !struct_exists(_struct, _seq) {
@@ -30,34 +30,34 @@ function DataCreateDialogue(){
 	#region	test
 			
 		//test
-		DataDialogueSet(_data, DLG_SEQ_TEST, 0,	"Name",	"Short Text", _cDef,	noone,	0);
-		DataDialogueSet(_data, DLG_SEQ_TEST, 1,	"Loooooong Assssssssssss Name",	"Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text", _cDef,	noone,	0);
+		DataDialogueSet(_data, DLG_SEQ_TEST, 0,	"Name",	"Short Text", _cDef,	0);
+		DataDialogueSet(_data, DLG_SEQ_TEST, 1,	"Loooooong Assssssssssss Name",	"Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text Very very long Text", _cDef,	0);
 		
 	#endregion
 	
 	#region	intro cutscene
 			
 		//test
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 0,	"MC",	"This is the intro dialogue", _cDef,	noone,	1);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 1,	"MC",	"In this office, you either spin or get spinned on...",	_cDef,	noone,	1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 0,	"MC",	"This is the intro dialogue", _cDef,	1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 1,	"MC",	"In this office, you either spin or get spinned on...",	_cDef,	1);
 		
 	#endregion
 	
 	#region   // Level Two
 	
-		DataDialogueSet(_data, DLG_SEQ_LVL_TWO, 0,	"MC",	"This is Level 2... Whatever that means", _cDef,	noone,	1);
+		DataDialogueSet(_data, DLG_SEQ_LVL_TWO, 0,	"MC",	"This is Level 2... Whatever that means", _cDef,	1);
 	
 	#endregion
 	
 	#region   // Level Three
 	
-		DataDialogueSet(_data, DLG_SEQ_LVL_THREE, 0,	"MC",	"Level 3, I'm almost there", _cDef,	noone,	1);
+		DataDialogueSet(_data, DLG_SEQ_LVL_THREE, 0,	"MC",	"Level 3, I'm almost there", _cDef,	1);
 	
 	#endregion
 	
 	#region
 	
-		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 0,	"MC",	"Finally... Boss floor", _cDef,	noone,	1);
+		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 0,	"MC",	"Finally... Boss floor", _cDef,	1);
 	
 	#endregion
 	

@@ -12,7 +12,8 @@ function TextboxStateDialogue(){
 	
 	//dialogue sfx
 	if audio_exists(textSfx) && !audio_is_playing(textSfx) && (textProgress < textLength) {
-		SoundPlay(textSfx);
+		var _sfx = SoundPlay(textSfx);
+		audio_sound_pitch(_sfx, random_range(0.8,1.2));
 	}
 	
 	//check player input
@@ -26,6 +27,9 @@ function TextboxStateDialogue(){
 		
 			//progress dialogue
 			DialogueProgress();
+			
+			//play sfx (MAYBE CHANGE TO UI CLICK INSTEAD?)
+			SoundPlay(sfxTextBlip);
 					
 		} else {
 		

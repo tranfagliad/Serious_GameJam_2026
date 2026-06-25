@@ -43,7 +43,7 @@ function DialogueSet(_sequence){
 	
 	//reset everything
 	textCol = c_white;
-	textSfx = noone;
+	textSfx = sfxText;
 	textAlpha = 1;
 	textSpeed = 1;
 	textMessage = "";
@@ -83,7 +83,7 @@ function DialogueProgress(){
 				
 			//get line color, alpha, speed, and text length
 			textCol = _sqData[$ string_concat(dlgSq, string(dlgSqPos))][$ DLG_COLOR]	?? c_white;
-			textSfx = _sqData[$ string_concat(dlgSq, string(dlgSqPos))][$ DLG_SFX]		?? noone;
+			textSfx = _sqData[$ string_concat(dlgSq, string(dlgSqPos))][$ DLG_SFX]		?? sfxText;
 			textAlpha = _sqData[$ string_concat(dlgSq, string(dlgSqPos))][$ DLG_ALPHA]	?? 1;
 			textSpeed = _sqData[$ string_concat(dlgSq, string(dlgSqPos))][$ DLG_SPEED]	?? 1;
 			textLength = string_length(textMessage);
