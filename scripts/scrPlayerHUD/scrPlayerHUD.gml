@@ -48,3 +48,23 @@ function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd) {
 	
 	draw_sprite_ext(sprSpinMeter, _frame, 20, VIEWPORT_HEIGHT-10, 2, 2, 0, c_white, 1);
 }
+
+
+function DrawEnemyDefeatReq(_current, _req){
+	
+	var _x1 = 720, _x2 = VIEWPORT_WIDTH - 96, _y1 = VIEWPORT_HEIGHT - 48 - 48, _y2 = VIEWPORT_HEIGHT - 48;
+	var _percent = _current/_req*100;
+	
+	var _col = c_white;
+	var _borderSize = 8;
+	draw_rectangle_colour(_x1-_borderSize, _y1-_borderSize, _x2+_borderSize, _y2+_borderSize, _col,_col,_col,_col, false);
+	draw_healthbar(_x1,_y1,_x2,_y2, _percent, c_dkgray, c_orange, c_orange, 0, true, false);
+	
+	draw_set_font(fntConsolHUD);
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+	var _x = _x1 + (_x2 - _x1)/2;
+	var _y = _y1 + (_y2 - _y1)/2;
+	draw_text(_x,_y, "ENEMIES DEFEATED");
+	
+}

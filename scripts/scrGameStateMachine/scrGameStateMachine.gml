@@ -3,7 +3,7 @@ function GameStateDefault(){
 	// countdown enemy spawn cooldown
 	global.enemySpawnCd = Approach(global.enemySpawnCd, 0, 1);
 	if global.enemySpawnCd <= 0 {
-		global.enemySpawnCd = global.enemySpawnCdMax;
+		global.enemySpawnCd = global.enemySpawnCdMaxCurrent;
 		var _enemyType = choose(objEnemyDefault, objEnemyDash, objEnemyTrap);
 		var _spawn_count = instance_number(objEnemySpawn);
 		if (_spawn_count > 0) {
@@ -19,7 +19,7 @@ function GameStateDefault(){
 	switch room {
 		//normal levels
 		default: {
-			if (global.enemyDefeated >= global.enemyDefeatedReq) {
+			if (global.enemyDefeated >= global.enemyDefeatedReqCurrent) {
 				global.enemyDefeated = 0;
 			
 				// Initialize our upgrade wheel phase and variables inside objGameController
@@ -48,21 +48,11 @@ function GameStateDefault(){
 }
 
 
-
-
-
-
-
-
-
 function GameStatePaused(){
 	
 	
 	
 }
-
-
-
 
 
 function GameStateDialogue(){
@@ -82,9 +72,6 @@ function GameStateDialogue(){
 }
 
 
-
-
-
 function GameStateTransition(){
 	
 	//check when transition is over, then move from this state
@@ -98,7 +85,6 @@ function GameStateCredits(){
 	//maybe
 	
 }
-
 
 
 function GameStateLevelComplete(){
@@ -154,8 +140,6 @@ function GameStateLevelComplete(){
 }
 
 
-
-
 function GameStatePlayerDeath() {
 	global.gamePaused = true;
 	
@@ -188,11 +172,14 @@ function GameStatePlayerDeath() {
 						
 						with (objPlayer) {
 							currentHp = 2;   // Revive with 2 HP (?)
+							playerState = playerStatePrev;
+							sprite_index = sprPlayer;
 							image_blend = c_white;
 							image_speed = 1;
 						}
 						
 						with (objEnemyParent) {
+							enemyState = enemyStatePrev;
 							image_speed = 1;
 						}
 						

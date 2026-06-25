@@ -27,7 +27,7 @@
 			instance_destroy();
 		
 			//increase enemy defeated count
-			global.enemyDefeated = Approach(global.enemyDefeated, global.enemyDefeatedReq, 1);
+			global.enemyDefeated = Approach(global.enemyDefeated, global.enemyDefeatedReqCurrent, 1);
 		}
 	
 	}

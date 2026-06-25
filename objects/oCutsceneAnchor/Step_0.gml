@@ -9,7 +9,7 @@ if !global.gamePaused && !global.midTransition {
 	
 		with objCamera {
 			followTarget = other.id;
-			zoomFactor = Approach(zoomFactor, 1, 0.01);
+			zoomFactor = Approach(zoomFactor, other.zoomFactor, 0.01);
 			zoomFactor = clamp(zoomFactor, zoomFactorMin, zoomFactorMax);
 		}
 	

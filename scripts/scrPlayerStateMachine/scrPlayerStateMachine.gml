@@ -220,6 +220,17 @@ function PlayerStateLocked(){
 	
 }
 
+
+function PlayerStateExplode(){
+	
+	//create the variable if not set yet
+	if !variable_instance_exists(id, "explodeCd") explodeCd = 60;
+	
+	explodeCd = Approach(explodeCd, 0, 1);
+	if explodeCd <= 0 PlayerDeath();
+	
+}
+
 function clampBounds () {
 	x = clamp(x, PLAYER_CENTER-5, room_width - PLAYER_CENTER+5);
 	y = clamp(y, PLAYER_CENTER-40, room_height - PLAYER_CENTER);

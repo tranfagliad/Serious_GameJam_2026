@@ -3,9 +3,14 @@ function PlayerHit(_damage){
 	// hp reduction
 	currentHp -= _damage;
 	
-	// Player Death
+	// Player Death Animation
 	if (currentHp <= 0) {
-		PlayerDeath();
+		
+		explodeCd = 30;
+		sprite_index = sprPlaceholderExplosion;
+		playerStatePrev = playerState;
+		playerState = PlayerStateExplode;
+		
 	}
 	
 	//invulnerability
@@ -64,10 +69,12 @@ function PlayerDeath () {
 	}
 	with (objPlayer) {
 		playerStatePrev = playerState;
+		playerState = PlayerStateLocked;
 		image_speed = 0;
 	}
 	with (objEnemyParent) {
 		enemyStatePrev = enemyState;
+		enemyState = EnemyStateLocked;
 		image_speed = 0;
 	}
 		
