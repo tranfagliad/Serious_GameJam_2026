@@ -52,56 +52,9 @@ if global.gamePaused {
 
 
 if (global.gameState == GameStateLevelComplete) {
-	
-	draw_set_alpha(0.7);
-	draw_rectangle_colour(0, 0, VIEWPORT_WIDTH, VIEWPORT_HEIGHT, c_black, c_black, c_black, c_black, false);
-	draw_set_alpha(1.0);
-	
-	var _cx = VIEWPORT_WIDTH / 2;
-	var _cy = VIEWPORT_HEIGHT / 2 - 20;
-	
-	draw_sprite_ext(sprUpgradeWheel, 0, _cx, _cy, 1.0, 1.0, wheelAngle, c_white, 1.0);
-	draw_sprite(sprWheelPointer, 0, _cx, _cy - 200);
-	
-	draw_set_font(fntConsolBig);
-	draw_set_valign(fa_top);
-	draw_set_halign(fa_center);
-	
-	var _text_y = _cy + 276;
-	var _inst_text = "";
-	var _text_color = c_yellow;
-	
-	switch (wheelPhase) {
-		case WheelSpinPhase.WAITING:
-			_inst_text = "PRESS [SPACE] TO SPIN THE UPGRADE WHEEL!";
-			_text_color = c_yellow;
-			break;
-		case WheelSpinPhase.SPINNING:
-			_inst_text = "SPINNING...";
-			_text_color = c_orange;
-			break;
-		case WheelSpinPhase.SPIN_COMPLETE:
-			if (wheelAngle >= THIRD_QUADRANT && wheelAngle < FOURTH_QUADRANT) {
-				_inst_text = "Health Restored!";
-				// Powerup
-			} else if (wheelAngle >= SECOND_QUADRANT && wheelAngle < THIRD_QUADRANT) {
-				_inst_text = "Additional Health Slot!";
-				// Powerup
-			} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
-				_inst_text = "Increased Dash Distance!";
-				
-				// Powerup
-			} else {
-				_inst_text = "Increased Movement Speed!"
-				// Powerup
-			}
-		
-			_inst_text += " Press [SPACE] to proceed.";
-			_text_color = c_lime;
-			break;
-	}
-	
-	// Draw dropping shadow text behind main text loop
-	draw_text_colour(_cx + 2, _text_y + 22, _inst_text, c_black, c_black, c_black, c_black, 1.0);
-	draw_text_colour(_cx, _text_y+20, _inst_text, _text_color, _text_color, _text_color, _text_color, 1.0);
+	SpinPowerUpWheel();
+}
+
+if (global.gameState == GameStatePlayerDeath) {
+	SpinRevivalWheel();
 }
