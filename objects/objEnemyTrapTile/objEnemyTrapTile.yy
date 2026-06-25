@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprPlaceholderTrapTile",
-    "path":"sprites/sprPlaceholderTrapTile/sprPlaceholderTrapTile.yy",
+    "name":"sprTileTile",
+    "path":"sprites/sprTileTile/sprTileTile.yy",
   },
   "spriteMaskId":null,
   "visible":true,
