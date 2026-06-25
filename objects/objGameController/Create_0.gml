@@ -28,7 +28,9 @@
 	global.playerPosLevel3 = [352, 224];
 	global.playerPosBossLevel = [512, 256];
 	
-	global.playerHp = 5;	//used for keeping track between transitions
+	// used for keeping track between transitions
+	global.playerHp = 3;	
+	global.playerSpeed = 4;
 	
 #endregion
 

@@ -82,21 +82,26 @@ if (global.gameState == GameStateLevelComplete) {
 			break;
 		case WheelSpinPhase.SPIN_COMPLETE:
 			if (wheelAngle >= THIRD_QUADRANT && wheelAngle < FOURTH_QUADRANT) {
-				show_debug_message("FIRST");
+				_inst_text = "Health Restored!";
+				// Powerup
 			} else if (wheelAngle >= SECOND_QUADRANT && wheelAngle < THIRD_QUADRANT) {
-				show_debug_message("SECOND");
+				_inst_text = "Additional Health Slot!";
+				// Powerup
 			} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
-				_quadrant_text = "THIRD";
+				_inst_text = "Increased Dash Distance!";
+				
+				// Powerup
 			} else {
-				_quadrant_text = "FOURTH";
+				_inst_text = "Increased Movement Speed!"
+				// Powerup
 			}
 		
-			_inst_text = "SPIN COMPLETE! PRESS [SPACE] TO UPGRADE & PROCEED!";
+			_inst_text += " Press [SPACE] to proceed.";
 			_text_color = c_lime;
 			break;
 	}
 	
 	// Draw dropping shadow text behind main text loop
-	draw_text_colour(_cx + 2, _text_y + 2, _inst_text, c_black, c_black, c_black, c_black, 1.0);
-	draw_text_colour(_cx, _text_y, _inst_text, _text_color, _text_color, _text_color, _text_color, 1.0);
+	draw_text_colour(_cx + 2, _text_y + 12, _inst_text, c_black, c_black, c_black, c_black, 1.0);
+	draw_text_colour(_cx, _text_y+10, _inst_text, _text_color, _text_color, _text_color, _text_color, 1.0);
 }
