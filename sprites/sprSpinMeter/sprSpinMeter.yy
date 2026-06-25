@@ -25,7 +25,8 @@
   "height":53,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"c455facf-d6e9-4f86-9bca-5476ae0a41e2","blendMode":0,"displayName":"default","isLocked":false,"name":"c455facf-d6e9-4f86-9bca-5476ae0a41e2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"aab910da-585e-4845-8c26-f45f811d5348","blendMode":0,"displayName":"default (2)","isLocked":false,"name":"aab910da-585e-4845-8c26-f45f811d5348","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c455facf-d6e9-4f86-9bca-5476ae0a41e2","blendMode":0,"displayName":"default","isLocked":false,"name":"c455facf-d6e9-4f86-9bca-5476ae0a41e2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"sprSpinMeter",
   "nineSlice":null,

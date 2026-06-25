@@ -30,7 +30,7 @@ function DrawInventory (_inventory) {
 }
 
 
-function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd) {
+function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd, _dashCdMax) {
 	
 	var _percentage = (_spin_speed / _max_spin_speed);
 	var _frame = 0;
@@ -45,6 +45,18 @@ function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd) {
 		// We are at 100% spin speed! Check if dash is ready or cooling down
 		_frame = (_dashCd > 0) ? 6 : 5;
 	}
+	
+	//setup sprite position and scale
+	var _x = 20, _y = VIEWPORT_HEIGHT-10, _scale = 2;
+	//setup dash percentage position
+	var _x1 = _x + 150*_scale;
+	var _x2 = _x + 205*_scale;
+	var _y1 = _y - 46*_scale;
+	var _y2 = _y - 13*_scale;
+	
+	var _percent = (1 - _dashCd/_dashCdMax)*100;
+	var _col = #7CC237;
+	draw_healthbar(_x1,_y1,_x2,_y2, _percent, c_white, _col, _col, 3, true, false);
 	
 	draw_sprite_ext(sprSpinMeter, _frame, 20, VIEWPORT_HEIGHT-10, 2, 2, 0, c_white, 1);
 }
