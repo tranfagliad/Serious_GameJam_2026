@@ -167,8 +167,25 @@ function GameStatePlayerDeath() {
 				
 			case WheelSpinPhase.SPIN_COMPLETE:
 				if (objInputManager.pressed.space) {
-					global.gamePaused = false;
-					// TODO: Make a decision
+					if (wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
+						global.gamePaused = false;
+						
+						with (objPlayer) {
+							currentHp = 2;   // Revive with 2 HP (?)
+							image_blend = c_white;
+							image_speed = 1;
+						}
+						
+						with (objEnemyParent) {
+							image_speed = 1;
+						}
+						
+						global.gameState = GameStateDefault;
+						
+					} else { // TODO: Game Over... go back to main menu when the player presses SPACE
+						global.gamePaused = false;
+						GameLose();
+					}
 				}
 				break;
 		}

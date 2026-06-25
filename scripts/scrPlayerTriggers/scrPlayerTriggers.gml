@@ -5,35 +5,7 @@ function PlayerHit(_damage){
 	
 	// Player Death
 	if (currentHp <= 0) {
-		currentHp = 0;   // Prevent HP from becoming negative
-		
-		with (objGameController) {
-			wheelPhase = 0;
-			wheelAngle = irandom(359);
-			wheelSpeed = 0;
-		}
-		with (objPlayer) {
-			playerStatePrev = playerState;
-			image_speed = 0;
-		}
-		with (objEnemyParent) {
-			enemyStatePrev = enemyState;
-			image_speed = 0;
-		}
-		
-		// Empty Inventory on death (?)
-		global.inventory = {
-			papers: 0,
-			computers: 0,
-			staplers: 0
-		};
-		global.inventoryVisuals = {
-			papers: [],
-			computers: [],
-			staplers: []
-		};
-		
-		global.gameState = GameStatePlayerDeath;
+		PlayerDeath();
 	}
 	
 	//invulnerability
@@ -45,6 +17,39 @@ function PlayerHit(_damage){
 }
 
 
+
+function PlayerDeath () {
+
+	currentHp = 0;   // Prevent HP from becoming negative
+		
+	with (objGameController) {
+		wheelPhase = 0;
+		wheelAngle = irandom(359);
+		wheelSpeed = 0;
+	}
+	with (objPlayer) {
+		playerStatePrev = playerState;
+		image_speed = 0;
+	}
+	with (objEnemyParent) {
+		enemyStatePrev = enemyState;
+		image_speed = 0;
+	}
+		
+	// Empty Inventory on death (?)
+	global.inventory = {
+		papers: 0,
+		computers: 0,
+		staplers: 0
+	};
+	global.inventoryVisuals = {
+		papers: [],
+		computers: [],
+		staplers: []
+	};
+		
+	global.gameState = GameStatePlayerDeath;
+}
 
 
 
