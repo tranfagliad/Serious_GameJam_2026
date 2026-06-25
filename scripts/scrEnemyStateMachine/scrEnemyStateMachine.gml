@@ -233,7 +233,7 @@
 	
 		//quit if player is gone
 		if !instance_exists(objPlayer) exit;
-	
+		
 		//get player position
 		var _x = 0, _y = 0;
 		with objPlayer {
@@ -241,8 +241,25 @@
 			_y = y;
 		}
 		
-		//movement
-		EnemyMoveTo(_x,_y);
+		//setup direction
+		var _dir = point_direction(x,y, _x,_y);
+		_dir += moveShiftDirection;
+		
+		//apply movement
+		var _hsp = lengthdir_x(moveSpeed, _dir);
+		var _vsp = lengthdir_y(moveSpeed, _dir);
+		x += _hsp;
+		y += _vsp;
+		
+		//change zig zag direction
+		moveShiftCd = Approach(moveShiftCd, 0, 1);
+		if moveShiftCd <= 0 {
+			
+			//zig zag shift
+			moveShiftDirection = -moveShiftDirection;
+			moveShiftCd = moveShiftCdMax;
+			
+		}
 		
 		
 		//check distance
@@ -296,6 +313,7 @@
 			}
 			
 			//repeat
+			image_speed = 1;
 			enemyState = EnemyStateBossLocate;
 			throwCd = throwCdMax;
 		
