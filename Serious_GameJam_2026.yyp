@@ -103,6 +103,7 @@
     {"id":{"name":"objTextboxFollower","path":"objects/objTextboxFollower/objTextboxFollower.yy",},},
     {"id":{"name":"objTextboxName","path":"objects/objTextboxName/objTextboxName.yy",},},
     {"id":{"name":"objTextboxPortrait","path":"objects/objTextboxPortrait/objTextboxPortrait.yy",},},
+    {"id":{"name":"oCutsceneAnchor","path":"objects/oCutsceneAnchor/oCutsceneAnchor.yy",},},
     {"id":{"name":"rmBossLevel","path":"rooms/rmBossLevel/rmBossLevel.yy",},},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"id":{"name":"rmLevelOne","path":"rooms/rmLevelOne/rmLevelOne.yy",},},

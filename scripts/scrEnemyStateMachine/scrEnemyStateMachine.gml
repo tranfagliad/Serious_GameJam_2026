@@ -46,7 +46,7 @@
 			damageActive = true;
 			image_blend = c_white;
 		
-		}
+		} else image_blend = c_gray;
 	
 	}
 	
@@ -230,7 +230,10 @@
 #region boss states
 	
 	function EnemyStateBossLocate(){
-	
+		
+		//spin
+		image_speed = 1;
+		
 		//quit if player is gone
 		if !instance_exists(objPlayer) exit;
 		

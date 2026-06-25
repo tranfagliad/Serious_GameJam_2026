@@ -23,10 +23,10 @@
 	global.dataDialogue = DataCreateDialogue();
 	
 	global.playerPosCheckpoint = [256, 256];
-	global.playerPosLevel1 = [512, 256];
+	global.playerPosLevel1 = [271, 255];
 	global.playerPosLevel2 = [512, 256];
 	global.playerPosLevel3 = [352, 224];
-	global.playerPosBossLevel = [512, 256];
+	global.playerPosBossLevel = [992, 1024];
 	
 	// used for keeping track between transitions
 	global.playerHp = 5;	
