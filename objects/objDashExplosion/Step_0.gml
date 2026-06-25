@@ -18,7 +18,7 @@ if !global.gamePaused && !global.midTransition {
 			
 				//damage enemy
 				var _enId = _colList[| _i];
-				with _enId if damageActive EnemyHit(damage);
+				with _enId if (damageActive && invulCd <= 0) EnemyHit(damage);
 			
 			}
 		}

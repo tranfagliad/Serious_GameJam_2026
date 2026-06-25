@@ -17,6 +17,41 @@ function PlayerHit(_damage){
 }
 
 
+function PlayerCollisionEnemy(){
+	
+	var _enCol = instance_place(x, y, objEnemyParent);
+	if instance_exists(_enCol) && invulCd <= 0 {
+		
+		//check if enemy is active
+		if _enCol.damageActive {
+			
+			//check paper
+			var _paperAmount = global.inventory.papers;
+			if (_paperAmount > 0) {
+				
+				//reduce paper amount
+				_paperAmount = Approach(_paperAmount, 0, global.paperReductionAmount);
+				global.inventory.papers = _paperAmount;
+				
+				//unique paper sfx
+				
+			} else {
+				
+				//player hit
+				PlayerHit(_enCol.damage);
+				
+				//player hit sfx
+			}
+			
+			//enemy also takes a hit
+			with _enCol if (invulCd <= 0) EnemyHit(other.playerDamage);
+			
+		}
+		
+	}
+	
+}
+
 
 function PlayerDeath () {
 
@@ -57,10 +92,10 @@ function PlayerDeath () {
 function PlayerStatsSaveUp(){
 	with objPlayer {
 		
-		//save hp between transitions
+		//save stats between transitions
 		global.playerHp = currentHp;
-		
-		//whatever else is needed
+		global.playerSpeed = playerSpeedDefault;
+		global.playerDashPower = dashPower;
 		
 	}
 }
@@ -71,10 +106,19 @@ function PlayerStatsSaveUp(){
 function PlayerStatsLoadUp(){
 	with objPlayer {
 		
-		//load hp between transitions
+		//load stats between transitions
 		currentHp = global.playerHp;
-		
-		//whatever else is needed
+		playerSpeedDefault = global.playerSpeed;
+		dashPower = global.playerDashPower;
 		
 	}
+}
+
+function PlayerStatsReset(){
+	
+	//reset every global
+	global.playerHp = 3;
+	global.playerSpeed = 4;
+	global.playerDashPower = 1;
+	
 }

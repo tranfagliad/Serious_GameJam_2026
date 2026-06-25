@@ -33,12 +33,13 @@ tornadoColCdMax = 15;
 
 
 // Dash variables
+dashPower = 1;
 dashDuration = 10;
 dashTimer = 0;
 dashSpeed = 20;
 dashDirection = 0;
 dashCd = 0;
-dashCdMax = 60;
+dashCdMax = 120;
 
 
 //update w/e vars are needed

@@ -16,7 +16,7 @@ function PlayerStateDefault(){
 	// Dash Mechanic
 	if (spinSpeed >= maxSpinSpeed && objInputManager.pressed.space && _is_moving && dashCd <= 0) {
 		dashDirection = point_direction(0, 0, _input_x, _input_y);
-		dashTimer = dashDuration;
+		dashTimer = dashDuration*dashPower;
 		playerState = PlayerStateDash;
 		dashCd = dashCdMax;
 		return;
@@ -112,36 +112,7 @@ function PlayerStateDefault(){
 	
 	
 	// Enemy collision logic
-	var _enCol = instance_place(x, y, objEnemyParent);
-	if instance_exists(_enCol) && invulCd <= 0 {
-		
-		//check if enemy is active
-		if _enCol.damageActive {
-			
-			//check paper
-			var _paperAmount = global.inventory.papers;
-			if (_paperAmount > 0) {
-				
-				//reduce paper amount
-				_paperAmount = Approach(_paperAmount, 0, 5);
-				global.inventory.papers = _paperAmount;
-				
-				//unique paper sfx
-				
-			} else {
-				
-				//player hit
-				PlayerHit(_enCol.damage);
-				
-				//player hit sfx
-			}
-			
-			//enemy also takes a hit
-			with _enCol EnemyHit(other.playerDamage);
-			
-		}
-		
-	}
+	PlayerCollisionEnemy();
 	
 	//trap collision logic
 	var _trapCol = instance_place(x, y, objEnemyTrapTile);
@@ -172,10 +143,8 @@ function PlayerStateDefault(){
 
 
 function PlayerStateDash () {
-
-	spinSpeed = maxSpinSpeed;
-	invulCd = invulCdMax/2;
 	
+	spinSpeed = maxSpinSpeed;
 	var _move_x = lengthdir_x(dashSpeed, dashDirection);
 	var _move_y = lengthdir_y(dashSpeed, dashDirection);
 	
@@ -187,16 +156,30 @@ function PlayerStateDash () {
 	// Clamp to room bounds
 	clampBounds();
 	
-	//enemy collision
-	var _enCol = collision_circle(x,y, PLAYER_WIDTH, objEnemyParent, false, true);
-	//var _enCol = instance_place(x, y, objEnemyParent);
-	with _enCol if damageActive EnemyHit(other.playerDamage);
+	//regular enemy collision
+	//PlayerCollisionEnemy();
+	
+	// Attack enemies with paper
+	var _paperAmount = global.inventory.papers;
+	if (_paperAmount > 0) {
+		
+		//larger collision range
+		var _enCol = collision_circle(x,y, PLAYER_WIDTH, objEnemyParent, false, true);
+		with _enCol if (damageActive && invulCd <= 0) {
+			EnemyHit(other.playerDamage);
+			
+			//reduce paper amount
+			_paperAmount = Approach(_paperAmount, 0, global.paperReductionAmount);
+			global.inventory.papers = _paperAmount;
+		}
+		
+	}
 	
 	dashTimer--;
 	if (dashTimer <= 0) {
 		
-		//create an explosion
-		instance_create_layer(x,y, "Player", objDashExplosion);
+		//create an explosion (too much power?)
+		//instance_create_layer(x,y, "Player", objDashExplosion);
 		
 		//check if any computers obtained
 		if global.inventory.computers > 0 {
@@ -224,7 +207,11 @@ function PlayerStateDash () {
 		}
 		
 		//stop dashing
-		playerState = PlayerStateDefault;		
+		playerState = PlayerStateDefault;
+		
+		//make player invulnerable for a very short period after dash
+		invulCd = 8;
+		
 	}
 }
 

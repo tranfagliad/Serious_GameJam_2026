@@ -15,4 +15,6 @@ function EnemyHit(_damage){
 	hp -= _damage;
 	if hp <= 0 EnemyDeath();
 	
+	invulCd = invulCdMax;
+	
 }
