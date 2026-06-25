@@ -102,6 +102,6 @@ if (global.gameState == GameStateLevelComplete) {
 	}
 	
 	// Draw dropping shadow text behind main text loop
-	draw_text_colour(_cx + 2, _text_y + 12, _inst_text, c_black, c_black, c_black, c_black, 1.0);
-	draw_text_colour(_cx, _text_y+10, _inst_text, _text_color, _text_color, _text_color, _text_color, 1.0);
+	draw_text_colour(_cx + 2, _text_y + 22, _inst_text, c_black, c_black, c_black, c_black, 1.0);
+	draw_text_colour(_cx, _text_y+20, _inst_text, _text_color, _text_color, _text_color, _text_color, 1.0);
 }
