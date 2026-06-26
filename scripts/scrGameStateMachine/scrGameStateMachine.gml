@@ -35,8 +35,6 @@ function GameStateDefault(){
 				
 				//move to wheel
 				global.gameState = GameStateLevelComplete;
-				AmbientFadeOut(AMBIENT_MUSIC);
-				
 			}
 		} break;
 		
@@ -113,7 +111,13 @@ function GameStateLevelComplete(){
 				
 				if (wheelSpeed <= 0) {
 					// TESTING: FORCE THE OUTCOME
-					wheelAngle = FIRST_QUADRANT-10;
+					//
+					// FIRST_QUADRANT -> Speed Upgrade
+					// SECOND_QUADRANT -> Dash Upgrade
+					// THIRD_QUADRANT -> Max HP Increase
+					// FOURTH_QUADRANT -> Full Heal
+					//
+					//wheelAngle = SECOND_QUADRANT-10;
 					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 				}
@@ -129,7 +133,7 @@ function GameStateLevelComplete(){
 						global.playerHp = global.playerMaxHp;
 						
 					} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
-						// Increased Dash Distance
+						global.playerDashPower += 0.5;
 					} else {
 						global.playerSpeed++;
 					}

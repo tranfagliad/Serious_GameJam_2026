@@ -16,7 +16,7 @@ function PlayerStateDefault(){
 	// Dash Mechanic
 	if (spinSpeed >= maxSpinSpeed && objInputManager.pressed.space && _is_moving && dashCd <= 0) {
 		dashDirection = point_direction(0, 0, _input_x, _input_y);
-		dashTimer = dashDuration*dashPower;
+		dashTimer = dashDuration*global.playerDashPower;
 		playerState = PlayerStateDash;
 		dashCd = dashCdMax;
 		SoundPlay(sfxPlayerDash);

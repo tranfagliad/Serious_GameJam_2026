@@ -21,7 +21,7 @@ function SpinPowerUpWheel () {
 	
 	switch (wheelPhase) {
 		case WheelSpinPhase.WAITING:
-			_inst_text = "PRESS [SPACE] TO SPIN THE UPGRADE WHEEL!";
+			_inst_text = "Press [SPACE] to Spin the Upgrade Wheel!";
 			_text_color = c_yellow;
 			break;
 		case WheelSpinPhase.SPINNING:
