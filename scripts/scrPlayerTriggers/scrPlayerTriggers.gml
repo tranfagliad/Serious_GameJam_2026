@@ -8,6 +8,9 @@ function PlayerPaperShielded(_paperAmount){
 	invulCd = invulCdMax/2;
 	image_blend = global.playerFlashColor;
 	
+	//unique paper sfx
+	SoundPlay(sfxPaperHit);
+	
 }
 
 function PlayerHit(_damage){
@@ -18,10 +21,21 @@ function PlayerHit(_damage){
 	// Player Death Animation
 	if (currentHp <= 0) {
 		
-		explodeCd = 30;
+		explodeCd = 60;
 		sprite_index = sprPlaceholderExplosion;
 		playerStatePrev = playerState;
 		playerState = PlayerStateExplode;
+		
+		//player death sfx
+		SoundPlay(sfxPlayerDeath);
+		
+		//fade out music
+		AmbientFadeOut(AMBIENT_MUSIC);
+		
+	} else {
+		
+		//player hit sfx
+		SoundPlay(sfxPlayerHit);
 		
 	}
 	
@@ -31,6 +45,7 @@ function PlayerHit(_damage){
 	
 	//screen shake
 	ScreenShakeStart(60, 6);
+	
 }
 
 
@@ -49,14 +64,11 @@ function PlayerCollisionEnemy(){
 				//shield
 				PlayerPaperShielded(_paperAmount);
 				
-				//unique paper sfx
-				
 			} else {
 				
 				//player hit
 				PlayerHit(_enCol.damage);
 				
-				//player hit sfx
 			}
 			
 			//enemy also takes a hit

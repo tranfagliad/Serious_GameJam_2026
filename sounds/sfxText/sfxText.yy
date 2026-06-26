@@ -15,7 +15,7 @@
   "name":"sfxText",
   "parent":{
     "name":"Text",
-    "path":"folders/SoundEffects/Text.yy",
+    "path":"folders/Sound/SoundEffects/Text.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

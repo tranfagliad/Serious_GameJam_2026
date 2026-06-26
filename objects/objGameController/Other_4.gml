@@ -9,6 +9,8 @@ switch room {
 		global.enemyDefeatedReqCurrent = global.enemyDefeatedReqLevel1;
 		global.enemySpawnCdMaxCurrent = global.enemySpawnCdMaxLevel1;
 		
+		AmbientChange(AMBIENT_MUSIC, bgmLevel1);
+		
 	} break;
 	
 	case rmLevelTwo: {

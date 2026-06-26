@@ -19,6 +19,7 @@ function PlayerStateDefault(){
 		dashTimer = dashDuration*dashPower;
 		playerState = PlayerStateDash;
 		dashCd = dashCdMax;
+		SoundPlay(sfxPlayerDash);
 		return;
 	}
 	
@@ -103,7 +104,11 @@ function PlayerStateDefault(){
 		var _move_x = lengthdir_x(playerSpeed, _direction);
 		var _move_y = lengthdir_y(playerSpeed, _direction);
 		
-		CheckPlayerCollisionMap(_move_x, _move_y);
+		var _col = CheckPlayerCollisionMap(_move_x, _move_y);
+		if !_col {
+			//sfx
+		}
+		
 		// Check for collisions with tables
 		//var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
 		//x = _collision.collidedX ? x : x + _move_x;
@@ -171,6 +176,10 @@ function PlayerStateDash () {
 			//reduce paper amount
 			_paperAmount = Approach(_paperAmount, 0, global.paperReductionAmount);
 			global.inventory.papers = _paperAmount;
+			
+			//paper sfx
+			SoundPlay(sfxPaperHit);
+			
 		}
 		
 	}

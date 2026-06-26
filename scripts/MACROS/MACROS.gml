@@ -45,3 +45,8 @@
 #macro SECOND_QUADRANT 180
 #macro THIRD_QUADRANT 270
 #macro FOURTH_QUADRANT 360
+
+
+//sound
+#macro AMBIENT_MUSIC			"ambientMusic"
+#macro AMBIENT_PLAYER_MOVEMENT	"ambientPlayerMovement"
