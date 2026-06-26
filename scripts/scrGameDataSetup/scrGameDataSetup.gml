@@ -37,27 +37,29 @@ function DataCreateDialogue(){
 	
 	#region	intro cutscene
 		// Introduction sequence with varying portraits and line breaks
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 0, "Narrator", "Samsara. The ongoing cycle of life, death, and rebirth.", _cDef, 0);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 1, "Narrator", "An office worker, deprived of all joy. Shackled to earthly responsibilities. Starved of purpose. Hungry ghosts trapped in the endless cycle of Samsara.", _cDef, 0);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 2, "Hughes", "Nirvana... I cannot find it here. I suffer in silence. No. No! I must break free!", _cDef, 1);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 3, "Narrator", "Use WASD to move and charge up your spin.\nMaintain high spin to create a tornado around you to pick up objects.", _cDef, 0);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 4, "Narrator", "At full charge, press [SPACE] to dash.", _cDef, 0);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 5, "Narrator", "Defend yourself with office supplies...\n* Use staplers and computers to attack.\n* Use paper to protect yourself.", _cDef, 0);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 6, "Narrator", "Good luck!", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 0, "Hughes", "I just got an email", _cDef, 1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 1, "Hughes", "*...click...click.*", _cDef, 1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 2, "Hughes", "The CEO just fired me?!", _cDef, 1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 3, "Hughes", "...", _cDef, 1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 4, "Hughes", "I'm gonna spin that snake through a wall...", _cDef, 1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 5, "Tutorial", "Use WASD to move and charge up your spin.\nMaintain high spin to create a tornado around you to pick up objects.", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 6, "Tutorial", "At full charge, press [SPACE] to dash.", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 7, "Tutorial", "Good luck!", _cDef, 0);
 	#endregion
 	
 	#region   // Level Two
-		//DataDialogueSet(_data, DLG_SEQ_LVL_TWO, 0, "Hughes", "This is Level 2... Whatever that means", _cDef,	1);
+		DataDialogueSet(_data, DLG_SEQ_LVL_TWO, 0, "Hughes", "Sales, always failing their pitch. Maybe they should pivot?", _cDef,	1);
 	#endregion
 	
 	#region   // Level Three
-		//DataDialogueSet(_data, DLG_SEQ_LVL_THREE, 0, "Hughes", "Level 3, I'm almost there", _cDef,	1);
+		DataDialogueSet(_data, DLG_SEQ_LVL_THREE, 0, "Hughes", "Human Resources, more like... human revolution.", _cDef,	1);
 	#endregion
 	
 	#region   // Boss Level
-		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 0,	"Ms. Snide", "My company... in ruins!", _cDef,	2);
-		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 1,	"Ms. Snide", "You dare say you approach Nirvana through this destruction?", _cDef,	2);
-		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 2,	"Ms. Snide", "I'll show you the truth of who you are!", _cDef,	2);
+		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 0,	"Ms. Snide", "Oh...? Here to beg for your job?", _cDef,	2);
+		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 1,	"Hughes", "No, I-", _cDef,	1);
+		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 2,	"Ms. Snide", "Ssssshut up! Peons!", _cDef,	2);
+		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 3,	"Ms. Snide", "Ssssspin this fool into orbit!", _cDef,	2);
 	#endregion
 	
 	//return structure of datasets
