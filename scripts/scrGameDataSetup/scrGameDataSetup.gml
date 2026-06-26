@@ -40,7 +40,7 @@ function DataCreateDialogue(){
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 0, "Narrator", "Samsara. The ongoing cycle of life, death, and rebirth.", _cDef, 0);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 1, "Narrator", "An office worker, deprived of all joy. Shackled to earthly responsibilities. Starved of purpose. Hungry ghosts trapped in the endless cycle of Samsara.", _cDef, 0);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 2, "Hughes", "Nirvana... I cannot find it here. I suffer in silence. No. No! I must break free!", _cDef, 1);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 3, "Narrator", "Use WASD to move and charge up your spin.", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 3, "Narrator", "Use WASD to move and charge up your spin.\nMaintain high spin to create a tornado around you to pick up objects.", _cDef, 0);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 4, "Narrator", "At full charge, press [SPACE] to dash.", _cDef, 0);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 5, "Narrator", "Defend yourself with office supplies...\n* Use staplers and computers to attack.\n* Use paper to protect yourself.", _cDef, 0);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 6, "Narrator", "Good luck!", _cDef, 0);
