@@ -210,6 +210,33 @@
 
 #region specific sound commands
 	
+	function MusicChangeLevelFirst(){
+		
+		//get sound id
+		var _data = global.ambient[$ AMBIENT_MUSIC] ?? AmbientDataSetup();
+		var _track = _data.ambientTrack;
+		var _snd = _data.ambientId;
+		
+		//check track
+		if (_track == bgmLevel1Intro) && audio_is_playing(_snd) {
+			
+			var _bgmChange = false;
+			var _pos = audio_sound_get_track_position(_snd);
+			if (_pos >= 2.53	&& _pos <= 2.54)		_bgmChange = true;
+			if (_pos >= 5.06	&& _pos <= 5.07)		_bgmChange = true;
+			if (_pos >= 7.05	&& _pos <= 7.06)		_bgmChange = true;
+			if (_pos >= 10.10	&& _pos <= 10.11)		_bgmChange = true;
+			
+			if _bgmChange {
+				audio_sound_set_track_position(bgmLevel1, 10.11);
+				AmbientChange(AMBIENT_MUSIC, bgmLevel1, 100, true, 0, 0);
+			}
+			return _pos;
+			
+		}
+		
+	}
+	
 	function MusicChangeBoss(){
 		
 		//get sound id

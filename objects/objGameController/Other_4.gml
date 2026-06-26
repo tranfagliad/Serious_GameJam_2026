@@ -9,7 +9,7 @@ switch room {
 		global.enemyDefeatedReqCurrent = global.enemyDefeatedReqLevel1;
 		global.enemySpawnCdMaxCurrent = global.enemySpawnCdMaxLevel1;
 		
-		AmbientChange(AMBIENT_MUSIC, bgmLevel1);
+		AmbientChange(AMBIENT_MUSIC, bgmLevel1Intro);
 		AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice);
 		
 	} break;
@@ -21,7 +21,7 @@ switch room {
 		global.enemyDefeatedReqCurrent = global.enemyDefeatedReqLevel2;
 		global.enemySpawnCdMaxCurrent = global.enemySpawnCdMaxLevel2;
 		
-		AmbientChange(AMBIENT_MUSIC, bgmLevel1);
+		AmbientChange(AMBIENT_MUSIC, bgmLevel1Intro);
 		AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice);
 		
 	} break;
@@ -34,7 +34,7 @@ switch room {
 		global.enemyDefeatedReqCurrent = global.enemyDefeatedReqLevel3;
 		global.enemySpawnCdMaxCurrent = global.enemySpawnCdMaxLevel3;
 		
-		AmbientChange(AMBIENT_MUSIC, bgmLevel1);
+		AmbientChange(AMBIENT_MUSIC, bgmLevel1Intro);
 		AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice);
 		
 	} break;

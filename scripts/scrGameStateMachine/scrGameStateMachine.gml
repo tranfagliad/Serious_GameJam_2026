@@ -40,6 +40,9 @@ function GameStateDefault(){
 				PlayerSoundFadeOut();
 				
 			}
+			
+			//music loop from intro
+			MusicChangeLevelFirst();
 		} break;
 		
 		//boss level specific
