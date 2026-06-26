@@ -5,5 +5,6 @@ if !global.gamePaused && !global.midTransition {
 	
 	//invul cd is separate
 	invulCd = Approach(invulCd, 0, 1);
+	if (invulCd <= 0) && (image_blend == global.enemyHitColor) image_blend = c_white;
 	
 }
