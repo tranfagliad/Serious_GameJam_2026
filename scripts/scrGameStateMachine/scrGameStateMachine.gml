@@ -126,7 +126,7 @@ function GameStateLevelComplete(){
 					} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
 						// Increased Dash Distance
 					} else {
-						// Increased Movement Speed
+						global.playerSpeed++;
 					}
 					
 					global.gamePaused = false;

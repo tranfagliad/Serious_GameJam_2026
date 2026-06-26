@@ -13,7 +13,7 @@ if global.showDebugUI {
 	draw_text(x,	y+15*2,	$"damage: {playerDamage}");
 	draw_text(x,	y+15*3,	$"hp: {global.playerHp}");
 	draw_text(x,	y+15*4,	$"invul cd: {invulCd}");
-	
+	draw_text(x,	y+15*5,	$"move speed: {global.playerSpeed}");
 }
 
 DrawTornadoVisuals();
