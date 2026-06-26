@@ -121,7 +121,6 @@
     {"id":{"name":"objLevel1Desk3","path":"objects/objLevel1Desk3/objLevel1Desk3.yy",},},
     {"id":{"name":"objMainMenuController","path":"objects/objMainMenuController/objMainMenuController.yy",},},
     {"id":{"name":"objMainMenuStartButton","path":"objects/objMainMenuStartButton/objMainMenuStartButton.yy",},},
-    {"id":{"name":"objMusicManager","path":"objects/objMusicManager/objMusicManager.yy",},},
     {"id":{"name":"objParentTable","path":"objects/objParentTable/objParentTable.yy",},},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},},
     {"id":{"name":"objPlayerDeathController","path":"objects/objPlayerDeathController/objPlayerDeathController.yy",},},
