@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sprOfficeBoundWallStripes",
   "bboxMode":0,
-  "bbox_bottom":65,
+  "bbox_bottom":64,
   "bbox_left":0,
-  "bbox_right":65,
+  "bbox_right":64,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":66,
+  "height":65,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"66403f7f-0a4c-48fe-a6a8-5573ce0260f7","blendMode":0,"displayName":"default","isLocked":false,"name":"66403f7f-0a4c-48fe-a6a8-5573ce0260f7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":66,
+  "width":65,
 }
