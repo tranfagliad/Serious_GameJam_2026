@@ -36,6 +36,11 @@
 	
 	global.paperReductionAmount = 2;
 	
+	global.playerFlashColor = c_orange;
+	global.playerHitColor = c_red;
+	global.enemyHitColor = c_aqua;
+	
+	
 #endregion
 
 #region state machine

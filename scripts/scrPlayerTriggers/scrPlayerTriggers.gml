@@ -1,3 +1,15 @@
+function PlayerPaperShielded(_paperAmount){
+	
+	//reduce paper amount
+	_paperAmount = Approach(_paperAmount, 0, global.paperReductionAmount);
+	global.inventory.papers = _paperAmount;
+				
+	//flash to indicate invulnerability
+	invulCd = invulCdMax/2;
+	image_blend = global.playerFlashColor;
+	
+}
+
 function PlayerHit(_damage){
 	
 	// hp reduction
@@ -15,7 +27,7 @@ function PlayerHit(_damage){
 	
 	//invulnerability
 	invulCd = invulCdMax;
-	image_blend = c_red;
+	image_blend = global.playerHitColor;
 	
 	//screen shake
 	ScreenShakeStart(60, 6);
@@ -34,9 +46,8 @@ function PlayerCollisionEnemy(){
 			var _paperAmount = global.inventory.papers;
 			if (_paperAmount > 0) {
 				
-				//reduce paper amount
-				_paperAmount = Approach(_paperAmount, 0, global.paperReductionAmount);
-				global.inventory.papers = _paperAmount;
+				//shield
+				PlayerPaperShielded(_paperAmount);
 				
 				//unique paper sfx
 				

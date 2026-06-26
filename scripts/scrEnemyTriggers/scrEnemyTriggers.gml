@@ -15,6 +15,8 @@ function EnemyHit(_damage){
 	hp -= _damage;
 	if hp <= 0 EnemyDeath();
 	
+	//make enemy flash and invul for short time
 	invulCd = invulCdMax;
+	image_blend = global.enemyHitColor;
 	
 }
