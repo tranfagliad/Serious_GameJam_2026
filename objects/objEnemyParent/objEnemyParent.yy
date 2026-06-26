@@ -39,7 +39,7 @@
     {"$GMObjectProperty":"v2","%Name":"spinSpeed","filters":[],"listItems":[],"multiselect":false,"name":"spinSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"waitCd","filters":[],"listItems":[],"multiselect":false,"name":"waitCd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"120","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"invulCd","filters":[],"listItems":[],"multiselect":false,"name":"invulCd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"invulCdMax","filters":[],"listItems":[],"multiselect":false,"name":"invulCdMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"12","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"invulCdMax","filters":[],"listItems":[],"multiselect":false,"name":"invulCdMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"15","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
