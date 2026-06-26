@@ -22,8 +22,8 @@
   ],
   "name":"rmMainMenu",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Screens",
+    "path":"folders/Rooms/Screens.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

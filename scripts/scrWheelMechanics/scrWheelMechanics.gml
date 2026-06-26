@@ -80,7 +80,7 @@ function SpinRevivalWheel () {
 	
 		switch (wheelPhase) {
 			case WheelSpinPhase.WAITING:
-				_inst_text = "HP DEPLETED! PRESS [SPACE] TO SPIN FOR A CHANCE TO REVIVE!";
+				_inst_text = "You Died! Press [SPACE] to Spin for a chance to Revive";
 				_text_color = c_yellow;
 				break;
 			
@@ -92,7 +92,7 @@ function SpinRevivalWheel () {
 			case WheelSpinPhase.SPIN_COMPLETE:
 				var _quadrant_text = "";
 				if (wheelAngle >= SECOND_QUADRANT && wheelAngle < FOURTH_QUADRANT) {
-					_quadrant_text = "Game Over...";
+					_quadrant_text = "";
 				} else {
 					_quadrant_text = "Revived!";
 				}

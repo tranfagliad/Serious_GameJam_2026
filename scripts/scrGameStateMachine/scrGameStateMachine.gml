@@ -203,6 +203,13 @@ function GameStatePlayerDeath() {
 				if (wheelAngle >= FOURTH_QUADRANT) wheelAngle -= FOURTH_QUADRANT;
 				
 				if (wheelSpeed <= 0) {
+					// TESTING: FORCE THE OUTCOME
+					//
+					// SECOND_QUADRANT -> Alive
+					// FOURTH_QUADRANT -> Death
+					//
+					wheelAngle = FOURTH_QUADRANT-10;
+					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 					SoundPlay(sfxWheelSpinEnd);
 					AmbientFadeOut(AMBIENT_WHEEL_SPIN);
@@ -211,7 +218,7 @@ function GameStatePlayerDeath() {
 				
 			case WheelSpinPhase.SPIN_COMPLETE:
 				if (objInputManager.pressed.space) {
-					if true { //(wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
+					if (wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
 						global.gamePaused = false;
 						
 						with (objPlayer) {
@@ -238,10 +245,13 @@ function GameStatePlayerDeath() {
 							case rmBossLevel: AmbientChange(AMBIENT_MUSIC, bgmBossLoop); break;
 						}
 						
-					} else { // TODO: Game Over... go back to main menu when the player presses SPACE
+					} 
+					else { 
 						global.gamePaused = false;
 						SoundPlay(sfxWheelDead);
-						GameLose();
+						global.enemyDefeated = 0;
+						PlayerStatsReset();
+						TransitionStart(rmPlayerDeath, sqFadeOut, sqFadeIn, 0, 0, GameStatePaused);
 					}
 				}
 				break;
