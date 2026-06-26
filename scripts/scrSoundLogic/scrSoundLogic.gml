@@ -206,4 +206,36 @@
 		
 	}
 	
+	
+	function MusicChangeBoss(){
+		
+		//get sound id
+		var _data = global.ambient[$ AMBIENT_MUSIC] ?? AmbientDataSetup();
+		var _track = _data.ambientTrack;
+		var _snd = _data.ambientId;
+		
+		//check track
+		if (_track == bgmBossIntro) && audio_is_playing(_snd) {
+			
+			var _bgmChange = false;
+			var _pos = audio_sound_get_track_position(_snd);
+			//if (_pos >= 3.08	&& _pos <= 3.1)			_bgmChange = true;
+			if (_pos >= 6.14	&& _pos <= 6.16)		_bgmChange = true;
+			//if (_pos >= 9.19	&& _pos <= 9.21)		_bgmChange = true;
+			if (_pos >= 12.28	&& _pos <= 12.30)		_bgmChange = true;
+			//if (_pos >= 15.33	&& _pos <= 15.35)		_bgmChange = true;
+			if (_pos >= 18.39	&& _pos <= 18.41)		_bgmChange = true;
+			//if (_pos >= 21.42	&& _pos <= 21.44)		_bgmChange = true;
+			if (_pos >= 24.47	&& _pos <= 24.49)		_bgmChange = true;
+			
+			if _bgmChange {
+				audio_sound_set_track_position(bgmBossLoop, 6.15);
+				AmbientChange(AMBIENT_MUSIC, bgmBossLoop, 100, true, 0, 0);
+			}
+			return _pos;
+			
+		}
+		
+	}
+	
 #endregion

@@ -9,5 +9,6 @@ if global.showDebugUI {
 	draw_text(x,	y+15*2,	$"damage: {damage}");
 	draw_text(x,	y+15*3,	$"damage active: {damageActive}");
 	draw_text(x,	y+15*4,	$"wait cd: {waitCd}");
+	draw_text(x,	y+15*5,	$"image blend: {image_blend}");
 	
 }

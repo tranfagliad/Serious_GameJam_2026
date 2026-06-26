@@ -27,8 +27,8 @@
 	
 	global.playerPosCheckpoint	= [256, 256];
 	global.playerPosLevel1		= [271, 255];
-	global.playerPosLevel2		= [512, 256];
-	global.playerPosLevel3		= [352, 224];
+	global.playerPosLevel2		= [1756, 2638];
+	global.playerPosLevel3		= [320, 192];
 	global.playerPosBossLevel	= [992, 1024];
 	
 	// used for keeping track between transitions

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"bgmLevel1",
+  "%Name":"bgmMainMenu",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":91.008026,
+  "duration":56.52,
   "exportDir":"",
-  "name":"bgmLevel1",
+  "name":"bgmMainMenu",
   "parent":{
     "name":"BGM",
     "path":"folders/Sound/BGM.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":22050,
-  "soundFile":"bgmLevel1.mp3",
+  "soundFile":"bgmMainMenu.mp3",
   "volume":1.0,
 }
