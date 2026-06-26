@@ -136,6 +136,7 @@ function PlayerStatsReset(){
 	
 	//reset every global
 	global.playerHp = 3;
+	global.playerMaxHp = 3;
 	global.playerSpeed = 4;
 	global.playerDashPower = 1;
 	

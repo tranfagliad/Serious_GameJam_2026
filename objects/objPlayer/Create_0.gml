@@ -12,9 +12,6 @@ playerSpeedSlowed = 2;
 playerDamage = 1;
 
 
-//health
-maxHp = 5;
-currentHp = 5;
 invulCd = 0;
 invulCdMax = 180;
 

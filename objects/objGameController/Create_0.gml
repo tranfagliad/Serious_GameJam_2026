@@ -29,11 +29,7 @@
 	global.playerPosBossLevel	= [992, 1024];
 	
 	// used for keeping track between transitions
-	global.playerHp = 5;	
-	global.playerSpeed = 4;
-	global.playerDashPower = 1;
 	PlayerStatsReset();
-	
 	global.paperReductionAmount = 4;
 	
 	global.playerFlashColor = c_orange;

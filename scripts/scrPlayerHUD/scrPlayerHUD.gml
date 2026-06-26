@@ -1,10 +1,10 @@
 
-function DrawPlayerHealth (_current_hp, _max_hp) {
+function DrawPlayerHealth () {
 	
 	draw_sprite_ext(sprHealthBadge, 0, VIEWPORT_WIDTH-10, 10, 2, 2, 0, c_white, 1);
 	
-	for (var _i = 0; _i < _max_hp; _i++) {
-		var _missing_hp = _max_hp - _current_hp;
+	for (var _i = 0; _i < global.playerMaxHp; _i++) {
+		var _missing_hp = global.playerMaxHp - global.playerHp;
 		var _frame = (_i >= _missing_hp) ? 0 : 1;
 		
 		var _draw_x = (VIEWPORT_WIDTH - 345) + (_i * 45);
