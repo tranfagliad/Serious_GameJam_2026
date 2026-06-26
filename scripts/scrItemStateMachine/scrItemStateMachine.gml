@@ -20,15 +20,15 @@ function ItemStateOrbit(){
 				
 				default: {
 					global.inventory.papers = Approach(global.inventory.papers, 0, 1);
-					SoundPlay(sfxPaperHit);
+					SoundPlay(sfxPaperHit, 80);
 				} break;
 				case objItemStapler: {
 					global.inventory.staplers = Approach(global.inventory.staplers, 0, 1);
-					SoundPlay(sfxStaplerHit);
+					SoundPlay(sfxStaplerHit, 80);
 				} break;
 				case objItemComputer: {
 					global.inventory.computers = Approach(global.inventory.computers, 0, 1);
-					SoundPlay(sfxComputerHit);
+					SoundPlay(sfxComputerHit, 80);
 				} break;
 				
 			}

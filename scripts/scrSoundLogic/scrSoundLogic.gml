@@ -229,7 +229,7 @@
 			
 			if _bgmChange {
 				audio_sound_set_track_position(bgmLevel1, 10.11);
-				AmbientChange(AMBIENT_MUSIC, bgmLevel1, 100, true, 0, 0);
+				AmbientChange(AMBIENT_MUSIC, bgmLevel1, 60, true, 0, 0);
 			}
 			return _pos;
 			
@@ -260,7 +260,7 @@
 			
 			if _bgmChange {
 				audio_sound_set_track_position(bgmBossLoop, 6.15);
-				AmbientChange(AMBIENT_MUSIC, bgmBossLoop, 100, true, 0, 0);
+				AmbientChange(AMBIENT_MUSIC, bgmBossLoop, 60, true, 0, 0);
 			}
 			return _pos;
 			

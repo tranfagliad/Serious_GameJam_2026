@@ -3,15 +3,15 @@ function EnemyDeath(){
 	//play sfx
 	switch sprite_index {
 		
-		case sprEnemy1F: SoundPlay(sfxEnemyDeathFemale); break;
-		case sprEnemy2F: SoundPlay(sfxEnemyDeathFemale); break;
-		case sprEnemy3F: SoundPlay(sfxEnemyDeathFemale); break;
+		case sprEnemy1F: SoundPlay(sfxEnemyDeathFemale, 90); break;
+		case sprEnemy2F: SoundPlay(sfxEnemyDeathFemale, 90); break;
+		case sprEnemy3F: SoundPlay(sfxEnemyDeathFemale, 90); break;
 		
-		case sprEnemy1M: SoundPlay(sfxEnemyDeathMale); break;
-		case sprEnemy2M: SoundPlay(sfxEnemyDeathMale); break;
-		case sprEnemy3M: SoundPlay(sfxEnemyDeathMale); break;
+		case sprEnemy1M: SoundPlay(sfxEnemyDeathMale, 90); break;
+		case sprEnemy2M: SoundPlay(sfxEnemyDeathMale, 90); break;
+		case sprEnemy3M: SoundPlay(sfxEnemyDeathMale, 90); break;
 		
-		case sprBoss:	SoundPlay(sfxEnemyBossDeath); break;
+		case sprBoss:	SoundPlay(sfxEnemyBossDeath, 90); break;
 		
 	}
 	

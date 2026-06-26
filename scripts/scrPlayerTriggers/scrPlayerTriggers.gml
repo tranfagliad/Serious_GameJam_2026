@@ -30,7 +30,7 @@ function PlayerHit(_damage){
 		SoundPlay(sfxPlayerDeath);
 		
 		//fade out player related sounds
-		AmbientChange(AMBIENT_MUSIC, bgmWheel);
+		AmbientChange(AMBIENT_MUSIC, bgmWheel, 60);
 		AmbientFadeOut(AMBIENT_OFFICE);
 		PlayerSoundFadeOut();
 		

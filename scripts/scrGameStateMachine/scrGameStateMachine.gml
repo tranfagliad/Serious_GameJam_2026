@@ -36,7 +36,7 @@ function GameStateDefault(){
 				
 				//move to wheel
 				global.gameState = GameStateLevelComplete;
-				AmbientChange(AMBIENT_MUSIC, bgmWheel);
+				AmbientChange(AMBIENT_MUSIC, bgmWheel, 60);
 				PlayerSoundFadeOut();
 				
 			}
@@ -234,11 +234,11 @@ function GameStatePlayerDeath() {
 						
 						global.gameState = GameStateDefault;
 						SoundPlay(sfxWheelAlive);
-						AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice);
+						AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice, 15);
 						
 						switch room {
-							default: AmbientChange(AMBIENT_MUSIC, bgmLevel1); break;
-							case rmBossLevel: AmbientChange(AMBIENT_MUSIC, bgmBossLoop); break;
+							default: AmbientChange(AMBIENT_MUSIC, bgmLevel1, 60); break;
+							case rmBossLevel: AmbientChange(AMBIENT_MUSIC, bgmBossLoop, 60); break;
 						}
 						
 					} else { // TODO: Game Over... go back to main menu when the player presses SPACE

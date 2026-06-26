@@ -19,7 +19,7 @@ function PlayerStateDefault(){
 		dashTimer = dashDuration*global.playerDashPower;
 		playerState = PlayerStateDash;
 		dashCd = dashCdMax;
-		SoundPlay(sfxPlayerDash);
+		SoundPlay(sfxPlayerDash, 75);
 		return;
 	}
 	
@@ -43,7 +43,7 @@ function PlayerStateDefault(){
 		
 		//setup pitch depending on spin level
 		var _pitch = 1 + (_frame*0.1 - 0.2);
-		var _snd = SoundPlay(sfxPlayerSpin);
+		var _snd = SoundPlay(sfxPlayerSpin, 30);
 		audio_sound_pitch(_snd, _pitch);
 	}
 	
@@ -94,7 +94,7 @@ function PlayerStateDefault(){
 			
 			//play sfx
 			switch _category {
-				case "papers":		if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_PAPERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);			break;
+				case "papers":		if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_PAPERS, sfxPaperFly, 30); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);			break;
 				//case "staplers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_STAPLERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
 				//case "computers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_COMPUTERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
 			}
@@ -102,7 +102,7 @@ function PlayerStateDefault(){
 		}
 		
 		//play sfx
-		AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado);
+		AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado, 30);
 		
 	} else {
 		// If the tornado drops, wipe out data inventories
@@ -136,7 +136,7 @@ function PlayerStateDefault(){
 		var _move_y = lengthdir_y(global.playerSpeed, _direction);
 		
 		var _col = CheckPlayerCollisionMap(_move_x, _move_y);
-		if !_col AmbientChange(AMBIENT_PLAYER_MOVEMENT, sfxPlayerMove, 100, true, 0); else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
+		if !_col AmbientChange(AMBIENT_PLAYER_MOVEMENT, sfxPlayerMove, 40, true, 0); else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
 		
 		// Check for collisions with tables
 		//var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
