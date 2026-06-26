@@ -243,10 +243,13 @@
 	
 	function PlayerSoundFadeOut(){
 		
-		AmbientFadeOut(AMBIENT_MUSIC);
+		//AmbientFadeOut(AMBIENT_MUSIC);
 		AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
 		AmbientFadeOut(AMBIENT_PLAYER_SPIN);
 		AmbientFadeOut(AMBIENT_PLAYER_TORNADO);
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO_COMPUTERS);
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO_STAPLERS);
 		
 	}
 	

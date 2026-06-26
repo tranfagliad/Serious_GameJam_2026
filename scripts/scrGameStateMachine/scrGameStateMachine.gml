@@ -35,6 +35,7 @@ function GameStateDefault(){
 				
 				//move to wheel
 				global.gameState = GameStateLevelComplete;
+				AmbientChange(AMBIENT_MUSIC, bgmWheel);
 				PlayerSoundFadeOut();
 				
 			}
@@ -108,6 +109,7 @@ function GameStateLevelComplete(){
 				if (objInputManager.pressed.space) {
 					wheelSpeed = random_range(25, 40); 
 					wheelPhase = WheelSpinPhase.SPINNING;
+					SoundPlay(sfxWheelSpinStart);
 				}
 				break;
 				
@@ -128,6 +130,7 @@ function GameStateLevelComplete(){
 					//wheelAngle = SECOND_QUADRANT-10;
 					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
+					SoundPlay(sfxWheelSpinEnd);
 				}
 				break;
 				
@@ -183,6 +186,7 @@ function GameStatePlayerDeath() {
 				if (objInputManager.pressed.space) {
 					wheelSpeed = random_range(25, 40);
 					wheelPhase = WheelSpinPhase.SPINNING;
+					SoundPlay(sfxWheelSpinStart);
 				}
 				break;
 				
@@ -194,19 +198,22 @@ function GameStatePlayerDeath() {
 				
 				if (wheelSpeed <= 0) {
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
+					SoundPlay(sfxWheelSpinEnd);
 				}
 				break;
 				
 			case WheelSpinPhase.SPIN_COMPLETE:
 				if (objInputManager.pressed.space) {
-					if (wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
+					if true {//(wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
 						global.gamePaused = false;
 						
 						with (objPlayer) {
 							global.playerHp = global.playerMaxHp;
-							playerState = playerStatePrev;
+							playerState = PlayerStateDefault;
+							playerStatePrev = PlayerStateDefault;
+							invulCd = invulCdMax;
 							sprite_index = sprPlayer;
-							image_blend = c_white;
+							image_blend = c_red;
 							image_speed = 1;
 						}
 						
@@ -216,9 +223,11 @@ function GameStatePlayerDeath() {
 						}
 						
 						global.gameState = GameStateDefault;
+						SoundPlay(sfxWheelAlive);
 						
 					} else { // TODO: Game Over... go back to main menu when the player presses SPACE
 						global.gamePaused = false;
+						SoundPlay(sfxWheelDead);
 						GameLose();
 					}
 				}

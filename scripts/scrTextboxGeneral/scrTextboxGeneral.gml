@@ -205,6 +205,7 @@ function DialogueStart(_seq, _stateTarget){
 	}
 	
 	//handle sfx
+	AmbientFadeOut(AMBIENT_MUSIC);
 	PlayerSoundFadeOut();
 	
 }
