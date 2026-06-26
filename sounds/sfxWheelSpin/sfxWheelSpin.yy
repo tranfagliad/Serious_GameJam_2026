@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":4.4880047,
+  "duration":4.421066,
   "exportDir":"",
   "name":"sfxWheelSpin",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxWheelSpin.mp3",
+  "soundFile":"sfxWheelSpin.wav",
   "volume":1.0,
 }

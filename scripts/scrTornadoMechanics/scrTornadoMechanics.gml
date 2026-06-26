@@ -27,7 +27,7 @@ function PlayerTornadoItemPickup (_radius) {
 				
 				//play sfx
 				switch _item_type {
-					case "papers":		SoundPlay(sfxPaperPickup);		break;
+					case "papers":		SoundPlay(sfxPaperPickup, 50);	break;
 					case "staplers":	SoundPlay(sfxStaplerPickup);	break;
 					case "computers":	SoundPlay(sfxComputerPickup);	break;
 				}

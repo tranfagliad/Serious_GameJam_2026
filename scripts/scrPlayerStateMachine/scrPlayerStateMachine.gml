@@ -94,7 +94,7 @@ function PlayerStateDefault(){
 			
 			//play sfx
 			switch _category {
-				case "papers":		if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_PAPERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
+				case "papers":		if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_PAPERS, sfxPaperFly, 50); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
 				//case "staplers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_STAPLERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
 				//case "computers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_COMPUTERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
 			}
@@ -102,7 +102,7 @@ function PlayerStateDefault(){
 		}
 		
 		//play sfx
-		//AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado, 100, true, 0, 0);
+		AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado, 30);
 		
 	} else {
 		// If the tornado drops, wipe out data inventories
@@ -120,7 +120,10 @@ function PlayerStateDefault(){
 		with objItemParent instance_destroy();
 		
 		//stop sfx
-		//AmbientFadeOut(AMBIENT_PLAYER_TORNADO, 0);
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO);
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);	
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO_STAPLERS);	
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO_COMPUTERS);	
 		
 	}
 
@@ -133,14 +136,14 @@ function PlayerStateDefault(){
 		var _move_y = lengthdir_y(global.playerSpeed, _direction);
 		
 		var _col = CheckPlayerCollisionMap(_move_x, _move_y);
-		//if !_col AmbientChange(AMBIENT_PLAYER_MOVEMENT, sfxPlayerMove); else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
+		if !_col AmbientChange(AMBIENT_PLAYER_MOVEMENT, sfxPlayerMove, 100, true, 0); else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
 		
 		// Check for collisions with tables
 		//var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
 		//x = _collision.collidedX ? x : x + _move_x;
 		//y = _collision.collidedY ? y : y + _move_y;
 		
-	} //else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
+	} else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
 	
 	
 	// Enemy collision logic

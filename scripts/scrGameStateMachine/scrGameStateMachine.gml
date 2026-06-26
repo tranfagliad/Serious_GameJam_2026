@@ -104,6 +104,7 @@ function GameStateLevelComplete(){
 					wheelSpeed = random_range(25, 40); 
 					wheelPhase = WheelSpinPhase.SPINNING;
 					SoundPlay(sfxWheelSpinStart);
+					AmbientChange(AMBIENT_WHEEL_SPIN, sfxWheelSpin);
 				}
 				break;
 				
@@ -125,6 +126,7 @@ function GameStateLevelComplete(){
 					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 					SoundPlay(sfxWheelSpinEnd);
+					AmbientFadeOut(AMBIENT_WHEEL_SPIN);
 				}
 				break;
 				
@@ -181,6 +183,7 @@ function GameStatePlayerDeath() {
 					wheelSpeed = random_range(25, 40);
 					wheelPhase = WheelSpinPhase.SPINNING;
 					SoundPlay(sfxWheelSpinStart);
+					AmbientChange(AMBIENT_WHEEL_SPIN, sfxWheelSpin);
 				}
 				break;
 				
@@ -193,12 +196,13 @@ function GameStatePlayerDeath() {
 				if (wheelSpeed <= 0) {
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 					SoundPlay(sfxWheelSpinEnd);
+					AmbientFadeOut(AMBIENT_WHEEL_SPIN);
 				}
 				break;
 				
 			case WheelSpinPhase.SPIN_COMPLETE:
 				if (objInputManager.pressed.space) {
-					if true {//(wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
+					if (wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
 						global.gamePaused = false;
 						
 						with (objPlayer) {

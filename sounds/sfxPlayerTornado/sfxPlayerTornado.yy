@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":4.1040134,
+  "duration":4.04161,
   "exportDir":"",
   "name":"sfxPlayerTornado",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxPlayerTornado.mp3",
+  "soundFile":"sfxPlayerTornado.wav",
   "volume":1.0,
 }

@@ -50,6 +50,7 @@
 //sound
 #macro AMBIENT_MUSIC					"ambientMusic"
 #macro AMBIENT_OFFICE					"ambientOffice"
+#macro AMBIENT_WHEEL_SPIN				"ambientWheelSpin"
 #macro AMBIENT_PLAYER_MOVEMENT			"ambientPlayerMovement"
 #macro AMBIENT_PLAYER_SPIN				"ambientPlayerSpin"
 #macro AMBIENT_PLAYER_TORNADO			"ambientPlayerTornado"

@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":4.68,
+  "duration":4.640068,
   "exportDir":"",
   "name":"sfxPlayerMove",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxPlayerMove.mp3",
+  "soundFile":"sfxPlayerMove.wav",
   "volume":1.0,
 }
