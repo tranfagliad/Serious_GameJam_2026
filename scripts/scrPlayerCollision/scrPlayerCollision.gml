@@ -17,8 +17,8 @@ function CheckPlayerCollisionMap (_move_x, _move_y) {
 	_move_x = round(_move_x);
 	_move_y = round(_move_y);
 	
-	var _steps_x = ceil(abs(_move_x) / COLLISION_TILESIZE);
-	var _steps_y = ceil(abs(_move_y) / COLLISION_TILESIZE);
+	var _steps_x = ceil(abs(_move_x) / (COLLISION_TILESIZE - 1));
+	var _steps_y = ceil(abs(_move_y) / (COLLISION_TILESIZE - 1));
 	
 	if (_steps_x == 0) _steps_x = 1;
 	if (_steps_y == 0) _steps_y = 1;
@@ -26,7 +26,7 @@ function CheckPlayerCollisionMap (_move_x, _move_y) {
 	var _sub_move_x = _move_x / _steps_x;
 	var _sub_move_y = _move_y / _steps_y;
 	
-	// --- X AXIS COLLISION ---
+	// X AXIS COLLISION
 	repeat (_steps_x) {
 		if (_sub_move_x != 0) {
 			var _check_x = (_sub_move_x > 0) ? round(x + _half_w + _sub_move_x) : round(x - _half_w + _sub_move_x);
@@ -56,7 +56,7 @@ function CheckPlayerCollisionMap (_move_x, _move_y) {
 		}
 	}
 	
-	// --- Y AXIS COLLISION ---
+	// Y AXIS COLLISION
 	repeat (_steps_y) {
 		if (_sub_move_y != 0) {
 			var _check_y = (_sub_move_y > 0) ? round(y + _half_h + _sub_move_y) : round(y - _half_h + _sub_move_y);
