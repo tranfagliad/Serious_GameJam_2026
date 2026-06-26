@@ -42,10 +42,16 @@ function GameStateDefault(){
 			}
 		} break;
 		
-		//this actually should trigger during boss death animation (within enemy death trigger)
-		//but here is a precaution
+		//boss level specific
 		case rmBossLevel: {
+			
+			//music check
+			MusicChangeBoss();
+			
+			//this actually should trigger during boss death animation (within enemy death trigger)
+			//but here is a precaution
 			if !instance_exists(objEnemyBoss) DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+			
 		} break;
 		
 	}
