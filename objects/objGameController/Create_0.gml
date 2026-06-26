@@ -34,7 +34,7 @@
 	global.playerDashPower = 1;
 	PlayerStatsReset();
 	
-	global.paperReductionAmount = 2;
+	global.paperReductionAmount = 4;
 	
 	global.playerFlashColor = c_orange;
 	global.playerHitColor = c_red;
