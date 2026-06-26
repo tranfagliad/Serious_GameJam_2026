@@ -44,10 +44,10 @@ if !global.gamePaused {
 			var _eId = _eIds[0];
 			var _eType = layer_get_element_type(_eId);
 			if (_eType == layerelementtype_sequence) && layer_sequence_exists(_trLay, _eId) {
-				layer_sequence_x(_eId, _camX);
-				layer_sequence_y(_eId, _camY);
-				layer_sequence_xscale(_eId, zoomFactor);
-				layer_sequence_yscale(_eId, zoomFactor);
+				if (followTarget != noone) && (instance_exists(followTarget)) layer_sequence_x(_eId, _camX); else layer_sequence_x(_eId, 0);
+				if (followTarget != noone) && (instance_exists(followTarget)) layer_sequence_y(_eId, _camY); else layer_sequence_y(_eId, 0);
+				if (followTarget != noone) && (instance_exists(followTarget)) layer_sequence_xscale(_eId, zoomFactor); else layer_sequence_xscale(_eId, 1);
+				if (followTarget != noone) && (instance_exists(followTarget)) layer_sequence_yscale(_eId, zoomFactor); else layer_sequence_xscale(_eId, 1);
 			}
 		}
 	}

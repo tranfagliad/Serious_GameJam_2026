@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"objMainMenuController",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objPlayerDeathController",
+  "eventList":[],
   "managed":true,
-  "name":"objMainMenuController",
+  "name":"objPlayerDeathController",
   "overriddenProperties":[],
   "parent":{
     "name":"RoomControllers",
