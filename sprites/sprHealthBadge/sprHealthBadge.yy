@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":2,
   "parent":{
-    "name":"HUD",
-    "path":"folders/Sprites/HUD.yy",
+    "name":"HealthBadge",
+    "path":"folders/Sprites/HUD/HealthBadge.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
