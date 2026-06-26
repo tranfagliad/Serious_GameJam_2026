@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"HUD",
-    "path":"folders/Sprites/HUD.yy",
+    "name":"Items",
+    "path":"folders/Sprites/HUD/Items.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
