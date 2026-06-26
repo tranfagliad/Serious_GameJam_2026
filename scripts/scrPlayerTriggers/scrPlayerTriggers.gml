@@ -31,6 +31,7 @@ function PlayerHit(_damage){
 		
 		//fade out player related sounds
 		AmbientChange(AMBIENT_MUSIC, bgmWheel);
+		AmbientFadeOut(AMBIENT_OFFICE);
 		PlayerSoundFadeOut();
 		
 	} else {

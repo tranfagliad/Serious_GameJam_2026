@@ -222,6 +222,12 @@ function GameStatePlayerDeath() {
 						
 						global.gameState = GameStateDefault;
 						SoundPlay(sfxWheelAlive);
+						AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice, 30);
+						
+						switch room {
+							default: AmbientChange(AMBIENT_MUSIC, bgmLevel1); break;
+							case rmBossLevel: AmbientChange(AMBIENT_MUSIC, bgmBossLoop); break;
+						}
 						
 					} else { // TODO: Game Over... go back to main menu when the player presses SPACE
 						global.gamePaused = false;
