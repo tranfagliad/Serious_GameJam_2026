@@ -28,7 +28,7 @@ function ItemStateOrbit(){
 				} break;
 				case objItemComputer: {
 					global.inventory.computers = Approach(global.inventory.computers, 0, 1);
-					SoundPlay(sfxComputerHit);
+					SoundPlay(sfxComputerHit, 125);
 				} break;
 				
 			}

@@ -22,7 +22,7 @@
 #region game data
 	
 	global.screenShakeActive = true;
-	global.cutsceneSkip = true;
+	global.cutsceneSkip = false;
 	global.dataDialogue = DataCreateDialogue();
 	
 	global.playerPosCheckpoint	= [256, 256];
@@ -84,8 +84,12 @@
 #endregion
 
 
-// Wheel Spins
-wheelPhase = WheelSpinPhase.WAITING;
-wheelAngle = 0;
-wheelSpeed = 0;
-wheelFriction = 0.15;
+#region Wheel Spins
+
+	wheelPhase = WheelSpinPhase.WAITING;
+	wheelAngle = 0;
+	wheelSpeed = 0;
+	wheelFriction = 0.15;
+	wheelScale = 0;
+	
+#endregion

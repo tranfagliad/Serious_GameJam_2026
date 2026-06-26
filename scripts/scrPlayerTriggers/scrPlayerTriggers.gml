@@ -91,6 +91,7 @@ function PlayerDeath () {
 		wheelPhase = 0;
 		wheelAngle = irandom(359);
 		wheelSpeed = 0;
+		wheelScale = 0;
 	}
 	with (objPlayer) {
 		playerStatePrev = playerState;

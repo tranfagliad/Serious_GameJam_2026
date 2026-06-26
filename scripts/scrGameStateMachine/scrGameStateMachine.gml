@@ -27,6 +27,7 @@ function GameStateDefault(){
 					wheelPhase = 0;
 					wheelAngle = irandom(359); // Start at a random resting position
 					wheelSpeed = 0;
+					wheelScale = 0;
 				}
 			
 				// Lock down player and enemy state buffers
@@ -96,6 +97,7 @@ function GameStateLevelComplete(){
 	global.gamePaused = true;
 	
 	with (objGameController) {
+		wheelScale = Approach(wheelScale, 1, 0.03);
 		
 		switch (wheelPhase) {
 			
@@ -175,6 +177,7 @@ function GameStatePlayerDeath() {
 	global.gamePaused = true;
 	
 	with (objGameController) {
+		wheelScale = Approach(wheelScale, 1, 0.03);
 		
 		switch (wheelPhase) {
 			
@@ -202,7 +205,7 @@ function GameStatePlayerDeath() {
 				
 			case WheelSpinPhase.SPIN_COMPLETE:
 				if (objInputManager.pressed.space) {
-					if (wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
+					if true { //(wheelAngle >= 0 && wheelAngle < SECOND_QUADRANT) {
 						global.gamePaused = false;
 						
 						with (objPlayer) {

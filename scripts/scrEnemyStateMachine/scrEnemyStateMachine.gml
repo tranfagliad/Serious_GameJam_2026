@@ -28,6 +28,10 @@
 		
 			//increase enemy defeated count
 			global.enemyDefeated = Approach(global.enemyDefeated, global.enemyDefeatedReqCurrent, 1);
+			
+			//check for boss
+			if (object_index == objEnemyBoss) DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+			
 		}
 	
 	}

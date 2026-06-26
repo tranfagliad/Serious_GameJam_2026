@@ -11,18 +11,14 @@ function EnemyDeath(){
 		case sprEnemy2M: SoundPlay(sfxEnemyDeathMale); break;
 		case sprEnemy3M: SoundPlay(sfxEnemyDeathMale); break;
 		
+		case sprBoss:	SoundPlay(sfxEnemyBossDeath); break;
+		
 	}
 	
 	damageActive = false;
 	explodeCd = 60;
 	sprite_index = sprPlaceholderExplosion;
 	enemyState = EnemyStateExplode;
-	
-	//check for boss
-	if object_index == objEnemyBoss {
-		DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
-		SoundPlay(sfxEnemyBossDeath);
-	}
 	
 }
 

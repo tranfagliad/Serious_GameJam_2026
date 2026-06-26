@@ -23,6 +23,11 @@
 		if keyboard_check_pressed(vk_f7) TransitionStart(rmLevelThree,	sqFadeOut, sqFadeIn, global.playerPosLevel3[0],		global.playerPosLevel3[1],		GameStateDefault);
 		if keyboard_check_pressed(vk_f8) TransitionStart(rmBossLevel,	sqFadeOut, sqFadeIn, global.playerPosBossLevel[0],	global.playerPosBossLevel[1],	GameStateDefault);
 		
+		if keyboard_check_pressed(ord("O")) global.playerHp = global.playerMaxHp;
+		if keyboard_check_pressed(ord("P")) global.playerHp = 0;
+		if keyboard_check_pressed(ord("N")) with objPlayer invulCd = invulCdMax;
+		if keyboard_check_pressed(ord("M")) global.enemyDefeated = global.enemyDefeatedReqCurrent;
+		
 	}
 
 #endregion
