@@ -222,9 +222,9 @@
 			
 			var _bgmChange = false;
 			var _pos = audio_sound_get_track_position(_snd);
-			if (_pos >= 2.53	&& _pos <= 2.54)		_bgmChange = true;
+			//if (_pos >= 2.53	&& _pos <= 2.54)		_bgmChange = true;
 			if (_pos >= 5.06	&& _pos <= 5.07)		_bgmChange = true;
-			if (_pos >= 7.05	&& _pos <= 7.06)		_bgmChange = true;
+			//if (_pos >= 7.05	&& _pos <= 7.06)		_bgmChange = true;
 			if (_pos >= 10.10	&& _pos <= 10.11)		_bgmChange = true;
 			
 			if _bgmChange {

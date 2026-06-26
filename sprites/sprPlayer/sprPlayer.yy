@@ -51,8 +51,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"Characters",
-    "path":"folders/Sprites/Characters.yy",
+    "name":"Spin",
+    "path":"folders/Sprites/Characters/Spin.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

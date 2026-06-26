@@ -38,6 +38,7 @@ function GameStateDefault(){
 				global.gameState = GameStateLevelComplete;
 				AmbientChange(AMBIENT_MUSIC, bgmWheel, 60);
 				PlayerSoundFadeOut();
+				SoundPlay(sfxPlayerWin, 75);
 				
 			}
 			
@@ -53,7 +54,10 @@ function GameStateDefault(){
 			
 			//this actually should trigger during boss death animation (within enemy death trigger)
 			//but here is a precaution
-			if !instance_exists(objEnemyBoss) DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+			if !instance_exists(objEnemyBoss) {
+				DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+				SoundPlay(sfxPlayerWin1, 75);
+			}
 			
 		} break;
 		

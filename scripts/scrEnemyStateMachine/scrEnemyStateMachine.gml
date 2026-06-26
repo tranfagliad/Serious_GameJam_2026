@@ -30,7 +30,10 @@
 			global.enemyDefeated = Approach(global.enemyDefeated, global.enemyDefeatedReqCurrent, 1);
 			
 			//check for boss
-			if (object_index == objEnemyBoss) DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+			if (object_index == objEnemyBoss) {
+				DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+				SoundPlay(sfxPlayerWin1, 75);
+			}
 			
 		}
 	
