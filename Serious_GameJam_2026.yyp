@@ -120,6 +120,7 @@
     {"id":{"name":"objMusicManager","path":"objects/objMusicManager/objMusicManager.yy",},},
     {"id":{"name":"objParentTable","path":"objects/objParentTable/objParentTable.yy",},},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},},
+    {"id":{"name":"objSplashScreenController","path":"objects/objSplashScreenController/objSplashScreenController.yy",},},
     {"id":{"name":"objTableComputer","path":"objects/objTableComputer/objTableComputer.yy",},},
     {"id":{"name":"objTableMixed","path":"objects/objTableMixed/objTableMixed.yy",},},
     {"id":{"name":"objTablePaper","path":"objects/objTablePaper/objTablePaper.yy",},},
