@@ -35,6 +35,8 @@ function GameStateDefault(){
 				
 				//move to wheel
 				global.gameState = GameStateLevelComplete;
+				PlayerSoundFadeOut();
+				
 			}
 		} break;
 		
@@ -145,6 +147,7 @@ function GameStateLevelComplete(){
 					}
 					
 					global.gamePaused = false;
+					//with objEnemyParent EnemyDeath(); maybe make all enemies explode?
 					
 					switch room {
 						case rmLevelOne:

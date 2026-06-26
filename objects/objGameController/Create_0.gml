@@ -22,7 +22,7 @@
 #region game data
 	
 	global.screenShakeActive = true;
-	global.cutsceneSkip = false;
+	global.cutsceneSkip = true;
 	global.dataDialogue = DataCreateDialogue();
 	
 	global.playerPosCheckpoint	= [256, 256];

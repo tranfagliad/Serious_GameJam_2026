@@ -29,8 +29,8 @@ function PlayerHit(_damage){
 		//player death sfx
 		SoundPlay(sfxPlayerDeath);
 		
-		//fade out music
-		AmbientFadeOut(AMBIENT_MUSIC);
+		//fade out player related sounds
+		PlayerSoundFadeOut();
 		
 	} else {
 		

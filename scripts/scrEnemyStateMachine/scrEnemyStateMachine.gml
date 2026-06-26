@@ -286,6 +286,9 @@
 			throwCharge = throwChargeMax;
 			enemyState = EnemyStateBossThrowCharge;
 			
+			//play sfx
+			SoundPlay(sfxEnemyBossDash);
+			
 		}
 		
 		//throw cooldown

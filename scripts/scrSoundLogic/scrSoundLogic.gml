@@ -123,11 +123,11 @@
 	
 	}
 
-	//change music to new track or empty
+	//change ambient to new track or empty
 	function AmbientChange(_type, _nextTrack = noone, _volPercent = 100, _looping = true, _fadeInTime = 2500, _fadeOutTime = 1000){
 		
 		//get ambient struct or setup a new one
-		if !struct_exists(global.ambient, _type) global.ambient[$ _type] = {ambientId: noone, ambientTrack: noone, ambientIdFade: noone, ambientVol: 100};
+		if !struct_exists(global.ambient, _type) global.ambient[$ _type] = AmbientDataSetup();
 		var _data = global.ambient[$ _type];
 		
 		
@@ -206,6 +206,9 @@
 		
 	}
 	
+#endregion
+
+#region specific sound commands
 	
 	function MusicChangeBoss(){
 		
@@ -236,6 +239,47 @@
 			
 		}
 		
+	}
+	
+	function PlayerSoundFadeOut(){
+		
+		AmbientFadeOut(AMBIENT_MUSIC);
+		AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
+		AmbientFadeOut(AMBIENT_PLAYER_SPIN);
+		AmbientFadeOut(AMBIENT_PLAYER_TORNADO);
+		
+	}
+	
+	
+	function VolumeUpdateAmbient(){
+		
+		//change gain
+		var _ambientTypes = struct_get_names(global.ambient);
+		var _al = array_length(_ambientTypes);
+		for (var i = 0; i < _al; i++) {
+		
+			var _name = _ambientTypes[i];
+			var _data = global.ambient[$ _name] ?? {ambientId: noone, ambientTrack: noone, ambientIdFade: noone, ambientVol: 100};
+			var _vol = _data.ambientVol;
+		
+			AmbientChange(_name, _data.ambientTrack, _vol, true, 0, 0);
+		
+		}
+		
+	}
+	
+	function VolumeUpdateSound(_vol){
+	
+		global.soundVolume = _vol;
+		VolumeUpdateAmbient();
+	
+	}
+
+	function VolumeUpdateMusic(_vol){
+	
+		global.musicVolume = _vol;
+		VolumeUpdateAmbient();
+	
 	}
 	
 #endregion

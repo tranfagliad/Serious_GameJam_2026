@@ -48,5 +48,11 @@
 
 
 //sound
-#macro AMBIENT_MUSIC			"ambientMusic"
-#macro AMBIENT_PLAYER_MOVEMENT	"ambientPlayerMovement"
+#macro AMBIENT_MUSIC					"ambientMusic"
+#macro AMBIENT_OFFICE					"ambientOffice"
+#macro AMBIENT_PLAYER_MOVEMENT			"ambientPlayerMovement"
+#macro AMBIENT_PLAYER_SPIN				"ambientPlayerSpin"
+#macro AMBIENT_PLAYER_TORNADO			"ambientPlayerTornado"
+#macro AMBIENT_PLAYER_TORNADO_PAPERS	"ambientPlayerItemPapers"
+#macro AMBIENT_PLAYER_TORNADO_STAPLERS	"ambientPlayerItemStaplers"
+#macro AMBIENT_PLAYER_TORNADO_COMPUTERS	"ambientPlayerItemComputers"

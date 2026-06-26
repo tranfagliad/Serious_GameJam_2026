@@ -25,6 +25,14 @@ function PlayerTornadoItemPickup (_radius) {
 					ItemObjectCreate(_item_type);
 				}
 				
+				//play sfx
+				switch _item_type {
+					case "papers":		SoundPlay(sfxPaperPickup);		break;
+					case "staplers":	SoundPlay(sfxStaplerPickup);	break;
+					case "computers":	SoundPlay(sfxComputerPickup);	break;
+				}
+				
+				
 				// Clear the contents of the table
 				variable_struct_set(_touched_table.contents, _item_type, 0);
 			

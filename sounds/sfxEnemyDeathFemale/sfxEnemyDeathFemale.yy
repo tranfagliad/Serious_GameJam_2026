@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfxEnemyDeathFemale",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.96,
+  "exportDir":"",
+  "name":"sfxEnemyDeathFemale",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/Sound/SoundEffects/Enemy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfxEnemyDeathFemale.mp3",
+  "volume":1.0,
+}

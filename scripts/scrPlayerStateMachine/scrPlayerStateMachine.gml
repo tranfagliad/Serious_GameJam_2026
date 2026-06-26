@@ -19,7 +19,7 @@ function PlayerStateDefault(){
 		dashTimer = dashDuration*global.playerDashPower;
 		playerState = PlayerStateDash;
 		dashCd = dashCdMax;
-		SoundPlay(sfxPlayerDash);
+		SoundPlay(sfxPlayerDash, 60);
 		return;
 	}
 	
@@ -32,6 +32,19 @@ function PlayerStateDefault(){
 		image_speed = (spinSpeed / maxSpinSpeed) * 6;
 	} else {
 		image_speed = 0;
+	}
+	
+	
+	//spin sfx
+	if !audio_is_playing(sfxPlayerSpin) && (spinSpeed > 0) {
+		var _percentage = (spinSpeed / maxSpinSpeed);
+		var _frame = floor(_percentage * 5);
+		_frame = clamp(_frame, 0, 4);
+		
+		//setup pitch depending on spin level
+		var _pitch = 1 + (_frame*0.1 - 0.2);
+		var _snd = SoundPlay(sfxPlayerSpin);
+		audio_sound_pitch(_snd, _pitch);
 	}
 	
 	// Tornado
@@ -78,7 +91,18 @@ function PlayerStateDefault(){
 			//update the struct with new array
 			struct_set(global.inventoryVisuals, _category, _visual_array);
 			
+			
+			//play sfx
+			//switch _category {
+				//case "papers":		if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_PAPERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
+				//case "staplers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_STAPLERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
+				//case "computers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_COMPUTERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
+			//}
+			
 		}
+		
+		//play sfx
+		//AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado, 100, true, 0, 0);
 		
 	} else {
 		// If the tornado drops, wipe out data inventories
@@ -94,6 +118,10 @@ function PlayerStateDefault(){
 		
 		//destroy all item objects
 		with objItemParent instance_destroy();
+		
+		//stop sfx
+		//AmbientFadeOut(AMBIENT_PLAYER_TORNADO, 0);
+		
 	}
 
 
@@ -105,15 +133,14 @@ function PlayerStateDefault(){
 		var _move_y = lengthdir_y(global.playerSpeed, _direction);
 		
 		var _col = CheckPlayerCollisionMap(_move_x, _move_y);
-		if !_col {
-			//sfx
-		}
+		//if !_col AmbientChange(AMBIENT_PLAYER_MOVEMENT, sfxPlayerMove); else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
 		
 		// Check for collisions with tables
 		//var _collision = CheckForPlayerCollision(_move_x, _move_y, objParentTable);
 		//x = _collision.collidedX ? x : x + _move_x;
 		//y = _collision.collidedY ? y : y + _move_y;
-	}
+		
+	} //else AmbientFadeOut(AMBIENT_PLAYER_MOVEMENT);
 	
 	
 	// Enemy collision logic

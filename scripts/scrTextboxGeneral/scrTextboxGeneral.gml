@@ -204,6 +204,9 @@ function DialogueStart(_seq, _stateTarget){
 		enemyState = EnemyStateLocked;
 	}
 	
+	//handle sfx
+	PlayerSoundFadeOut();
+	
 }
 
 //destroy all dialogue objects

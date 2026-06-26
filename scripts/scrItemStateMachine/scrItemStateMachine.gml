@@ -15,12 +15,21 @@ function ItemStateOrbit(){
 			//explode
 			ItemExplode();
 			
-			//remove item from inventory
+			//check which item is used, then remove them from inventory and play sfx
 			switch object_index {
 				
-				default:				global.inventory.papers = Approach(global.inventory.papers, 0, 1);			break;
-				case objItemStapler:	global.inventory.staplers = Approach(global.inventory.staplers, 0, 1);		break;
-				case objItemComputer:	global.inventory.computers = Approach(global.inventory.computers, 0, 1);	break;
+				default: {
+					global.inventory.papers = Approach(global.inventory.papers, 0, 1);
+					SoundPlay(sfxPaperHit);
+				} break;
+				case objItemStapler: {
+					global.inventory.staplers = Approach(global.inventory.staplers, 0, 1);
+					SoundPlay(sfxStaplerHit);
+				} break;
+				case objItemComputer: {
+					global.inventory.computers = Approach(global.inventory.computers, 0, 1);
+					SoundPlay(sfxComputerHit);
+				} break;
 				
 			}
 		
