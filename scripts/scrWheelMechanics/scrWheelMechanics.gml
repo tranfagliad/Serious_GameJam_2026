@@ -31,20 +31,15 @@ function SpinPowerUpWheel () {
 			if (wheelAngle >= THIRD_QUADRANT && wheelAngle < FOURTH_QUADRANT) {
 				_inst_text = "Health Restored!";
 				_text_color = c_orange;
-				// Powerup
 			} else if (wheelAngle >= SECOND_QUADRANT && wheelAngle < THIRD_QUADRANT) {
 				_inst_text = "Additional Health Slot!";
 				_text_color = c_blue;
-				// Powerup
 			} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
 				_inst_text = "Increased Dash Distance!";
 				_text_color = c_green;
-				
-				// Powerup
 			} else {
 				_inst_text = "Increased Movement Speed!"
 				_text_color = c_red;
-				// Powerup
 			}
 			_inst_text += " Press [SPACE] to proceed.";
 			break;

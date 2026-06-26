@@ -6,15 +6,10 @@ image_index = 0;
 //general
 playerState = PlayerStateDefault;
 playerStatePrev = PlayerStateDefault;
-playerSpeed = 4;
-playerSpeedDefault = 4;
 playerSpeedSlowed = 2;
 playerDamage = 1;
 
 
-//health
-maxHp = 5;
-currentHp = 5;
 invulCd = 0;
 invulCdMax = 180;
 

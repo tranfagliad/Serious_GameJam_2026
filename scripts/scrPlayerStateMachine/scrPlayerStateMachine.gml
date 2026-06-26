@@ -101,8 +101,8 @@ function PlayerStateDefault(){
 	if (_is_moving) {
 		var _direction = point_direction(0, 0, _input_x, _input_y);
     
-		var _move_x = lengthdir_x(playerSpeed, _direction);
-		var _move_y = lengthdir_y(playerSpeed, _direction);
+		var _move_x = lengthdir_x(global.playerSpeed, _direction);
+		var _move_y = lengthdir_y(global.playerSpeed, _direction);
 		
 		var _col = CheckPlayerCollisionMap(_move_x, _move_y);
 		if !_col {
@@ -127,12 +127,12 @@ function PlayerStateDefault(){
 		spinSpeed = Approach(spinSpeed, 0, spinDecel);
 		
 		//slow movement
-		playerSpeed = playerSpeedSlowed;
+		global.playerSpeed = playerSpeedSlowed;
 		
 	} else {
 		
 		//return normal speed
-		playerSpeed = playerSpeedDefault;
+		global.playerSpeed = playerSpeedDefault;
 		
 	}
 	

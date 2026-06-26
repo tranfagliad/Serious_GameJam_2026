@@ -1,17 +1,22 @@
 
-function DrawPlayerHealth (_current_hp, _max_hp) {
+function DrawPlayerHealth () {
 	
 	draw_sprite_ext(sprHealthBadge, 0, VIEWPORT_WIDTH-10, 10, 2, 2, 0, c_white, 1);
 	
-	for (var _i = 0; _i < _max_hp; _i++) {
-		var _missing_hp = _max_hp - _current_hp;
-		var _frame = (_i >= _missing_hp) ? 0 : 1;
+	for (var _i = 0; _i < global.playerMaxHp; _i++) {
+		var _frame = (_i < global.playerHp) ? 0 : 1;
+		var _right_anchor = VIEWPORT_WIDTH - 170; 
+		var _draw_x = _right_anchor - (_i * 45);
 		
-		var _draw_x = (VIEWPORT_WIDTH - 345) + (_i * 45);
-		
+		draw_sprite_ext(sprHealthBadgeChunk, 0, _draw_x, 10, 2, 2, 0, c_white, 1);
 		draw_sprite_ext(sprPlayerHealth, _frame, _draw_x, 53, 2, 2, 0, c_white, 1);
 	}
+	
+	var _tail_anchor = VIEWPORT_WIDTH - 147;
+	var _tail_x = _tail_anchor - (global.playerMaxHp * 45);
+	draw_sprite_ext(sprHealthBadgeTail, 0, _tail_x, 10, 2, 2, 0, c_white, 1);
 }
+
 
 
 function DrawInventory (_inventory) {
