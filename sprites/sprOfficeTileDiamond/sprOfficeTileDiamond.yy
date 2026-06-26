@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sprOfficeTileDiamond",
   "bboxMode":0,
-  "bbox_bottom":65,
-  "bbox_left":66,
-  "bbox_right":131,
+  "bbox_bottom":64,
+  "bbox_left":65,
+  "bbox_right":129,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":66,
+  "height":65,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"df59b90f-6103-40b5-a469-77f0bdc759a8","blendMode":0,"displayName":"default","isLocked":false,"name":"df59b90f-6103-40b5-a469-77f0bdc759a8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":132,
+  "width":130,
 }
