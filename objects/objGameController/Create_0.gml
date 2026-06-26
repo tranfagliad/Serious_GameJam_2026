@@ -33,7 +33,7 @@
 	
 	// used for keeping track between transitions
 	PlayerStatsReset();
-	global.paperReductionAmount = 4;
+	global.paperReductionAmount = 5;
 	
 	global.playerFlashColor = c_orange;
 	global.playerHitColor = c_red;
