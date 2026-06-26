@@ -110,6 +110,9 @@ function GameStateLevelComplete(){
 				if (wheelAngle >= FOURTH_QUADRANT)  { wheelAngle -= FOURTH_QUADRANT; }
 				
 				if (wheelSpeed <= 0) {
+					// TESTING: FORCE THE OUTCOME
+					wheelAngle = FIRST_QUADRANT-10;
+					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 				}
 				break;

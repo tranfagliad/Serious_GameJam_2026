@@ -112,7 +112,7 @@ function PlayerStatsSaveUp(){
 		
 		//save stats between transitions
 		//global.playerHp = currentHp;
-		global.playerSpeed = playerSpeedDefault;
+		//global.playerSpeed = playerSpeedDefault;
 		global.playerDashPower = dashPower;
 		
 	}
