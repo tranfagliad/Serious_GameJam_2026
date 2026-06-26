@@ -1,4 +1,4 @@
-
+/*
 draw_set_font(fntConsol);
 draw_text(40, VIEWPORT_HEIGHT-90,  "Artists");
 draw_text(280, VIEWPORT_HEIGHT-90, "Music/SFX");
@@ -22,3 +22,4 @@ draw_text(630, VIEWPORT_HEIGHT-45,  "CarbonFire");
 
 
 draw_set_font(fntConsol);
+*/
