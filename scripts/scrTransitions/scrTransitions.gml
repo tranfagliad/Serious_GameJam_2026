@@ -59,6 +59,9 @@ function TransitionStart(_targetRoom, _typeOut, _typeIn, _playerX, _playerY, _st
 		global.gameStateTarget = _stateTarget;
 		global.gameState = GameStateTransition;
 		
+		//fade out all ambient
+		AmbientFadeOutAll();
+		
 		//return result
 		return true;
 		

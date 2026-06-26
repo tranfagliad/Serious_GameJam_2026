@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxUIClick",
+  "%Name":"sfxPlayerDeath",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.40800452,
+  "duration":0.45598638,
   "exportDir":"",
-  "name":"sfxUIClick",
+  "name":"sfxPlayerDeath",
   "parent":{
-    "name":"UI",
-    "path":"folders/Sound/SoundEffects/UI.yy",
+    "name":"General",
+    "path":"folders/Sound/SoundEffects/Player/General.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxUIClick.mp3",
+  "soundFile":"sfxPlayerDeath.mp3",
   "volume":1.0,
 }

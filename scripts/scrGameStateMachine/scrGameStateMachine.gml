@@ -35,6 +35,8 @@ function GameStateDefault(){
 				
 				//move to wheel
 				global.gameState = GameStateLevelComplete;
+				AmbientFadeOut(AMBIENT_MUSIC);
+				
 			}
 		} break;
 		

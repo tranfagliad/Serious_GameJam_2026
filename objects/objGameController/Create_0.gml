@@ -14,6 +14,9 @@
 	global.soundVolume = 0.5;
 	global.musicVolume = 0.5;
 	
+	global.ambient = {};
+	global.dlgSfxDisable = false;
+	
 #endregion
 
 #region game data

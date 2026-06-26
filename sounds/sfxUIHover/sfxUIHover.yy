@@ -15,7 +15,7 @@
   "name":"sfxUIHover",
   "parent":{
     "name":"UI",
-    "path":"folders/SoundEffects/UI.yy",
+    "path":"folders/Sound/SoundEffects/UI.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

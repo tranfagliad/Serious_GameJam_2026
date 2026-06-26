@@ -25,6 +25,9 @@
 //global state machine
 global.gameState();
 
+//ambient fade control
+AmbientFadeCheck();
+
 //fullscreen
 if !global.htmlActive {
 	if objInputManager.pressed.fullscreen window_set_fullscreen(!window_get_fullscreen());
