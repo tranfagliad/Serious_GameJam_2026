@@ -15,18 +15,24 @@ switch room {
 	
 	case rmLevelTwo: {
 		
+		instance_create_layer(global.playerPosLevel2[0], global.playerPosLevel2[1], "System", oCutsceneAnchor);
 		DialogueStart(DLG_SEQ_LVL_TWO, GameStateDefault);
 		global.enemyDefeatedReqCurrent = global.enemyDefeatedReqLevel2;
 		global.enemySpawnCdMaxCurrent = global.enemySpawnCdMaxLevel2;
+		
+		AmbientChange(AMBIENT_MUSIC, bgmLevel1);
 		
 	} break;
 	
 	
 	case rmLevelThree: {
 		
+		instance_create_layer(global.playerPosLevel3[0], global.playerPosLevel3[1], "System", oCutsceneAnchor);
 		DialogueStart(DLG_SEQ_LVL_THREE, GameStateDefault);
 		global.enemyDefeatedReqCurrent = global.enemyDefeatedReqLevel3;
 		global.enemySpawnCdMaxCurrent = global.enemySpawnCdMaxLevel3;
+		
+		AmbientChange(AMBIENT_MUSIC, bgmLevel1);
 		
 	} break;
 	
@@ -36,6 +42,8 @@ switch room {
 		DialogueStart(DLG_SEQ_LVL_BOSS, GameStateDefault);
 		global.enemyDefeatedReqCurrent = global.enemyDefeatedReqLevelBoss;
 		global.enemySpawnCdMaxCurrent = global.enemySpawnCdMaxLevelBoss;
+		
+		AmbientChange(AMBIENT_MUSIC, bgmBossIntro);
 		
 	} break;
 	
