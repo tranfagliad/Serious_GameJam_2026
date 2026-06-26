@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxPaperPickup",
+  "%Name":"sfxEnemyBossCharge",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.2720182,
+  "duration":2.9280045,
   "exportDir":"",
-  "name":"sfxPaperPickup",
+  "name":"sfxEnemyBossCharge",
   "parent":{
-    "name":"Items",
-    "path":"folders/Sound/SoundEffects/Player/Items.yy",
+    "name":"Enemy",
+    "path":"folders/Sound/SoundEffects/Enemy.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxPaperPickup.mp3",
+  "soundFile":"sfxEnemyBossCharge.mp3",
   "volume":1.0,
 }

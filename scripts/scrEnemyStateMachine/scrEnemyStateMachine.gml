@@ -137,6 +137,9 @@
 			//move to active dashing
 			dashTimer = dashTimerMax;
 			enemyState = EnemyStateDashActive;
+			
+			//sfx
+			SoundPlay(sfxEnemyDash);
 		
 		}
 	
@@ -287,7 +290,7 @@
 			enemyState = EnemyStateBossThrowCharge;
 			
 			//play sfx
-			SoundPlay(sfxEnemyBossDash);
+			SoundPlay(sfxEnemyBossCharge);
 			
 		}
 		
@@ -315,6 +318,9 @@
 				throwDirection = other.throwDirection;
 				throwSpeed = 8;
 				throwTimer = 60;
+				
+				//sfx
+				SoundPlay(sfxEnemyBossThrow);
 				
 			}
 			

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxEnemyBossDash",
+  "%Name":"sfxWheelAlive",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.9280045,
+  "duration":4.0080047,
   "exportDir":"",
-  "name":"sfxEnemyBossDash",
+  "name":"sfxWheelAlive",
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Sound/SoundEffects/Enemy.yy",
+    "name":"Wheel",
+    "path":"folders/Sound/SoundEffects/Wheel.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxEnemyBossDash.mp3",
+  "soundFile":"sfxWheelAlive.mp3",
   "volume":1.0,
 }

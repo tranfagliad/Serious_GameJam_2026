@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.7440136,
+  "duration":1.2720182,
   "exportDir":"",
   "name":"sfxStaplerPickup",
   "parent":{

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxPaperPickup",
+  "%Name":"sfxWheelSpin",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.2720182,
+  "duration":4.4880047,
   "exportDir":"",
-  "name":"sfxPaperPickup",
+  "name":"sfxWheelSpin",
   "parent":{
-    "name":"Items",
-    "path":"folders/Sound/SoundEffects/Player/Items.yy",
+    "name":"Wheel",
+    "path":"folders/Sound/SoundEffects/Wheel.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxPaperPickup.mp3",
+  "soundFile":"sfxWheelSpin.mp3",
   "volume":1.0,
 }
