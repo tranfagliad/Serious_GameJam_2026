@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":15.0,
+  "duration":15.048027,
   "exportDir":"",
   "name":"bgmAmbientOffice",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":22050,
-  "soundFile":"bgmAmbientOffice.wav",
+  "soundFile":"bgmAmbientOffice.mp3",
   "volume":1.0,
 }

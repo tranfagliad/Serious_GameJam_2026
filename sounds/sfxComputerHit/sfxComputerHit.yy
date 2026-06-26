@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.1280046,
+  "duration":2.1840136,
   "exportDir":"",
   "name":"sfxComputerHit",
   "parent":{

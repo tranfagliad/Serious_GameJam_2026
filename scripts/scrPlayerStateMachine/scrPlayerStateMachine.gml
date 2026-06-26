@@ -19,7 +19,7 @@ function PlayerStateDefault(){
 		dashTimer = dashDuration*global.playerDashPower;
 		playerState = PlayerStateDash;
 		dashCd = dashCdMax;
-		SoundPlay(sfxPlayerDash, 60);
+		SoundPlay(sfxPlayerDash);
 		return;
 	}
 	
@@ -94,7 +94,7 @@ function PlayerStateDefault(){
 			
 			//play sfx
 			switch _category {
-				case "papers":		if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_PAPERS, sfxPaperFly, 50); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
+				case "papers":		if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_PAPERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);			break;
 				//case "staplers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_STAPLERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
 				//case "computers":	if _target_count > 0 AmbientChange(AMBIENT_PLAYER_TORNADO_COMPUTERS, sfxPaperFly); else AmbientFadeOut(AMBIENT_PLAYER_TORNADO_PAPERS);		break;
 			}
@@ -102,7 +102,7 @@ function PlayerStateDefault(){
 		}
 		
 		//play sfx
-		AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado, 30);
+		AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado);
 		
 	} else {
 		// If the tornado drops, wipe out data inventories

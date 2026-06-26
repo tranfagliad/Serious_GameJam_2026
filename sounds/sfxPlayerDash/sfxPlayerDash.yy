@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.55201817,
+  "duration":1.3920182,
   "exportDir":"",
   "name":"sfxPlayerDash",
   "parent":{

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"bgmLevel1Intro",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":10.176009,
+  "exportDir":"",
+  "name":"bgmLevel1Intro",
+  "parent":{
+    "name":"BGM",
+    "path":"folders/Sound/BGM.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"bgmLevel1Intro.mp3",
+  "volume":1.0,
+}

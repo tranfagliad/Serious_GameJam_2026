@@ -231,7 +231,7 @@ function GameStatePlayerDeath() {
 						
 						global.gameState = GameStateDefault;
 						SoundPlay(sfxWheelAlive);
-						AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice, 30);
+						AmbientChange(AMBIENT_OFFICE, bgmAmbientOffice);
 						
 						switch room {
 							default: AmbientChange(AMBIENT_MUSIC, bgmLevel1); break;
