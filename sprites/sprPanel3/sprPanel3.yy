@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Panels",
-    "path":"folders/Sprites/Levels/LevelOne/Panels.yy",
+    "path":"folders/Sprites/Levels/Panels.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
