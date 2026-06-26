@@ -13,10 +13,10 @@ function PlayerPaperShielded(_paperAmount){
 function PlayerHit(_damage){
 	
 	// hp reduction
-	currentHp -= _damage;
+	global.playerHp -= _damage;
 	
 	// Player Death Animation
-	if (currentHp <= 0) {
+	if (global.playerHp <= 0) {
 		
 		explodeCd = 30;
 		sprite_index = sprPlaceholderExplosion;
@@ -71,7 +71,7 @@ function PlayerCollisionEnemy(){
 
 function PlayerDeath () {
 
-	currentHp = 0;   // Prevent HP from becoming negative
+	global.playerHp = 0;   // Prevent HP from becoming negative
 		
 	with (objGameController) {
 		wheelPhase = 0;
@@ -111,7 +111,7 @@ function PlayerStatsSaveUp(){
 	with objPlayer {
 		
 		//save stats between transitions
-		global.playerHp = currentHp;
+		//global.playerHp = currentHp;
 		global.playerSpeed = playerSpeedDefault;
 		global.playerDashPower = dashPower;
 		
@@ -125,7 +125,7 @@ function PlayerStatsLoadUp(){
 	with objPlayer {
 		
 		//load stats between transitions
-		currentHp = global.playerHp;
+		//currentHp = global.playerHp;
 		playerSpeedDefault = global.playerSpeed;
 		dashPower = global.playerDashPower;
 		

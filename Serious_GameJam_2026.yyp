@@ -196,6 +196,7 @@
     {"id":{"name":"sprGameJamTitle","path":"sprites/sprGameJamTitle/sprGameJamTitle.yy",},},
     {"id":{"name":"sprHealthBadge","path":"sprites/sprHealthBadge/sprHealthBadge.yy",},},
     {"id":{"name":"sprHealthBadgeChunk","path":"sprites/sprHealthBadgeChunk/sprHealthBadgeChunk.yy",},},
+    {"id":{"name":"sprHealthBadgeTail","path":"sprites/sprHealthBadgeTail/sprHealthBadgeTail.yy",},},
     {"id":{"name":"sprLevelBossTable1","path":"sprites/sprLevelBossTable1/sprLevelBossTable1.yy",},},
     {"id":{"name":"sprLevelBossTable2","path":"sprites/sprLevelBossTable2/sprLevelBossTable2.yy",},},
     {"id":{"name":"sprLevelBossTable3","path":"sprites/sprLevelBossTable3/sprLevelBossTable3.yy",},},

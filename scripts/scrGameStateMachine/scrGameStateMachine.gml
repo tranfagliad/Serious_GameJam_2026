@@ -87,10 +87,11 @@ function GameStateCredits(){
 }
 
 
+
+
 function GameStateLevelComplete(){
 	global.gamePaused = true;
 	
-
 	with (objGameController) {
 		
 		switch (wheelPhase) {
@@ -106,9 +107,8 @@ function GameStateLevelComplete(){
 				wheelAngle += wheelSpeed;
 				wheelSpeed = Approach(wheelSpeed, 0, wheelFriction);
 				
-				if (wheelAngle >= 360)  { wheelAngle -= 360; }
+				if (wheelAngle >= FOURTH_QUADRANT)  { wheelAngle -= FOURTH_QUADRANT; }
 				
-				// Check if the wheel has ground to a complete halt
 				if (wheelSpeed <= 0) {
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 				}
@@ -116,9 +116,21 @@ function GameStateLevelComplete(){
 				
 			case WheelSpinPhase.SPIN_COMPLETE:
 				if (objInputManager.pressed.space) {
+					
+					if (wheelAngle >= THIRD_QUADRANT && wheelAngle < FOURTH_QUADRANT) {
+						global.playerHp = global.playerMaxHp;
+					} else if (wheelAngle >= SECOND_QUADRANT && wheelAngle < THIRD_QUADRANT) {
+						global.playerMaxHp++;
+						global.playerHp = global.playerMaxHp;
+						
+					} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
+						// Increased Dash Distance
+					} else {
+						// Increased Movement Speed
+					}
+					
 					global.gamePaused = false;
 					
-					// Proceed seamlessly to the target room routing matrix
 					switch room {
 						case rmLevelOne:
 							TransitionStart(rmLevelTwo, sqFadeOut, sqFadeIn, global.playerPosLevel2[0], global.playerPosLevel2[1], GameStateDefault);
@@ -138,6 +150,8 @@ function GameStateLevelComplete(){
 		}
 	}
 }
+
+
 
 
 function GameStatePlayerDeath() {
@@ -171,7 +185,7 @@ function GameStatePlayerDeath() {
 						global.gamePaused = false;
 						
 						with (objPlayer) {
-							currentHp = 2;   // Revive with 2 HP (?)
+							global.playerHp = global.playerMaxHp;
 							playerState = playerStatePrev;
 							sprite_index = sprPlayer;
 							image_blend = c_white;
