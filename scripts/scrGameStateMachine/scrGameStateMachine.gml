@@ -83,8 +83,13 @@ function GameStateDialogue(){
 		//unlock other state machines
 		with objPlayer playerState = playerStatePrev;
 		with objEnemyParent enemyState = enemyStatePrev;
-	}
-	
+	}	
+}
+
+
+function GameStateFinishedDialogue() {
+	global.gamePaused = false;
+	TransitionStart(rmCredits, sqFadeOut, sqFadeIn, 0, 0, GameStatePaused);
 }
 
 
@@ -257,7 +262,7 @@ function GameStatePlayerDeath() {
 }
 
 
-function GameStateGameCompleted () {
-	
-	
+function GameStateCredits () {
+	global.gamePaused = false;
+	TransitionStart(rmCredits, sqFadeOut, sqFadeIn, 0, 0, GameStatePaused);
 }

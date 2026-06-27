@@ -53,9 +53,15 @@ switch room {
 	
 	case rmGameCompleted: {
 		global.gameState = GameStateDialogue;
-		global.gameStateTarget = GameStatePaused;
-		if (global.cutsceneSkip) { global.gameState = GameStatePaused; } else {DialogueStart(DLG_SEQ_OUTRO, GameStatePaused);}
-		// AmbientChange(AMBIENT_MUSIC, bgmVictoryTheme, 60);   <---- Some music or something idk play Wonderwall
+		global.gameStateTarget = GameStateFinishedDialogue;
+		
+		if (global.cutsceneSkip) {
+			global.gameState = GameStateFinishedDialogue;
+			GameStateFinishedDialogue();
+		} else {
+			DialogueStart(DLG_SEQ_OUTRO, GameStateFinishedDialogue);
+		}
+		
 	} break;
 	
 }
