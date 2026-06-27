@@ -48,8 +48,8 @@
 	global.gamePaused = false;
 	global.midTransition = false;
 	
-	global.gameState = GameStateDefault;
-	global.gameStatePrev = GameStateDefault;
+	global.gameState = GameStatePaused;
+	global.gameStatePrev = GameStatePaused;
 	
 	global.enemySpawnCd = 180;
 	global.enemySpawnCdMaxCurrent	= 150;
