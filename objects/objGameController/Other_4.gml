@@ -1,6 +1,10 @@
 //initialize game state depending on the room
 switch room {
 	
+	case rmMainMenu: {
+		AmbientChange(AMBIENT_MUSIC, bgmMainMenu, 60);
+	} break;
+	
 	//intro at the start of first level
 	case rmLevelOne: {
 		
@@ -64,4 +68,7 @@ switch room {
 		
 	} break;
 	
+	case rmCredits: {
+		AmbientChange(AMBIENT_MUSIC, bgmMainMenu, 60);
+	}
 }

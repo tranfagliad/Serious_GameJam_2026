@@ -37,7 +37,7 @@ function DataCreateDialogue(){
 	
 	#region	intro cutscene
 		// Introduction sequence with varying portraits and line breaks
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 0, "Hughes", "I just got an email", _cDef, 1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 0, "Hughes", "I just got an email.", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 1, "Hughes", "*...click...click.*", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 2, "Hughes", "The CEO just fired me?!", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 3, "Hughes", "...", _cDef, 1);
