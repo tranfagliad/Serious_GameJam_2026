@@ -57,3 +57,8 @@
 #macro AMBIENT_PLAYER_TORNADO_PAPERS	"ambientPlayerItemPapers"
 #macro AMBIENT_PLAYER_TORNADO_STAPLERS	"ambientPlayerItemStaplers"
 #macro AMBIENT_PLAYER_TORNADO_COMPUTERS	"ambientPlayerItemComputers"
+
+//enemy data
+#macro ENEMY_TYPE_DEFAULT				"enemyDefault"
+#macro ENEMY_TYPE_TRAP					"enemyTrap"
+#macro ENEMY_TYPE_DASH					"enemyDash"

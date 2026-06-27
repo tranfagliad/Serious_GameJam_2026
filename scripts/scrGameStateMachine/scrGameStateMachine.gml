@@ -4,7 +4,20 @@ function GameStateDefault(){
 	global.enemySpawnCd = Approach(global.enemySpawnCd, 0, 1);
 	if global.enemySpawnCd <= 0 {
 		global.enemySpawnCd = global.enemySpawnCdMaxCurrent;
-		var _enemyType = choose(objEnemyDefault, objEnemyDash, objEnemyTrap);
+		
+		// --- CHOOSE ENEMY TYPE WITH WEIGHTED RANDOMNESS ---
+		var _enemyTypes = [objEnemyDefault, objEnemyTrap, objEnemyDash];
+		var _enemyRarity = [0,0,0];
+		switch room {
+			case rmLevelOne:	_enemyRarity = [1,		0.5,	0.1	];	break;	//default is twice as common as trap, dashing is very rare
+			case rmLevelTwo:	_enemyRarity = [1,		2,		0.5	];	break;	//default is half as common as trap, dashing is kinda rare
+			case rmLevelThree:	_enemyRarity = [1,		1,		2	];	break;	//default is as common as trap, dashing is twice as common as them
+			case rmBossLevel:	_enemyRarity = [1,		1,		1	];	break;	//fair game, basically choose()
+		}
+		var _chosenNum = RandomWeigths(_enemyRarity);
+		var _enemyType = _enemyTypes[_chosenNum];
+		
+		// --- SPAWN THE BASTARD ---
 		var _spawn_count = instance_number(objEnemySpawn);
 		if (_spawn_count > 0) {
 			var _random_index = irandom(_spawn_count - 1);
