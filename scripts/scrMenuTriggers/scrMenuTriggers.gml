@@ -1,13 +1,13 @@
-function PauseUpdateVolumeSound(_vol){
+function PauseUpdateVolumeSound(){
 	
-	global.soundVolume = _vol;
+	global.soundVolume = butVolume;
 	VolumeUpdateAmbient();
 	
 }
 
-function PauseUpdateVolumeMusic(_vol){
+function PauseUpdateVolumeMusic(){
 	
-	global.musicVolume = _vol;
+	global.musicVolume = butVolume;
 	VolumeUpdateAmbient();
 	
 }

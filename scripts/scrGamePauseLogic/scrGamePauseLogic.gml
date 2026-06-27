@@ -4,9 +4,9 @@ function PauseMenuCreate(){
 	var _startY = 96;	
 		
 	//upper buttons scale
-	var _xscale = 4;
-	var _yscale = 1;
-	var _shiftX = 128;
+	var _xscale = 3.5;
+	var _yscale = 1.5;
+	var _shiftX = 128 + 64 - 16;
 		
 	//ambient office
 	var _x = _shiftX;
@@ -14,44 +14,44 @@ function PauseMenuCreate(){
 	instance_create_layer(_x,_y, "System", objButtonPause, {butScript: PauseUpdateAmbientOffice, image_xscale: _xscale, image_yscale: _yscale});
 		
 	//ambient tornado
-	var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale + 64;
+	var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale + 64*2;
 	var _y = _startY;
 	instance_create_layer(_x,_y, "System", objButtonPause, {butScript: PauseUpdateAmbientTornado, image_xscale: _xscale, image_yscale: _yscale});
 		
 	//sfx voume
 	for (var i = 0; i <= 10; i++){
 			
-		var _xscale = 0.4;
-		var _yscale = 0.5;
-		var _shiftX = 80;
-		var _shiftY = 64;
+		var _xscale = 0.8;
+		var _yscale = 0.8;
+		var _shiftX = 128 + 32 + 8;
+		var _shiftY = 320 + 64;
 			
-		var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale * i;
+		var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale*i;
 		var _y = _startY + _shiftY;
-		//instance_create_layer(_x, _y, "System", objButtonVolume, {butScript: PauseUpdateVolumeSound, image_xscale: _xscale, image_yscale: _yscale, butVolume: 0.1*i});
+		instance_create_layer(_x, _y, "System", objButtonPause, {butScript: PauseUpdateVolumeSound, image_xscale: _xscale, image_yscale: _yscale, butVolume: 0.1*i});
 			
 	}
 		
 	//music voume
 	for (var i = 0; i <= 10; i++){
 			
-		var _xscale = 0.4;
-		var _yscale = 0.5;
-		var _shiftX = 80;
-		var _shiftY = (64+32);
+		var _xscale = 0.8;
+		var _yscale = 0.8;
+		var _shiftX = 128 + 32 + 8;
+		var _shiftY = 320 + 64 + 64;
 			
-		var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale * i;
+		var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale*i;
 		var _y = _startY + _shiftY;
-		//instance_create_layer(_x, _y, "System", objButtonVolume, {butScript: PauseUpdateVolumeMusic, image_xscale: _xscale, image_yscale: _yscale, butVolume: 0.1*i});
+		instance_create_layer(_x, _y, "System", objButtonPause, {butScript: PauseUpdateVolumeMusic, image_xscale: _xscale, image_yscale: _yscale, butVolume: 0.1*i});
 			
 	}
 		
 		
 	//bottom buttons scale
-	var _xscale = 1;
-	var _yscale = 1;
-	var _shiftX = 128;
-	var _shiftY = (64+32+48);
+	var _xscale = 3.5;
+	var _yscale = 1.5;
+	var _shiftX = 128 + 64 - 16;
+	var _shiftY = (64+32);
 		
 	//dialogue sfx
 	var _x = _shiftX;
@@ -59,7 +59,7 @@ function PauseMenuCreate(){
 	instance_create_layer(_x,_y, "System", objButtonPause, {butScript: PauseUpdateSfxText, image_xscale: _xscale, image_yscale: _yscale});
 		
 	//screen shake
-	var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale + 64;
+	var _x = _shiftX + sprite_get_width(sprButtonBorder)*_xscale + 64*2;
 	var _y = _startY + _shiftY;
 	instance_create_layer(_x,_y, "System", objButtonPause, {butScript: PauseUpdateScreenShake, image_xscale: _xscale, image_yscale: _yscale});
 	

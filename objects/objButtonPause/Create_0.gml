@@ -9,7 +9,10 @@ switch butScript {
 	case PauseUpdateAmbientOffice:		butName = "OFFICE AMBIENT SOUND EFFECT";	break;
 	case PauseUpdateAmbientTornado:		butName = "TORNADO SOUND EFFECT";			break;
 	
-	case PauseUpdateVolumeMusic:		butName = "MUSIC";			break;
-	case PauseUpdateVolumeSound:		butName = "SOUND";			break;
-
+	
+	case PauseUpdateVolumeMusic:		butName = $"{round(butVolume*100)}";		break;
+	case PauseUpdateVolumeSound:		butName = $"{round(butVolume*100)}";		break;
+	
+	
+	
 }
