@@ -142,6 +142,7 @@
     {"id":{"name":"objTextboxPortrait","path":"objects/objTextboxPortrait/objTextboxPortrait.yy",},},
     {"id":{"name":"oCutsceneAnchor","path":"objects/oCutsceneAnchor/oCutsceneAnchor.yy",},},
     {"id":{"name":"rmBossLevel","path":"rooms/rmBossLevel/rmBossLevel.yy",},},
+    {"id":{"name":"rmCredits","path":"rooms/rmCredits/rmCredits.yy",},},
     {"id":{"name":"rmGameCompleted","path":"rooms/rmGameCompleted/rmGameCompleted.yy",},},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"id":{"name":"rmLevelOne","path":"rooms/rmLevelOne/rmLevelOne.yy",},},
@@ -344,6 +345,7 @@
     {"roomId":{"name":"rmSplashScreen","path":"rooms/rmSplashScreen/rmSplashScreen.yy",},},
     {"roomId":{"name":"rmPlayerDeath","path":"rooms/rmPlayerDeath/rmPlayerDeath.yy",},},
     {"roomId":{"name":"rmGameCompleted","path":"rooms/rmGameCompleted/rmGameCompleted.yy",},},
+    {"roomId":{"name":"rmCredits","path":"rooms/rmCredits/rmCredits.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
