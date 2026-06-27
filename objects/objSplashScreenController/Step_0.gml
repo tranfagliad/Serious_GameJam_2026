@@ -21,16 +21,17 @@ switch (mode) {
         break;
         
     case 2:
-        timer++;
-        fade_alpha = (timer / fade_duration);
-        if (timer >= fade_duration) {
-            fade_alpha = 1;
-            mode = 3; // Trigger warp
-        }
+		TransitionStart(rmMainMenu, sqFadeOut, sqFadeIn, 0,0, GameStatePaused);
+        //timer++;
+        //fade_alpha = (timer / fade_duration);
+        //if (timer >= fade_duration) {
+        //    fade_alpha = 1;
+        //    mode = 3; // Trigger warp
+        //}
         break;
         
     case 3:
-        global.gameState = GameStatePaused;
-        room_goto(rmMainMenu);
+       // global.gameState = GameStatePaused;
+       // room_goto(rmMainMenu);
         break;
 }

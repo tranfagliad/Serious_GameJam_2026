@@ -1,6 +1,6 @@
 // Configuration
 splash_duration = 4 * game_get_speed(gamespeed_fps); // 5 seconds of screen time
-fade_duration   = 1 * game_get_speed(gamespeed_fps); // 1 second fade duration
+fade_duration   = 1.2 * game_get_speed(gamespeed_fps); // 1.5 second fade duration
 
 // Timing Trackers
 timer = 0;
