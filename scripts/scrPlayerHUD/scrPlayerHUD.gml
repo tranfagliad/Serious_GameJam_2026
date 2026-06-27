@@ -80,3 +80,26 @@ function DrawEnemyDefeatReq(_current, _req){
 	
 	draw_sprite_ext(sprEnemyReqMeter, _frame, _draw_x, _draw_y, 1.5, 1.5, 0, c_white, 1.0);
 }
+
+
+function DrawBossHealthBar() {
+	if (!instance_exists(objEnemyBoss)) exit;
+	
+	var _scale = 0.8;
+	var _percent = (objEnemyBoss.hp / objEnemyBoss.maxHp) * 100;
+	var _col = #FF1600;
+	
+	var _sprite_origin_x = VIEWPORT_WIDTH - 10;
+	var _sprite_origin_y = VIEWPORT_HEIGHT - 10;
+	
+	var _sprite_top_left_x = _sprite_origin_x - (778 * _scale);
+	var _sprite_top_left_y = _sprite_origin_y - (120 * _scale);
+	
+	var _bar_x1 = _sprite_top_left_x + (278 * _scale);
+	var _bar_y1 = _sprite_top_left_y + (47 * _scale);
+	var _bar_x2 = _sprite_top_left_x + (755 * _scale);
+	var _bar_y2 = _sprite_top_left_y + (73 * _scale);
+	
+	draw_healthbar(_bar_x1, _bar_y1, _bar_x2, _bar_y2, _percent, c_black, _col, _col, 0, true, false);
+	draw_sprite_ext(sprBossHealth, 0, _sprite_origin_x, _sprite_origin_y, _scale, _scale, 0, c_white, 1);
+}
