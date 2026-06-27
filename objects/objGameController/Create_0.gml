@@ -3,7 +3,7 @@
 	//randomise();
 	global.htmlActive = false;
 	
-	global.cheat = true;
+	global.cheat = false;
 	global.cheatcode = "bees";
 	global.showDebugUI = false;
 
