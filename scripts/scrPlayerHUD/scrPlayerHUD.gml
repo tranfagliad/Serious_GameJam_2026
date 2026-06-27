@@ -87,7 +87,8 @@ function DrawBossHealthBar() {
 	
 	var _scale = 0.8;
 	var _percent = (objEnemyBoss.hp / objEnemyBoss.maxHp) * 100;
-	var _col = #FF1600;
+	var _min_col = #FF1600;
+	var _max_col = #A0FF00;
 	
 	var _sprite_origin_x = VIEWPORT_WIDTH - 10;
 	var _sprite_origin_y = VIEWPORT_HEIGHT - 10;
@@ -100,6 +101,6 @@ function DrawBossHealthBar() {
 	var _bar_x2 = _sprite_top_left_x + (755 * _scale);
 	var _bar_y2 = _sprite_top_left_y + (73 * _scale);
 	
-	draw_healthbar(_bar_x1, _bar_y1, _bar_x2, _bar_y2, _percent, c_black, _col, _col, 0, true, false);
+	draw_healthbar(_bar_x1, _bar_y1, _bar_x2, _bar_y2, _percent, c_black, _min_col, _max_col, 0, true, false);
 	draw_sprite_ext(sprBossHealth, 0, _sprite_origin_x, _sprite_origin_y, _scale, _scale, 0, c_white, 1);
 }
