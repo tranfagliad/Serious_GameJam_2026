@@ -40,6 +40,4 @@ global.gameState();
 AmbientFadeCheck();
 
 //fullscreen
-if !global.htmlActive {
-	if objInputManager.pressed.fullscreen window_set_fullscreen(!window_get_fullscreen());
-}
+if objInputManager.pressed.fullscreen window_set_fullscreen(!window_get_fullscreen());
