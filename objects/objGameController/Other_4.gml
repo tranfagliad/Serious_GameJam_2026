@@ -1,6 +1,10 @@
 //initialize game state depending on the room
 switch room {
 	
+	case rmMainMenu: {
+		AmbientChange(AMBIENT_MUSIC, bgmMainMenu, 60);
+	} break;
+	
 	//intro at the start of first level
 	case rmLevelOne: {
 		
@@ -51,6 +55,20 @@ switch room {
 		
 	} break;
 	
-	//add outro later
+	case rmGameCompleted: {
+		global.gameState = GameStateDialogue;
+		global.gameStateTarget = GameStateFinishedDialogue;
+		
+		if (global.cutsceneSkip) {
+			global.gameState = GameStateFinishedDialogue;
+			GameStateFinishedDialogue();
+		} else {
+			DialogueStart(DLG_SEQ_OUTRO, GameStateFinishedDialogue);
+		}
+		
+	} break;
 	
+	case rmCredits: {
+		AmbientChange(AMBIENT_MUSIC, bgmMainMenu, 60);
+	}
 }

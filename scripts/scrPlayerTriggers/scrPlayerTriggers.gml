@@ -22,7 +22,7 @@ function PlayerHit(_damage){
 	if (global.playerHp <= 0) {
 		
 		explodeCd = 60;
-		sprite_index = sprPlaceholderExplosion;
+		sprite_index = sprPlayerDeath;
 		playerStatePrev = playerState;
 		playerState = PlayerStateExplode;
 		
@@ -47,7 +47,6 @@ function PlayerHit(_damage){
 	
 	//screen shake
 	ScreenShakeStart(60, 6);
-	
 }
 
 

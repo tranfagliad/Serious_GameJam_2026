@@ -37,14 +37,16 @@ function DataCreateDialogue(){
 	
 	#region	intro cutscene
 		// Introduction sequence with varying portraits and line breaks
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 0, "Hughes", "I just got an email", _cDef, 1);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 0, "Hughes", "I just got an email.", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 1, "Hughes", "*...click...click.*", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 2, "Hughes", "The CEO just fired me?!", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 3, "Hughes", "...", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 4, "Hughes", "I'm gonna spin that snake through a wall...", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 5, "Tutorial", "Use WASD to move and charge up your spin.\nMaintain high spin to create a tornado around you to pick up objects.", _cDef, 0);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 6, "Tutorial", "At full charge, press [SPACE] to dash.", _cDef, 0);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 7, "Tutorial", "Good luck!", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 7, "Tutorial", "Paper provides you with protection.\nStaplers provide a means to attack.", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 8, "Tutorial", "Computers deal massive damage and can be hurled as projectiles.\nThey are launched in the direction that you dash.", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 9, "Tutorial", "Good luck!", _cDef, 0);
 	#endregion
 	
 	#region   // Level Two
@@ -60,6 +62,10 @@ function DataCreateDialogue(){
 		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 1,	"Hughes", "No, I-", _cDef,	1);
 		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 2,	"Ms. Snide", "Ssssshut up! Peons!", _cDef,	2);
 		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 3,	"Ms. Snide", "Ssssspin this fool into orbit!", _cDef,	2);
+	#endregion
+	
+	#region
+		DataDialogueSet(_data, DLG_SEQ_OUTRO, 0, "Dev Team", "Thanks for playing! We hope you are enjoying the game jam!", _cDef, 3);
 	#endregion
 	
 	//return structure of datasets

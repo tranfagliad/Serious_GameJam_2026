@@ -5,3 +5,5 @@ room_goto(rmSplashScreen);
 //room_goto(rmLevelTwo);
 //room_goto(rmLevelThree);
 //room_goto(rmBossLevel);
+//room_goto(rmGameCompleted);
+//room_goto(rmCredits);
