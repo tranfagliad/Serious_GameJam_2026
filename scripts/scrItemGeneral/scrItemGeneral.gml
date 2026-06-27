@@ -69,8 +69,15 @@ function ItemPapersTriggerDisperse(_x,_y){
 
 function ItemExplode(){
 	
+	switch sprite_index {
+		case sprStapler: image_xscale = 0.5; image_yscale = 0.5;
+	}
+	
+	sprite_index = sprExplosion;
+	image_index = 0;
+	image_speed = 1;
+	
 	explodeCd = 15;
-	sprite_index = sprPlaceholderExplosion;
 	itemState = ItemStateExplode;
 	
 }

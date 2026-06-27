@@ -41,12 +41,14 @@ function ItemStateOrbit(){
 
 function ItemStateExplode(){
 	
-	//create the variable if not set yet
-	if !variable_instance_exists(id, "explodeCd") explodeCd = 15;
+	if (image_index >= (image_number - 1)) instance_destroy();
 	
-	//countdown until destruction
-	explodeCd = Approach(explodeCd, 0, 1);
-	if explodeCd <= 0 instance_destroy();
+	////create the variable if not set yet
+	//if !variable_instance_exists(id, "explodeCd") explodeCd = 15;
+	//
+	////countdown until destruction
+	//explodeCd = Approach(explodeCd, 0, 1);
+	//if explodeCd <= 0 instance_destroy();
 	
 }
 

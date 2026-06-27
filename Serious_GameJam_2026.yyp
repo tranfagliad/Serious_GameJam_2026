@@ -267,6 +267,7 @@
     {"id":{"name":"sprEnemy3MDeath","path":"sprites/sprEnemy3MDeath/sprEnemy3MDeath.yy",},},
     {"id":{"name":"sprEnemyReqMeter","path":"sprites/sprEnemyReqMeter/sprEnemyReqMeter.yy",},},
     {"id":{"name":"sprEnemySpawn","path":"sprites/sprEnemySpawn/sprEnemySpawn.yy",},},
+    {"id":{"name":"sprExplosion","path":"sprites/sprExplosion/sprExplosion.yy",},},
     {"id":{"name":"sprGameCompletedBgr","path":"sprites/sprGameCompletedBgr/sprGameCompletedBgr.yy",},},
     {"id":{"name":"sprGameJamTitle","path":"sprites/sprGameJamTitle/sprGameJamTitle.yy",},},
     {"id":{"name":"sprHealthBadge","path":"sprites/sprHealthBadge/sprHealthBadge.yy",},},
