@@ -14,7 +14,7 @@ draw_text(300, 250, "Artists");
 draw_set_colour(c_purple);
 draw_text(300, 380, "Music / SFX");
 draw_set_colour(c_green);
-draw_text(300, 500, "Support");
+draw_text(300, 480, "Support");
 draw_set_colour(c_white);
 
 draw_set_font(fntConsolBig)
@@ -26,8 +26,8 @@ draw_text(340, 320, "Dreamy                    Character Design & Animations");
 
 draw_text(340, 420, "stedema");
 
-draw_text(340, 540, "extonjunior               Production Support & Team Coordination");
-draw_text(340, 570, "CarbonFire                Level Design & Dialogue");
+draw_text(340, 520, "extonjunior               Production Support & Team Coordination");
+draw_text(340, 550, "CarbonFire                Level Design & Dialogue");
 
 
 
