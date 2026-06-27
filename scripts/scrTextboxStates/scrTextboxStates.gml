@@ -11,7 +11,7 @@ function TextboxStateDialogue(){
 	textProgress = Approach(textProgress, textLength, textSpeed);
 	
 	//dialogue sfx
-	if audio_exists(textSfx) && !audio_is_playing(textSfx) && (textProgress < textLength) {
+	if global.sfxTextActive && audio_exists(textSfx) && !audio_is_playing(textSfx) && (textProgress < textLength) {
 		var _sfx = SoundPlay(textSfx);
 		audio_sound_pitch(_sfx, random_range(0.8,1.2));
 	}

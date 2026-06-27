@@ -38,7 +38,7 @@ if global.cheat {
 	
 	draw_set_colour(c_yellow);
 	draw_set_halign(fa_left);
-	draw_text(10,	VIEWPORT_HEIGHT - 64,	$"CHEATS ARE ACTIVE (YOU FOOL)");
+	draw_text(10,	VIEWPORT_HEIGHT - 80,	$"CHEATS ARE ACTIVE (YOU FOOLS)");
 	
 }
 
@@ -54,11 +54,59 @@ if global.gamePaused {
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
 	var _c1 = c_black;
-	var _c2 = c_white;
+	var _c2 = c_yellow;
 	var _x = VIEWPORT_WIDTH/2;
 	var _y = VIEWPORT_HEIGHT/2;
 	draw_text_transformed_colour(_x + 1, _y + 1,	$"PAUSED", 3,3, 0, _c1,_c1,_c1,_c1, 1);
 	draw_text_transformed_colour(_x, _y,			$"PAUSED", 3,3, 0, _c2,_c2,_c2,_c2, 1);
+	
+	
+	//draw buttons
+	with objButtonPause {
+		
+		draw_self();
+		draw_set_font(fntConsolBig);
+		draw_set_valign(fa_top);
+		draw_set_halign(fa_left);
+		
+		//setup text
+		var _text = butName;
+		var _c = c_white; // #FBFF86;
+		if image_index == 2 _c = c_gray;
+
+		//setup position
+		var _x = floor(bbox_left + (bbox_right - bbox_left)/2 - string_width(_text)/2);
+		var _y = floor(bbox_top + (bbox_bottom - bbox_top)/2 - string_height(_text)/2);
+
+		//draw text
+		draw_text_transformed_color(_x,_y, _text, 1, 1, 0, _c,_c,_c,_c, image_alpha);
+		
+		//set name for line of volume buttons
+		if ((butScript == PauseUpdateVolumeMusic) || (butScript == PauseUpdateVolumeSound)) && (butVolume <= 0) {
+			
+			//very good code no changes necessary
+			var _text = "SOUND";
+			if (butScript == PauseUpdateVolumeMusic) _text = "MUSIC";	
+	
+			var _xscale = 0.8;
+			var _yscale = 0.8;
+			var _x = x - sprite_get_width(sprButtonBorder)*_xscale;
+			var _y = y;
+	
+			//sprite
+			draw_sprite_ext(sprButtonBorder, 0, _x, _y, _xscale, _yscale, 0,c_white, image_alpha);
+	
+			//text
+			_x = _x + sprite_get_width(sprButtonBorder)*_xscale/2 - string_width(_text)/2;
+			_y = _y + sprite_get_height(sprButtonBorder)*_yscale/2 - string_height(_text)/2;
+			_x = floor(_x);
+			_y = floor(_y);
+			var _c = #FBFF86;
+			draw_text_transformed_colour(_x, _y, _text, 1,1, 0, _c,_c,_c,_c, image_alpha);
+	
+		}
+		
+	}
 	
 }
 

@@ -13,11 +13,6 @@
 		if keyboard_check_pressed(ord("R")) game_restart();
 		if keyboard_check_pressed(vk_tab) global.showDebugUI = !global.showDebugUI;
 		
-		if keyboard_check_pressed(vk_f1) VolumeUpdateMusic(global.musicVolume - 0.1);
-		if keyboard_check_pressed(vk_f2) VolumeUpdateMusic(global.musicVolume + 0.1);
-		if keyboard_check_pressed(vk_f3) VolumeUpdateSound(global.soundVolume - 0.1);
-		if keyboard_check_pressed(vk_f4) VolumeUpdateSound(global.soundVolume + 0.1);
-		
 		if keyboard_check_pressed(vk_f5) TransitionStart(rmLevelOne,	sqFadeOut, sqFadeIn, global.playerPosLevel1[0],		global.playerPosLevel1[1],		GameStateDefault);
 		if keyboard_check_pressed(vk_f6) TransitionStart(rmLevelTwo,	sqFadeOut, sqFadeIn, global.playerPosLevel2[0],		global.playerPosLevel2[1],		GameStateDefault);
 		if keyboard_check_pressed(vk_f7) TransitionStart(rmLevelThree,	sqFadeOut, sqFadeIn, global.playerPosLevel3[0],		global.playerPosLevel3[1],		GameStateDefault);
