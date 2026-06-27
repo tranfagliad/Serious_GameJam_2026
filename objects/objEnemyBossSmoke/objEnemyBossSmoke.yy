@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"objEnemyBossSnake",
+  "%Name":"objEnemyBossSmoke",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objEnemyBossSnake",
+  "name":"objEnemyBossSmoke",
   "overriddenProperties":[],
   "parent":{
     "name":"Boss",
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBossSnake",
-    "path":"sprites/sprBossSnake/sprBossSnake.yy",
+    "name":"sprExplosion",
+    "path":"sprites/sprExplosion/sprExplosion.yy",
   },
   "spriteMaskId":null,
   "visible":true,

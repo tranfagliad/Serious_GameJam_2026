@@ -16,8 +16,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"hp","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
   ],
   "parent":{
-    "name":"EnemyTypes",
-    "path":"folders/Objects/Enemies/EnemyTypes.yy",
+    "name":"Boss",
+    "path":"folders/Objects/Enemies/EnemyTypes/Boss.yy",
   },
   "parentObjectId":{
     "name":"objEnemyParent",
