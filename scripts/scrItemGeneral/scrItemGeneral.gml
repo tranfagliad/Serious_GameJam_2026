@@ -42,6 +42,31 @@ function ItemObjectCreate(_type){
 	
 }
 
+function ItemPapersTriggerDisperse(_x,_y){
+	
+	var _num = 5;
+	for (var i = 0; i < _num; i++) {
+		
+		var _item = instance_create_layer(_x,_y, "Player", objItemPaper);
+		with _item {
+			
+			x = _x;
+			y = _y;
+			
+			image_angle = 0;
+			image_index = 0;
+			image_speed = 0;
+			
+			itemState = ItemStateDisperse;
+			dashSpeed = 2;
+			dashDirection = 360*i/_num;
+			
+		}
+		
+	}
+	
+}
+
 function ItemExplode(){
 	
 	explodeCd = 15;

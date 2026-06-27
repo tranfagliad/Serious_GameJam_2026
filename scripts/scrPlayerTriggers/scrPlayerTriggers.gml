@@ -3,6 +3,7 @@ function PlayerPaperShielded(_paperAmount){
 	//reduce paper amount
 	_paperAmount = Approach(_paperAmount, 0, global.paperReductionAmount);
 	global.inventory.papers = _paperAmount;
+	ItemPapersTriggerDisperse(x,y);
 				
 	//flash to indicate invulnerability
 	invulCd = invulCdMax/2;

@@ -76,3 +76,19 @@ function ItemStateDash(){
 	if (x < 0 || x > room_width || y < 0 || y > room_height) instance_destroy();
 	
 }
+	
+function ItemStateDisperse(){
+	
+	//precaution
+	if !variable_instance_exists(id, "dashDirection") dashDirection = 0;
+	if !variable_instance_exists(id, "dashSpeed") dashSpeed = 1;
+	
+	//movement
+	x += lengthdir_x(dashSpeed, dashDirection);
+	y += lengthdir_y(dashSpeed, dashDirection);
+	
+	//fading
+	image_alpha = Approach(image_alpha, 0, 0.02);
+	if (image_alpha <= 0) instance_destroy();
+	
+}

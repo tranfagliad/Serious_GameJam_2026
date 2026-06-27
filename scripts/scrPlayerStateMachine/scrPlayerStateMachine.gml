@@ -206,6 +206,7 @@ function PlayerStateDash () {
 			//reduce paper amount
 			_paperAmount = Approach(_paperAmount, 0, global.paperReductionAmount);
 			global.inventory.papers = _paperAmount;
+			ItemPapersTriggerDisperse(x,y);
 			
 			//paper sfx
 			SoundPlay(sfxPaperHit);
@@ -249,7 +250,7 @@ function PlayerStateDash () {
 		playerState = PlayerStateDefault;
 		
 		//make player invulnerable for a very short period after dash
-		invulCd = 8;
+		invulCd = 15;
 		
 	}
 }

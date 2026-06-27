@@ -116,6 +116,7 @@
     {"id":{"name":"objInitController","path":"objects/objInitController/objInitController.yy",},},
     {"id":{"name":"objInputManager","path":"objects/objInputManager/objInputManager.yy",},},
     {"id":{"name":"objItemComputer","path":"objects/objItemComputer/objItemComputer.yy",},},
+    {"id":{"name":"objItemPaper","path":"objects/objItemPaper/objItemPaper.yy",},},
     {"id":{"name":"objItemParent","path":"objects/objItemParent/objItemParent.yy",},},
     {"id":{"name":"objItemStapler","path":"objects/objItemStapler/objItemStapler.yy",},},
     {"id":{"name":"objLevel1BigTable1","path":"objects/objLevel1BigTable1/objLevel1BigTable1.yy",},},
