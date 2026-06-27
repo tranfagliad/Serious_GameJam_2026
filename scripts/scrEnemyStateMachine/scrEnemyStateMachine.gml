@@ -30,14 +30,11 @@
 		//countdown until destruction
 		explodeCd = Approach(explodeCd, 0, 1);
 		if explodeCd <= 0 {
-			instance_destroy();
-		
 			//increase enemy defeated count
 			global.enemyDefeated = Approach(global.enemyDefeated, global.enemyDefeatedReqCurrent, 1);
 			
-			if (object_index == objEnemyBoss) {
-				global.bossDefeated = true;
-			}
+			//boss does not get destroyed
+			if (object_index == objEnemyBoss) global.bossDefeated = true; else instance_destroy();
 		}
 	
 	}

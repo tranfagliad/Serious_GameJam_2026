@@ -217,6 +217,7 @@
     {"id":{"name":"sprBigTable1","path":"sprites/sprBigTable1/sprBigTable1.yy",},},
     {"id":{"name":"sprBigTable2","path":"sprites/sprBigTable2/sprBigTable2.yy",},},
     {"id":{"name":"sprBoss","path":"sprites/sprBoss/sprBoss.yy",},},
+    {"id":{"name":"sprBossDeath","path":"sprites/sprBossDeath/sprBossDeath.yy",},},
     {"id":{"name":"sprBossHealth","path":"sprites/sprBossHealth/sprBossHealth.yy",},},
     {"id":{"name":"sprCabinet1","path":"sprites/sprCabinet1/sprCabinet1.yy",},},
     {"id":{"name":"sprCabinet2","path":"sprites/sprCabinet2/sprCabinet2.yy",},},

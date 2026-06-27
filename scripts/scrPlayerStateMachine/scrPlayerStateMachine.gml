@@ -262,6 +262,12 @@ function PlayerStateLocked(){
 
 function PlayerStateExplode(){
 	
+	//stop animation
+	if image_index >= (image_number - 1) {
+		image_index = (image_number - 1);
+		image_speed = 0;
+	}
+	
 	//create the variable if not set yet
 	if !variable_instance_exists(id, "explodeCd") explodeCd = 60;
 	

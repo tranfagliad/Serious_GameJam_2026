@@ -27,6 +27,7 @@
 		if keyboard_check_pressed(ord("P")) global.playerHp = 0;
 		if keyboard_check_pressed(ord("N")) with objPlayer invulCd = invulCdMax;
 		if keyboard_check_pressed(ord("M")) global.enemyDefeated = global.enemyDefeatedReqCurrent;
+		if keyboard_check_pressed(ord("L")) with objEnemyBoss { hp = 1; EnemyHit(1);}
 		
 	}
 

@@ -21,8 +21,11 @@ function PlayerHit(_damage){
 	// Player Death Animation
 	if (global.playerHp <= 0) {
 		
-		explodeCd = 60;
 		sprite_index = sprPlayerDeath;
+		image_speed = 1;
+		image_index = 0;
+		
+		explodeCd = 60;
 		playerStatePrev = playerState;
 		playerState = PlayerStateExplode;
 		

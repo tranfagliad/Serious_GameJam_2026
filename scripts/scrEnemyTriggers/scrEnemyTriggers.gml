@@ -11,7 +11,7 @@ function EnemyDeath(){
 		case sprEnemy2M: { SoundPlay(sfxEnemyDeathMale, 90);	sprite_index = sprEnemy2MDeath;		_ghostId.sprite_index = sprEnemy2Ghost; } break;
 		case sprEnemy3M: { SoundPlay(sfxEnemyDeathMale, 90);	sprite_index = sprEnemy3MDeath;		_ghostId.sprite_index = sprEnemy3Ghost; } break;
 		
-		case sprBoss:	SoundPlay(sfxEnemyBossDeath, 90); break;
+		case sprBoss:	{ SoundPlay(sfxEnemyBossDeath, 90);		sprite_index = sprBossDeath;		_ghostId.sprite_index = sprEnemy3Ghost; } break;
 		
 	}
 	
