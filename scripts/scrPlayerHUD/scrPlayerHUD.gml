@@ -61,9 +61,11 @@ function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd, _dashCdMax)
 	
 	var _percent = (1 - _dashCd/_dashCdMax)*100;
 	var _col = #7CC237;
-	draw_healthbar(_x1,_y1,_x2,_y2, _percent, c_white, _col, _col, 3, true, false);
+	//draw_healthbar(_x1,_y1,_x2,_y2, _percent, c_white, _col, _col, 3, true, false);
+	//draw_sprite_ext(sprSpinDashMeter, _frame, 20, VIEWPORT_HEIGHT-10, 2, 2, 0, c_white, 1);
 	
-	draw_sprite_ext(sprSpinMeter, _frame, 20, VIEWPORT_HEIGHT-10, 2, 2, 0, c_white, 1);
+	
+	draw_sprite_ext(sprSpinMeter, _frame, 20, VIEWPORT_HEIGHT-10, 1, 1, 0, c_white, 1);
 }
 
 
@@ -88,7 +90,7 @@ function DrawBossHealthBar() {
 	var _scale = 0.8;
 	var _percent = (objEnemyBoss.hp / objEnemyBoss.maxHp) * 100;
 	var _min_col = #FF1600;
-	var _max_col = #A0FF00;
+	var _max_col = #487C27;
 	
 	var _sprite_origin_x = VIEWPORT_WIDTH - 10;
 	var _sprite_origin_y = VIEWPORT_HEIGHT - 10;

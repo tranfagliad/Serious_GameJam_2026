@@ -11,10 +11,10 @@ function GameStateDefault(){
 		switch room {
 			case rmLevelOne:	_enemyRarity = [1,		0.5,	0.1	];	break;	//default is twice as common as trap, dashing is very rare
 			case rmLevelTwo:	_enemyRarity = [1,		2,		0.5	];	break;	//default is half as common as trap, dashing is kinda rare
-			case rmLevelThree:	_enemyRarity = [1,		1,		2	];	break;	//default is as common as trap, dashing is twice as common as them
+			case rmLevelThree:	_enemyRarity = [0.5,	1,		2	];	break;	//default is not as common, trap is normal, dashing is twice as common
 			case rmBossLevel:	_enemyRarity = [1,		1,		1	];	break;	//fair game, basically choose()
 		}
-		var _chosenNum = RandomWeigths(_enemyRarity);
+		var _chosenNum = RandomWeights(_enemyRarity);
 		var _enemyType = _enemyTypes[_chosenNum];
 		
 		// --- SPAWN THE BASTARD ---
