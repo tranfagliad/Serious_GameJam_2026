@@ -8,12 +8,12 @@
   "name":"objEnemyBoss",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"spriteChoice","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[sprBoss]",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"hp","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"damage","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"moveSpeed","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"spinSpeed","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"enemyStateTarget","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"EnemyStateBossLocate",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"enemyStatePrev","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"EnemyStateBossLocate",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objEnemyParent","path":"objects/objEnemyParent/objEnemyParent.yy",},"propertyId":{"name":"hp","path":"objects/objEnemyParent/objEnemyParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
   ],
   "parent":{
     "name":"EnemyTypes",
@@ -37,6 +37,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
+    {"$GMObjectProperty":"v2","%Name":"maxHp","filters":[],"listItems":[],"multiselect":false,"name":"maxHp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"throwReadyDist","filters":[],"listItems":[],"multiselect":false,"name":"throwReadyDist","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"160","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"throwCharge","filters":[],"listItems":[],"multiselect":false,"name":"throwCharge","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"throwChargeMax","filters":[],"listItems":[],"multiselect":false,"name":"throwChargeMax","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"90","varType":0,},

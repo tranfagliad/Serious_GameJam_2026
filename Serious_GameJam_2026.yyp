@@ -323,6 +323,7 @@
     {"id":{"name":"sprTable6","path":"sprites/sprTable6/sprTable6.yy",},},
     {"id":{"name":"sprTextbox","path":"sprites/sprTextbox/sprTextbox.yy",},},
     {"id":{"name":"sprTileTile","path":"sprites/sprTileTile/sprTileTile.yy",},},
+    {"id":{"name":"sprTitleLogo","path":"sprites/sprTitleLogo/sprTitleLogo.yy",},},
     {"id":{"name":"sprTornado","path":"sprites/sprTornado/sprTornado.yy",},},
     {"id":{"name":"sprTransitionCover","path":"sprites/sprTransitionCover/sprTransitionCover.yy",},},
     {"id":{"name":"sprUpgradeWheel","path":"sprites/sprUpgradeWheel/sprUpgradeWheel.yy",},},

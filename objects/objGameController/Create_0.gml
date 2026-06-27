@@ -60,7 +60,7 @@
 	global.enemyDefeatedReqCurrent		= 10;
 	global.enemyDefeatedReqLevel1		= 15;
 	global.enemyDefeatedReqLevel2		= 30;
-	global.enemyDefeatedReqLevel3		= 45;
+	global.enemyDefeatedReqLevel3		= 40;
 	global.enemyDefeatedReqLevelBoss	= 0;
 	
 	global.bossDefeated = false;
