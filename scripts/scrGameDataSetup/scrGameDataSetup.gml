@@ -64,6 +64,10 @@ function DataCreateDialogue(){
 		DataDialogueSet(_data, DLG_SEQ_LVL_BOSS, 3,	"Ms. Snide", "Ssssspin this fool into orbit!", _cDef,	2);
 	#endregion
 	
+	#region
+		DataDialogueSet(_data, DLG_SEQ_OUTRO, 0, "Dev Team", "You beat the game! Thanks for playing!", _cDef, 0);
+	#endregion
+	
 	//return structure of datasets
 	return _data;
 		

@@ -65,6 +65,7 @@
 	global.enemyDefeatedReqLevel3		= 45;
 	global.enemyDefeatedReqLevelBoss	= 0;
 	
+	global.bossDefeated = false;
 #endregion
 
 #region inventory data

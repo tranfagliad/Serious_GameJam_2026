@@ -52,11 +52,10 @@ function GameStateDefault(){
 			//music check
 			MusicChangeBoss();
 			
-			//this actually should trigger during boss death animation (within enemy death trigger)
-			//but here is a precaution
-			if !instance_exists(objEnemyBoss) {
-				DialogueStart(DLG_SEQ_OUTRO, GameStateCredits);
+			if (global.bossDefeated) {
+				global.bossDefeated = false;
 				SoundPlay(sfxPlayerWin1, 75);
+				TransitionStart(rmGameCompleted, sqFadeOut, sqFadeIn, 0, 0, GameStatePaused);
 			}
 			
 		} break;
@@ -95,15 +94,6 @@ function GameStateTransition(){
 	if !global.midTransition global.gameState = global.gameStateTarget;
 		
 }
-
-
-function GameStateCredits(){
-	
-	//maybe
-	
-}
-
-
 
 
 function GameStateLevelComplete(){
@@ -215,7 +205,7 @@ function GameStatePlayerDeath() {
 					// SECOND_QUADRANT -> Alive
 					// FOURTH_QUADRANT -> Death
 					//
-					wheelAngle = FOURTH_QUADRANT-10;
+					//wheelAngle = FOURTH_QUADRANT-10;
 					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 					SoundPlay(sfxWheelSpinEnd);
@@ -264,4 +254,10 @@ function GameStatePlayerDeath() {
 				break;
 		}
 	}
+}
+
+
+function GameStateGameCompleted () {
+	
+	
 }
