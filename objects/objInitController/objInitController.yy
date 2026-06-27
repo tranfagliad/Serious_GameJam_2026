@@ -8,8 +8,8 @@
   "name":"objInitController",
   "overriddenProperties":[],
   "parent":{
-    "name":"RoomControllers",
-    "path":"folders/Objects/RoomControllers.yy",
+    "name":"System",
+    "path":"folders/Objects/System.yy",
   },
   "parentObjectId":null,
   "persistent":true,
