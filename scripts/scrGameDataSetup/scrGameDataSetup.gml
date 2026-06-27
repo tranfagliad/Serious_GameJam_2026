@@ -44,7 +44,9 @@ function DataCreateDialogue(){
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 4, "Hughes", "I'm gonna spin that snake through a wall...", _cDef, 1);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 5, "Tutorial", "Use WASD to move and charge up your spin.\nMaintain high spin to create a tornado around you to pick up objects.", _cDef, 0);
 		DataDialogueSet(_data, DLG_SEQ_INTRO, 6, "Tutorial", "At full charge, press [SPACE] to dash.", _cDef, 0);
-		DataDialogueSet(_data, DLG_SEQ_INTRO, 7, "Tutorial", "Good luck!", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 7, "Tutorial", "Paper provides you with protection.\nStaplers provide a means to attack.", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 8, "Tutorial", "Computers deal massive damage and can be hurled as projectiles.\nThey are launched in the direction that you dash.", _cDef, 0);
+		DataDialogueSet(_data, DLG_SEQ_INTRO, 9, "Tutorial", "Good luck!", _cDef, 0);
 	#endregion
 	
 	#region   // Level Two
