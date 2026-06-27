@@ -88,7 +88,7 @@ function ItemStateDisperse(){
 	y += lengthdir_y(dashSpeed, dashDirection);
 	
 	//fading
-	image_alpha = Approach(image_alpha, 0, 0.02);
+	image_alpha = Approach(image_alpha, 0, 0.01);
 	if (image_alpha <= 0) instance_destroy();
 	
 }

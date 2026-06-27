@@ -1,0 +1,1 @@
+if !global.midTransition image_speed = 1;
