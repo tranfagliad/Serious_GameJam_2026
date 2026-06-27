@@ -215,7 +215,7 @@ function GameStatePlayerDeath() {
 					// SECOND_QUADRANT -> Alive
 					// FOURTH_QUADRANT -> Death
 					//
-					//wheelAngle = FOURTH_QUADRANT-10;
+					wheelAngle = FOURTH_QUADRANT-10;
 					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 					SoundPlay(sfxWheelSpinEnd);
