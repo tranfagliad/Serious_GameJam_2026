@@ -103,6 +103,7 @@
     {"id":{"name":"objBossTable4","path":"objects/objBossTable4/objBossTable4.yy",},},
     {"id":{"name":"objBossTable5","path":"objects/objBossTable5/objBossTable5.yy",},},
     {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},},
+    {"id":{"name":"objCreditsController","path":"objects/objCreditsController/objCreditsController.yy",},},
     {"id":{"name":"objDashExplosion","path":"objects/objDashExplosion/objDashExplosion.yy",},},
     {"id":{"name":"objEnemyBoss","path":"objects/objEnemyBoss/objEnemyBoss.yy",},},
     {"id":{"name":"objEnemyDash","path":"objects/objEnemyDash/objEnemyDash.yy",},},
