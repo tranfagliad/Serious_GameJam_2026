@@ -13,14 +13,17 @@
 	global.musicVolume = 0.5;
 	
 	global.ambient = {};
-	global.dlgSfxDisable = false;
 	
 #endregion
 
 #region game data
 	
-	global.screenShakeActive = true;
 	global.cutsceneSkip = false;
+	global.screenShakeActive = true;
+	global.ambientOfficeActive = true;
+	global.ambientTornadoActive = false;
+	global.sfxTextActive = true;
+	
 	global.dataDialogue = DataCreateDialogue();
 	
 	global.playerPosCheckpoint	= [256, 256];

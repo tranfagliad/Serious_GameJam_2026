@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrGameTriggers",
+  "%Name":"scrMenuTriggers",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrGameTriggers",
+  "name":"scrMenuTriggers",
   "parent":{
     "name":"System",
     "path":"folders/Scripts/System.yy",

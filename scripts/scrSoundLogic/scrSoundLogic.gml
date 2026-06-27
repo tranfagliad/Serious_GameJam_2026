@@ -279,7 +279,7 @@
 		
 	}
 	
-	
+	//this is used for volume changes
 	function VolumeUpdateAmbient(){
 		
 		//change gain
@@ -295,20 +295,6 @@
 		
 		}
 		
-	}
-	
-	function VolumeUpdateSound(_vol){
-	
-		global.soundVolume = _vol;
-		VolumeUpdateAmbient();
-	
-	}
-
-	function VolumeUpdateMusic(_vol){
-	
-		global.musicVolume = _vol;
-		VolumeUpdateAmbient();
-	
 	}
 	
 #endregion

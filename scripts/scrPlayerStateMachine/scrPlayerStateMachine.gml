@@ -102,7 +102,7 @@ function PlayerStateDefault(){
 		}
 		
 		//play sfx
-		//AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado, 30);
+		if global.ambientTornadoActive AmbientChange(AMBIENT_PLAYER_TORNADO, sfxPlayerTornado, 30);
 		
 	} else {
 		// If the tornado drops, wipe out data inventories
