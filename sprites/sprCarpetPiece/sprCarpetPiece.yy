@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Carpet",
-    "path":"folders/Sprites/Levels/LevelBoss/Carpet.yy",
+    "path":"folders/Sprites/Levels/Carpet.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
