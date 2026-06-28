@@ -1,12 +1,15 @@
 
 function SpinPowerUpWheel () {
-
+	
 	draw_set_alpha(0.7);
 	draw_rectangle_colour(0, 0, VIEWPORT_WIDTH, VIEWPORT_HEIGHT, c_black, c_black, c_black, c_black, false);
 	draw_set_alpha(1.0);
 	
+	draw_set_font(fntConsolMassive);
+	draw_text(VIEWPORT_WIDTH/2, 25, "Level Completed!");
+	
 	var _cx = VIEWPORT_WIDTH / 2;
-	var _cy = VIEWPORT_HEIGHT / 2 - 20;
+	var _cy = VIEWPORT_HEIGHT / 2;
 	
 	draw_sprite_ext(sprUpgradeWheel, 0, _cx, _cy, wheelScale, wheelScale, wheelAngle, c_white, 1.0);
 	draw_sprite_ext(sprWheelPointer, 0, _cx, _cy - 200, wheelScale, wheelScale, 0,c_white,1);
@@ -64,7 +67,7 @@ function SpinRevivalWheel () {
 	draw_set_alpha(1.0);
 	
 	var _cx = VIEWPORT_WIDTH / 2;
-	var _cy = VIEWPORT_HEIGHT / 2 - 20;
+	var _cy = VIEWPORT_HEIGHT / 2;
 	
 	draw_sprite_ext(sprRevivalWheel, 0, _cx, _cy, wheelScale, wheelScale, wheelAngle, c_white, 1.0);
 	draw_sprite_ext(sprWheelPointer, 0, _cx, _cy - 200, wheelScale, wheelScale, 0,c_white,1);

@@ -83,8 +83,12 @@ function DrawEnemyDefeatReq(_current, _req){
 	
 	var _draw_x = VIEWPORT_WIDTH - 16;
 	var _draw_y = VIEWPORT_HEIGHT - 16;
+	var _draw_text = string(_current) + "/" + string(_req);
 	
 	draw_sprite_ext(sprEnemyReqMeter, _frame, _draw_x, _draw_y, 1.5, 1.5, 0, c_white, 1.0);
+	draw_set_halign(fa_center);
+	draw_text(_draw_x-66, _draw_y-254, _draw_text);
+	draw_set_halign(fa_left);
 }
 
 
