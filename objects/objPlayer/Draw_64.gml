@@ -1,7 +1,7 @@
 if global.gameState == GameStateDefault {
 	DrawInventory(global.inventory);
 	DrawPlayerHealth();
-	DrawPlayerSpinMeter(spinSpeed, maxSpinSpeed, dashCd, dashCdMax);
+	DrawPlayerSpinDashMeter(spinSpeed, maxSpinSpeed, dashCd, dashCdMax);
 	if (room == rmBossLevel) {
 		DrawBossHealthBar();
 	} else {

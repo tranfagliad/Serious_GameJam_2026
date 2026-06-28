@@ -327,7 +327,6 @@
     {"id":{"name":"sprPlayerHealth","path":"sprites/sprPlayerHealth/sprPlayerHealth.yy",},},
     {"id":{"name":"sprPortraits","path":"sprites/sprPortraits/sprPortraits.yy",},},
     {"id":{"name":"sprRevivalWheel","path":"sprites/sprRevivalWheel/sprRevivalWheel.yy",},},
-    {"id":{"name":"sprSpinDashMeter","path":"sprites/sprSpinDashMeter/sprSpinDashMeter.yy",},},
     {"id":{"name":"sprSpinMeter","path":"sprites/sprSpinMeter/sprSpinMeter.yy",},},
     {"id":{"name":"sprStapler","path":"sprites/sprStapler/sprStapler.yy",},},
     {"id":{"name":"sprStaplerBadge","path":"sprites/sprStaplerBadge/sprStaplerBadge.yy",},},
