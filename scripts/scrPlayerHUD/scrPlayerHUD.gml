@@ -35,35 +35,41 @@ function DrawInventory (_inventory) {
 }
 
 
-function DrawPlayerSpinMeter (_spin_speed, _max_spin_speed, _dashCd, _dashCdMax) {
+function DrawPlayerSpinDashMeter (_spin_speed, _max_spin_speed, _dash_cd, _dash_cd_max) {
 	
 	var _percentage = (_spin_speed / _max_spin_speed);
 	var _frame = 0;
 	
 	if (_percentage < 1.0) {
-		// Maps 0.0 - 0.99 into explicit 20% chunks (Frames 0 to 4)
-		// floor(0.15 * 5) = floor(0.75) = Frame 0
-		// floor(0.85 * 5) = floor(4.25) = Frame 4
 		_frame = floor(_percentage * 5);
-		_frame = clamp(_frame, 0, 4); // Safety net clamp
+		_frame = clamp(_frame, 0, 4); 
 	} else {
-		// We are at 100% spin speed! Check if dash is ready or cooling down
-		_frame = (_dashCd > 0) ? 6 : 5;
+		_frame = (_dash_cd > 0) ? 6 : 5;
 	}
 	
-	//setup sprite position and scale
-	var _x = 20, _y = VIEWPORT_HEIGHT-10, _scale = 2;
-	//setup dash percentage position
-	var _x1 = _x + 150*_scale;
-	var _x2 = _x + 205*_scale;
-	var _y1 = _y - 46*_scale;
-	var _y2 = _y - 13*_scale;
-	
-	var _percent = (1 - _dashCd/_dashCdMax)*100;
-	var _col = #7CC237;
-	draw_healthbar(_x1,_y1,_x2,_y2, _percent, c_white, _col, _col, 3, true, false);
-	
 	draw_sprite_ext(sprSpinMeter, _frame, 20, VIEWPORT_HEIGHT-10, 2, 2, 0, c_white, 1);
+	
+	var _percent = 100;
+	if (_dash_cd_max > 0) {
+		_percent = (1 - (_dash_cd / _dash_cd_max)) * 100;
+	}
+	_percent = clamp(_percent, 0, 100);
+	
+	var _col = #333333;
+	
+	if (_dash_cd <= 0 && _percentage >= 1.0) {
+		_col = #39FF14;
+	}
+	
+	var _dash_top = VIEWPORT_HEIGHT - 25;
+	
+	var _x1 = 360;
+	var _y1 = VIEWPORT_HEIGHT - 80;       
+	var _x2 = 476;
+	var _y2 = VIEWPORT_HEIGHT - 40;       
+	
+	draw_healthbar(_x1, _y1, _x2, _y2, _percent, c_white, _col, _col, 0, true, false);
+	draw_sprite_ext(sprDashMeter, 0, 330, _dash_top, 2, 2, 0, c_white, 1);
 }
 
 
@@ -88,7 +94,7 @@ function DrawBossHealthBar() {
 	var _scale = 0.8;
 	var _percent = (objEnemyBoss.hp / objEnemyBoss.maxHp) * 100;
 	var _min_col = #FF1600;
-	var _max_col = #A0FF00;
+	var _max_col = #487C27;
 	
 	var _sprite_origin_x = VIEWPORT_WIDTH - 10;
 	var _sprite_origin_y = VIEWPORT_HEIGHT - 10;
@@ -96,11 +102,13 @@ function DrawBossHealthBar() {
 	var _sprite_top_left_x = _sprite_origin_x - (778 * _scale);
 	var _sprite_top_left_y = _sprite_origin_y - (120 * _scale);
 	
+	var _bar_y_offset = 10; 
+	
 	var _bar_x1 = _sprite_top_left_x + (278 * _scale);
-	var _bar_y1 = _sprite_top_left_y + (47 * _scale);
+	var _bar_y1 = _sprite_top_left_y + (47 * _scale) - _bar_y_offset;
 	var _bar_x2 = _sprite_top_left_x + (755 * _scale);
-	var _bar_y2 = _sprite_top_left_y + (73 * _scale);
+	var _bar_y2 = _sprite_top_left_y + (73 * _scale) - _bar_y_offset;
 	
 	draw_healthbar(_bar_x1, _bar_y1, _bar_x2, _bar_y2, _percent, c_black, _min_col, _max_col, 0, true, false);
-	draw_sprite_ext(sprBossHealth, 0, _sprite_origin_x, _sprite_origin_y, _scale, _scale, 0, c_white, 1);
+	draw_sprite_ext(sprBossHealth, 0, _sprite_origin_x, _sprite_origin_y - _bar_y_offset, _scale, _scale, 0, c_white, 1);
 }

@@ -26,7 +26,7 @@ function Approach(_val, _newVal, _speed){
 }
 
 //get a random position from array based on chance weigths
-function RandomWeigths(_weigthsArray){
+function RandomWeights(_weigthsArray){
 	
 	//get length of original weigths
 	var _al = array_length(_weigthsArray);
