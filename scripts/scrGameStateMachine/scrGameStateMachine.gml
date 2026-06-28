@@ -145,7 +145,7 @@ function GameStateLevelComplete(){
 					// THIRD_QUADRANT -> Max HP Increase
 					// FOURTH_QUADRANT -> Full Heal
 					//
-					//wheelAngle = SECOND_QUADRANT-10;
+					//wheelAngle = FIRST_QUADRANT-10;
 					/***********************************************/
 					wheelPhase = WheelSpinPhase.SPIN_COMPLETE;
 					SoundPlay(sfxWheelSpinEnd);
@@ -165,7 +165,7 @@ function GameStateLevelComplete(){
 					} else if (wheelAngle >= FIRST_QUADRANT && wheelAngle < SECOND_QUADRANT) {
 						global.playerDashPower += 0.5;
 					} else {
-						global.playerSpeed++;
+						global.playerSpeed += 0.5;
 					}
 					
 					global.gamePaused = false;
